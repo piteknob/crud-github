@@ -1,0 +1,1112 @@
+CRITICAL - 2024-05-15 01:42:27 --> ArgumentCountError: getallheaders() expects exactly 0 arguments, 1 given
+[Method: GET, Route: index]
+in APPPATH\Controllers\Product.php on line 23.
+ 1 APPPATH\Controllers\Product.php(23): getallheaders('token')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 01:42:39 --> Error: Array callback must have exactly two elements
+[Method: GET, Route: index]
+in APPPATH\Controllers\Product.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 01:44:32 --> Error: Array callback must have exactly two elements
+[Method: GET, Route: index]
+in APPPATH\Controllers\Product.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 01:44:34 --> Error: Array callback must have exactly two elements
+[Method: GET, Route: index]
+in APPPATH\Controllers\Product.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 01:44:42 --> Error: Array callback must have exactly two elements
+[Method: GET, Route: index]
+in APPPATH\Controllers\Product.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 01:45:27 --> Error: Array callback must have exactly two elements
+[Method: GET, Route: index]
+in APPPATH\Filters\Auth.php on line 52.
+ 1 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('index', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 01:48:06 --> Error: Array callback must have exactly two elements
+[Method: GET, Route: index]
+in APPPATH\Controllers\Product.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 01:48:10 --> Error: Array callback must have exactly two elements
+[Method: GET, Route: index]
+in APPPATH\Controllers\Product.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 01:48:37 --> Error: Array callback must have exactly two elements
+[Method: GET, Route: index]
+in APPPATH\Controllers\Product.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 01:49:18 --> ArgumentCountError: getallheaders() expects exactly 0 arguments, 1 given
+[Method: GET, Route: index]
+in APPPATH\Controllers\Product.php on line 22.
+ 1 APPPATH\Controllers\Product.php(22): getallheaders('Token-User')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 01:49:30 --> Error: Array callback must have exactly two elements
+[Method: GET, Route: index]
+in APPPATH\Controllers\Product.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 01:51:44 --> Error: Array callback must have exactly two elements
+[Method: GET, Route: index]
+in APPPATH\Controllers\Product.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 09:04:37 --> ParseError: syntax error, unexpected token ")"
+[Method: GET, Route: index]
+in APPPATH\Controllers\Product.php on line 40.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Product')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Product')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Product', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 09:41:05 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 112.
+ 1 APPPATH\Controllers\User.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 112)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 09:43:03 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 112.
+ 1 APPPATH\Controllers\User.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 112)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 09:43:34 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 112.
+ 1 APPPATH\Controllers\User.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 112)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 09:44:45 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\Query.php on line 331.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\system\\Database\\Query.php', 331)
+ 2 SYSTEMPATH\Database\Query.php(331): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(312): CodeIgniter\Database\Query->matchNamedBinds('UPDATE `auth_user` SET `auth_user_date_expired` = :auth_user_date_expired:
+WHERE `auth_user_user_id` = :auth_user_user_id:', [...])
+ 4 SYSTEMPATH\Database\Query.php(163): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(2497): CodeIgniter\Database\BaseConnection->query('UPDATE `auth_user` SET `auth_user_date_expired` = :auth_user_date_expired:
+WHERE `auth_user_user_id` = :auth_user_user_id:', [...], false)
+ 7 APPPATH\Controllers\User.php(125): CodeIgniter\Database\BaseBuilder->update([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 09:45:35 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 112.
+ 1 APPPATH\Controllers\User.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 112)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 09:46:46 --> Error: Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 112.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 09:47:41 --> Error: Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 112.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 09:52:37 --> ArgumentCountError: mysqli_fetch_array() expects at least 1 argument, 0 given
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 104.
+ 1 APPPATH\Controllers\User.php(104): mysqli_fetch_array()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 09:57:08 --> ErrorException: Undefined array key 0
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 105.
+ 1 APPPATH\Controllers\User.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 105)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 09:57:21 --> ErrorException: Undefined array key "auth_user_user_id"
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 105.
+ 1 APPPATH\Controllers\User.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "auth_user_user_id"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 105)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 09:59:20 --> ErrorException: Undefined array key 0
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 105.
+ 1 APPPATH\Controllers\User.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 105)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:01:56 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 109.
+ 1 APPPATH\Controllers\User.php(109): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 109)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:04:00 --> ErrorException: Undefined array key 0
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 105.
+ 1 APPPATH\Controllers\User.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 105)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:04:22 --> ErrorException: Undefined array key 0
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 105.
+ 1 APPPATH\Controllers\User.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 105)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:05:31 --> ErrorException: Undefined array key 0
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 105.
+ 1 APPPATH\Controllers\User.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 105)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:05:39 --> ErrorException: Undefined array key "auth_user_user_id"
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 105.
+ 1 APPPATH\Controllers\User.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "auth_user_user_id"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 105)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:06:11 --> ErrorException: Undefined array key "auth_user_user_id"
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 105.
+ 1 APPPATH\Controllers\User.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "auth_user_user_id"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 105)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:31:33 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 120.
+ 1 APPPATH\Controllers\User.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 120)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:31:35 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 120.
+ 1 APPPATH\Controllers\User.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 120)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:31:53 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 120.
+ 1 APPPATH\Controllers\User.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 120)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:32:03 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 105.
+ 1 APPPATH\Controllers\User.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 105)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:32:08 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 105.
+ 1 APPPATH\Controllers\User.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 105)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:32:10 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 105.
+ 1 APPPATH\Controllers\User.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 105)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:32:11 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 105.
+ 1 APPPATH\Controllers\User.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 105)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:32:33 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 105.
+ 1 APPPATH\Controllers\User.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 105)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:32:47 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 120.
+ 1 APPPATH\Controllers\User.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 120)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:33:34 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 117.
+ 1 APPPATH\Controllers\User.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 117)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:33:42 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 121.
+ 1 APPPATH\Controllers\User.php(121): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 121)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:33:56 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 121.
+ 1 APPPATH\Controllers\User.php(121): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 121)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:33:58 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 121.
+ 1 APPPATH\Controllers\User.php(121): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 121)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:34:16 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 120.
+ 1 APPPATH\Controllers\User.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 120)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:35:55 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 120.
+ 1 APPPATH\Controllers\User.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 120)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:37:05 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 120.
+ 1 APPPATH\Controllers\User.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 120)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:37:06 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 120.
+ 1 APPPATH\Controllers\User.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 120)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:37:24 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 121.
+ 1 APPPATH\Controllers\User.php(121): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 121)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:39:28 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 105.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 105)
+ 2 APPPATH\Controllers\User.php(105): implode(' ', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:39:42 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 105.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 105)
+ 2 APPPATH\Controllers\User.php(105): implode(' ', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:40:40 --> TypeError: json_decode(): Argument #1 ($json) must be of type string, array given
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 105.
+ 1 APPPATH\Controllers\User.php(105): json_decode([...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:41:30 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 105.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 105)
+ 2 APPPATH\Controllers\User.php(105): implode(' ', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:41:48 --> TypeError: implode(): Argument #2 ($array) must be of type ?array, string given
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 105.
+ 1 APPPATH\Controllers\User.php(105): implode([...], ' ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:42:01 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 105.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 105)
+ 2 APPPATH\Controllers\User.php(105): implode([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:42:13 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 105.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 105)
+ 2 APPPATH\Controllers\User.php(105): implode([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:49:25 --> Error: Object of class stdClass could not be converted to string
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 120.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:54:07 --> ErrorException: Undefined variable $rowID
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 106.
+ 1 APPPATH\Controllers\User.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rowID', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 106)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 10:54:31 --> Error: Object of class stdClass could not be converted to string
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 120.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 11:19:32 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 108.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 108)
+ 2 APPPATH\Controllers\User.php(108): implode([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 11:19:54 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 108.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 108)
+ 2 APPPATH\Controllers\User.php(108): implode([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 11:20:22 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 108.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 108)
+ 2 APPPATH\Controllers\User.php(108): implode(' ', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 11:23:11 --> TypeError: mysqli_fetch_assoc(): Argument #1 ($result) must be of type mysqli_result, array given
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 108.
+ 1 APPPATH\Controllers\User.php(108): mysqli_fetch_assoc([...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 11:25:26 --> ErrorException: Undefined array key "auth_user_user_id"
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 87.
+ 1 APPPATH\Controllers\User.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "auth_user_user_id"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 87)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 11:26:19 --> ErrorException: Undefined array key "auth_user_user_id"
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 88.
+ 1 APPPATH\Controllers\User.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "auth_user_user_id"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+ERROR - 2024-05-15 11:27:16 --> mysqli_sql_exception: Unknown column 'user_email' in 'where clause' in C:\xampp\htdocs\crud_ci4_postman\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud_ci4_postman\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\crud_ci4_postman\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\crud_ci4_postman\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\crud_ci4_postman\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\crud_ci4_postman\app\Controllers\User.php(85): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(933): App\Controllers\User->login()
+#6 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud_ci4_postman\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud_ci4_postman\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud_ci4_postman\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud_ci4_postman\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-15 11:27:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'user_email' in 'where clause'
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `auth_user`
+WHERE `user_email` = :user_email:', [...], false)
+ 2 APPPATH\Controllers\User.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 11:27:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'user_email' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `auth_user`
+WHERE `user_email` = \'nugger@gmail.com\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `auth_user`
+WHERE `user_email` = \'nugger@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `auth_user`
+WHERE `user_email` = :user_email:', [...], false)
+ 4 APPPATH\Controllers\User.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 11:27:16 --> [Caused by] mysqli_sql_exception: Unknown column 'user_email' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `auth_user`
+WHERE `user_email` = \'nugger@gmail.com\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `auth_user`
+WHERE `user_email` = \'nugger@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `auth_user`
+WHERE `user_email` = \'nugger@gmail.com\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `auth_user`
+WHERE `user_email` = :user_email:', [...], false)
+ 5 APPPATH\Controllers\User.php(85): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 11:38:20 --> ErrorException: Array to string conversion
+[Method: POST, Route: login]
+in APPPATH\Controllers\User.php on line 121.
+ 1 APPPATH\Controllers\User.php(121): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\User.php', 121)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+ERROR - 2024-05-15 11:51:41 --> mysqli_sql_exception: Unknown column 'user_auth_token' in 'where clause' in C:\xampp\htdocs\crud_ci4_postman\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud_ci4_postman\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\crud_ci4_postman\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\crud_ci4_postman\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\crud_ci4_postman\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php(43): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(933): App\Controllers\Product->index()
+#6 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud_ci4_postman\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud_ci4_postman\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud_ci4_postman\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud_ci4_postman\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-15 11:51:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'user_auth_token' in 'where clause'
+[Method: GET, Route: index]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `auth_user`
+WHERE `user_auth_token` = :user_auth_token:', [...], false)
+ 2 APPPATH\Controllers\Product.php(43): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 11:51:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'user_auth_token' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `auth_user`
+WHERE `user_auth_token` = \'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjEzNTY5OTk1MjQsIm5iZiI6MTM1NzAwMDAwMCwidWlkIjoiNSIsImVtYWlsIjoicGl0ZWtub29iQGdtYWlsLmNvbSJ9.zs3qKndYrlllnu6lhioucFqciM4pVSkUtb8f9sS_PjY\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `auth_user`
+WHERE `user_auth_token` = \'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjEzNTY5OTk1MjQsIm5iZiI6MTM1NzAwMDAwMCwidWlkIjoiNSIsImVtYWlsIjoicGl0ZWtub29iQGdtYWlsLmNvbSJ9.zs3qKndYrlllnu6lhioucFqciM4pVSkUtb8f9sS_PjY\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `auth_user`
+WHERE `user_auth_token` = :user_auth_token:', [...], false)
+ 4 APPPATH\Controllers\Product.php(43): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 11:51:41 --> [Caused by] mysqli_sql_exception: Unknown column 'user_auth_token' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT *
+FROM `auth_user`
+WHERE `user_auth_token` = \'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjEzNTY5OTk1MjQsIm5iZiI6MTM1NzAwMDAwMCwidWlkIjoiNSIsImVtYWlsIjoicGl0ZWtub29iQGdtYWlsLmNvbSJ9.zs3qKndYrlllnu6lhioucFqciM4pVSkUtb8f9sS_PjY\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `auth_user`
+WHERE `user_auth_token` = \'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjEzNTY5OTk1MjQsIm5iZiI6MTM1NzAwMDAwMCwidWlkIjoiNSIsImVtYWlsIjoicGl0ZWtub29iQGdtYWlsLmNvbSJ9.zs3qKndYrlllnu6lhioucFqciM4pVSkUtb8f9sS_PjY\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `auth_user`
+WHERE `user_auth_token` = \'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjEzNTY5OTk1MjQsIm5iZiI6MTM1NzAwMDAwMCwidWlkIjoiNSIsImVtYWlsIjoicGl0ZWtub29iQGdtYWlsLmNvbSJ9.zs3qKndYrlllnu6lhioucFqciM4pVSkUtb8f9sS_PjY\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `auth_user`
+WHERE `user_auth_token` = :user_auth_token:', [...], false)
+ 5 APPPATH\Controllers\Product.php(43): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 13:19:59 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: index]
+in APPPATH\Controllers\Product.php on line 46.
+ 1 APPPATH\Controllers\Product.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 13:30:19 --> ErrorException: Undefined property: App\Filters\Auth::$response
+[Method: GET, Route: index]
+in SYSTEMPATH\API\ResponseTrait.php on line 326.
+ 1 SYSTEMPATH\API\ResponseTrait.php(326): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Filters\\Auth::$response', 'C:\\xampp\\htdocs\\crud_ci4_postman\\system\\API\\ResponseTrait.php', 326)
+ 2 SYSTEMPATH\API\ResponseTrait.php(103): App\Filters\Auth->format('Token Expired')
+ 3 APPPATH\Filters\Auth.php(59): App\Filters\Auth->respond('Token Expired')
+ 4 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('index', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 13:37:55 --> ErrorException: Undefined property: App\Filters\Auth::$response
+[Method: GET, Route: index]
+in SYSTEMPATH\API\ResponseTrait.php on line 326.
+ 1 SYSTEMPATH\API\ResponseTrait.php(326): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Filters\\Auth::$response', 'C:\\xampp\\htdocs\\crud_ci4_postman\\system\\API\\ResponseTrait.php', 326)
+ 2 SYSTEMPATH\API\ResponseTrait.php(103): App\Filters\Auth->format('Token Expired')
+ 3 APPPATH\Filters\Auth.php(59): App\Filters\Auth->respond('Token Expired')
+ 4 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('index', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 13:39:01 --> ErrorException: Class App\Filters\Auth contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (CodeIgniter\Filters\FilterInterface::after)
+[Method: GET, Route: index]
+in APPPATH\Filters\Auth.php on line 12.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-05-15 13:39:07 --> ErrorException: Undefined property: App\Filters\Auth::$response
+[Method: GET, Route: index]
+in SYSTEMPATH\API\ResponseTrait.php on line 326.
+ 1 SYSTEMPATH\API\ResponseTrait.php(326): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Filters\\Auth::$response', 'C:\\xampp\\htdocs\\crud_ci4_postman\\system\\API\\ResponseTrait.php', 326)
+ 2 SYSTEMPATH\API\ResponseTrait.php(103): App\Filters\Auth->format('Token Expired')
+ 3 APPPATH\Filters\Auth.php(59): App\Filters\Auth->respond('Token Expired')
+ 4 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('index', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 13:50:11 --> ErrorException: Undefined property: App\Filters\Auth::$response
+[Method: GET, Route: index]
+in SYSTEMPATH\API\ResponseTrait.php on line 326.
+ 1 SYSTEMPATH\API\ResponseTrait.php(326): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Filters\\Auth::$response', 'C:\\xampp\\htdocs\\crud_ci4_postman\\system\\API\\ResponseTrait.php', 326)
+ 2 SYSTEMPATH\API\ResponseTrait.php(103): App\Filters\Auth->format('Token Expired')
+ 3 APPPATH\Filters\Auth.php(61): App\Filters\Auth->respond('Token Expired')
+ 4 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('index', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 13:52:28 --> ErrorException: Undefined property: App\Filters\Auth::$response
+[Method: GET, Route: index]
+in SYSTEMPATH\API\ResponseTrait.php on line 326.
+ 1 SYSTEMPATH\API\ResponseTrait.php(326): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Filters\\Auth::$response', 'C:\\xampp\\htdocs\\crud_ci4_postman\\system\\API\\ResponseTrait.php', 326)
+ 2 SYSTEMPATH\API\ResponseTrait.php(103): App\Filters\Auth->format('Token Expired')
+ 3 APPPATH\Filters\Auth.php(61): App\Filters\Auth->respond('Token Expired')
+ 4 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('index', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 13:53:15 --> ErrorException: Undefined property: App\Filters\Auth::$response
+[Method: GET, Route: index]
+in SYSTEMPATH\API\ResponseTrait.php on line 326.
+ 1 SYSTEMPATH\API\ResponseTrait.php(326): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Filters\\Auth::$response', 'C:\\xampp\\htdocs\\crud_ci4_postman\\system\\API\\ResponseTrait.php', 326)
+ 2 SYSTEMPATH\API\ResponseTrait.php(103): App\Filters\Auth->format('Token Unauthorized')
+ 3 APPPATH\Filters\Auth.php(46): App\Filters\Auth->respond('Token Unauthorized')
+ 4 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('index', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 13:57:50 --> ErrorException: Undefined property: App\Filters\Auth::$response
+[Method: GET, Route: index]
+in SYSTEMPATH\API\ResponseTrait.php on line 326.
+ 1 SYSTEMPATH\API\ResponseTrait.php(326): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Filters\\Auth::$response', 'C:\\xampp\\htdocs\\crud_ci4_postman\\system\\API\\ResponseTrait.php', 326)
+ 2 SYSTEMPATH\API\ResponseTrait.php(103): App\Filters\Auth->format([...])
+ 3 APPPATH\Filters\Auth.php(51): App\Filters\Auth->respond([...])
+ 4 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('index', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 13:58:00 --> ErrorException: Undefined property: App\Filters\Auth::$response
+[Method: GET, Route: index]
+in SYSTEMPATH\API\ResponseTrait.php on line 326.
+ 1 SYSTEMPATH\API\ResponseTrait.php(326): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Filters\\Auth::$response', 'C:\\xampp\\htdocs\\crud_ci4_postman\\system\\API\\ResponseTrait.php', 326)
+ 2 SYSTEMPATH\API\ResponseTrait.php(103): App\Filters\Auth->format([...])
+ 3 APPPATH\Filters\Auth.php(51): App\Filters\Auth->respond([...])
+ 4 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('index', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 13:58:48 --> ErrorException: Undefined property: App\Filters\Auth::$response
+[Method: GET, Route: index]
+in SYSTEMPATH\API\ResponseTrait.php on line 326.
+ 1 SYSTEMPATH\API\ResponseTrait.php(326): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Filters\\Auth::$response', 'C:\\xampp\\htdocs\\crud_ci4_postman\\system\\API\\ResponseTrait.php', 326)
+ 2 SYSTEMPATH\API\ResponseTrait.php(103): App\Filters\Auth->format([...])
+ 3 APPPATH\Filters\Auth.php(53): App\Filters\Auth->respond([...])
+ 4 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('index', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 13:59:37 --> ErrorException: Undefined property: App\Filters\Auth::$response
+[Method: GET, Route: index]
+in SYSTEMPATH\API\ResponseTrait.php on line 326.
+ 1 SYSTEMPATH\API\ResponseTrait.php(326): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Filters\\Auth::$response', 'C:\\xampp\\htdocs\\crud_ci4_postman\\system\\API\\ResponseTrait.php', 326)
+ 2 SYSTEMPATH\API\ResponseTrait.php(103): App\Filters\Auth->format([...])
+ 3 APPPATH\Filters\Auth.php(56): App\Filters\Auth->respond([...])
+ 4 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('index', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 15:49:18 --> ErrorException: Undefined array key "Token-User"
+[Method: POST, Route: login]
+in APPPATH\Filters\Auth.php on line 37.
+ 1 APPPATH\Filters\Auth.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token-User"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Filters\\Auth.php', 37)
+ 2 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('login', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 15:49:27 --> ErrorException: Undefined array key "Token-User"
+[Method: POST, Route: login]
+in APPPATH\Filters\Auth.php on line 37.
+ 1 APPPATH\Filters\Auth.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token-User"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Filters\\Auth.php', 37)
+ 2 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('login', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 15:49:29 --> ErrorException: Undefined array key "Token-User"
+[Method: POST, Route: login]
+in APPPATH\Filters\Auth.php on line 37.
+ 1 APPPATH\Filters\Auth.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token-User"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Filters\\Auth.php', 37)
+ 2 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('login', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 15:50:38 --> ErrorException: Undefined array key "Token-User"
+[Method: POST, Route: login]
+in APPPATH\Filters\Auth.php on line 37.
+ 1 APPPATH\Filters\Auth.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token-User"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Filters\\Auth.php', 37)
+ 2 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('login', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 15:51:10 --> ErrorException: Undefined array key "Token-User"
+[Method: POST, Route: product]
+in APPPATH\Filters\Auth.php on line 37.
+ 1 APPPATH\Filters\Auth.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token-User"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Filters\\Auth.php', 37)
+ 2 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 15:55:23 --> ErrorException: Undefined array key "Token-User"
+[Method: POST, Route: product]
+in APPPATH\Filters\Auth.php on line 37.
+ 1 APPPATH\Filters\Auth.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token-User"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Filters\\Auth.php', 37)
+ 2 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 16:53:31 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: product/insert]
+in SYSTEMPATH\Security\Security.php on line 262.
+ 1 SYSTEMPATH\Security\Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(57): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(203): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/insert', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-15 17:00:19 --> ErrorException: Undefined array key "Token-User"
+[Method: POST, Route: login]
+in APPPATH\Filters\Auth.php on line 37.
+ 1 APPPATH\Filters\Auth.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token-User"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Filters\\Auth.php', 37)
+ 2 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('login', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')

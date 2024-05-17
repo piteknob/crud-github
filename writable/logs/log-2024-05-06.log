@@ -1,0 +1,596 @@
+CRITICAL - 2024-05-06 04:01:28 --> TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given
+[Method: GET, Route: product/search]
+in APPPATH\Controllers\Product.php on line 83.
+ 1 APPPATH\Controllers\Product.php(83): count('SELECT 
+                product.product_id AS id,
+                product.product_name AS produk,
+                product.product_category_name AS kategori,
+                product_stock_unit_name AS unit,
+                product_stock_price_sell AS harga
+            FROM
+                product_stock
+                LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE 1=1 AND product_stock_price_sell BETWEEN \'300\' AND \'500\' AND product_stock_price_sell >= \'300\' AND product_stock_price_sell <= \'500\'')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->search()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-06 04:02:07 --> Error: Call to undefined function App\Controllers\query()
+[Method: GET, Route: product/search]
+in APPPATH\Controllers\Product.php on line 83.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->search()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+ERROR - 2024-05-06 04:07:34 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND product_stock_price_sell BETWEEN '300' AND '500'' at line 10 in C:\xampp\htdocs\crud_ci4_postman\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud_ci4_postman\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT \r\n      ...', 0)
+#1 C:\xampp\htdocs\crud_ci4_postman\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \r\n      ...')
+#2 C:\xampp\htdocs\crud_ci4_postman\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \r\n      ...')
+#3 C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php(62): CodeIgniter\Database\BaseConnection->query('SELECT \r\n      ...')
+#4 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(933): App\Controllers\Product->search()
+#5 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#6 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\crud_ci4_postman\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\crud_ci4_postman\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\crud_ci4_postman\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\crud_ci4_postman\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-06 04:07:34 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND product_stock_price_sell BETWEEN '300' AND '500'' at line 10
+[Method: GET, Route: product/search]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Product.php(62): CodeIgniter\Database\BaseConnection->query('SELECT 
+                product.product_id AS id,
+                product.product_name AS produk,
+                product.product_category_name AS kategori,
+                product_stock_unit_name AS unit,
+                product_stock_price_sell AS harga
+            FROM
+                product_stock
+                LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE  AND product_stock_price_sell BETWEEN \'300\' AND \'500\'')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->search()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-06 04:07:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND product_stock_price_sell BETWEEN '300' AND '500'' at line 10
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+                product.product_id AS id,
+                product.product_name AS produk,
+                product.product_category_name AS kategori,
+                product_stock_unit_name AS unit,
+                product_stock_price_sell AS harga
+            FROM
+                product_stock
+                LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE  AND product_stock_price_sell BETWEEN \'300\' AND \'500\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+                product.product_id AS id,
+                product.product_name AS produk,
+                product.product_category_name AS kategori,
+                product_stock_unit_name AS unit,
+                product_stock_price_sell AS harga
+            FROM
+                product_stock
+                LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE  AND product_stock_price_sell BETWEEN \'300\' AND \'500\'')
+ 3 APPPATH\Controllers\Product.php(62): CodeIgniter\Database\BaseConnection->query('SELECT 
+                product.product_id AS id,
+                product.product_name AS produk,
+                product.product_category_name AS kategori,
+                product_stock_unit_name AS unit,
+                product_stock_price_sell AS harga
+            FROM
+                product_stock
+                LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE  AND product_stock_price_sell BETWEEN \'300\' AND \'500\'')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->search()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-06 04:07:34 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND product_stock_price_sell BETWEEN '300' AND '500'' at line 10
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT 
+                product.product_id AS id,
+                product.product_name AS produk,
+                product.product_category_name AS kategori,
+                product_stock_unit_name AS unit,
+                product_stock_price_sell AS harga
+            FROM
+                product_stock
+                LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE  AND product_stock_price_sell BETWEEN \'300\' AND \'500\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+                product.product_id AS id,
+                product.product_name AS produk,
+                product.product_category_name AS kategori,
+                product_stock_unit_name AS unit,
+                product_stock_price_sell AS harga
+            FROM
+                product_stock
+                LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE  AND product_stock_price_sell BETWEEN \'300\' AND \'500\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+                product.product_id AS id,
+                product.product_name AS produk,
+                product.product_category_name AS kategori,
+                product_stock_unit_name AS unit,
+                product_stock_price_sell AS harga
+            FROM
+                product_stock
+                LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE  AND product_stock_price_sell BETWEEN \'300\' AND \'500\'')
+ 4 APPPATH\Controllers\Product.php(62): CodeIgniter\Database\BaseConnection->query('SELECT 
+                product.product_id AS id,
+                product.product_name AS produk,
+                product.product_category_name AS kategori,
+                product_stock_unit_name AS unit,
+                product_stock_price_sell AS harga
+            FROM
+                product_stock
+                LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE  AND product_stock_price_sell BETWEEN \'300\' AND \'500\'')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->search()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+ERROR - 2024-05-06 04:09:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIMI 0, 2' at line 10 in C:\xampp\htdocs\crud_ci4_postman\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud_ci4_postman\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT \r\n      ...', 0)
+#1 C:\xampp\htdocs\crud_ci4_postman\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \r\n      ...')
+#2 C:\xampp\htdocs\crud_ci4_postman\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \r\n      ...')
+#3 C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php(70): CodeIgniter\Database\BaseConnection->query('SELECT \r\n      ...')
+#4 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(933): App\Controllers\Product->search()
+#5 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#6 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\crud_ci4_postman\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\crud_ci4_postman\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\crud_ci4_postman\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\crud_ci4_postman\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-06 04:09:25 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIMI 0, 2' at line 10
+[Method: GET, Route: product/search]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Product.php(70): CodeIgniter\Database\BaseConnection->query('SELECT 
+                product.product_id AS id,
+                product.product_name AS produk,
+                product.product_category_name AS kategori,
+                product_stock_unit_name AS unit,
+                product_stock_price_sell AS harga
+            FROM
+                product_stock
+                LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE 1=1 AND product_stock_price_sell BETWEEN \'300\' AND \'500\' LIMI 0, 2')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->search()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-06 04:09:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIMI 0, 2' at line 10
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+                product.product_id AS id,
+                product.product_name AS produk,
+                product.product_category_name AS kategori,
+                product_stock_unit_name AS unit,
+                product_stock_price_sell AS harga
+            FROM
+                product_stock
+                LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE 1=1 AND product_stock_price_sell BETWEEN \'300\' AND \'500\' LIMI 0, 2')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+                product.product_id AS id,
+                product.product_name AS produk,
+                product.product_category_name AS kategori,
+                product_stock_unit_name AS unit,
+                product_stock_price_sell AS harga
+            FROM
+                product_stock
+                LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE 1=1 AND product_stock_price_sell BETWEEN \'300\' AND \'500\' LIMI 0, 2')
+ 3 APPPATH\Controllers\Product.php(70): CodeIgniter\Database\BaseConnection->query('SELECT 
+                product.product_id AS id,
+                product.product_name AS produk,
+                product.product_category_name AS kategori,
+                product_stock_unit_name AS unit,
+                product_stock_price_sell AS harga
+            FROM
+                product_stock
+                LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE 1=1 AND product_stock_price_sell BETWEEN \'300\' AND \'500\' LIMI 0, 2')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->search()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-06 04:09:25 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'LIMI 0, 2' at line 10
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT 
+                product.product_id AS id,
+                product.product_name AS produk,
+                product.product_category_name AS kategori,
+                product_stock_unit_name AS unit,
+                product_stock_price_sell AS harga
+            FROM
+                product_stock
+                LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE 1=1 AND product_stock_price_sell BETWEEN \'300\' AND \'500\' LIMI 0, 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+                product.product_id AS id,
+                product.product_name AS produk,
+                product.product_category_name AS kategori,
+                product_stock_unit_name AS unit,
+                product_stock_price_sell AS harga
+            FROM
+                product_stock
+                LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE 1=1 AND product_stock_price_sell BETWEEN \'300\' AND \'500\' LIMI 0, 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+                product.product_id AS id,
+                product.product_name AS produk,
+                product.product_category_name AS kategori,
+                product_stock_unit_name AS unit,
+                product_stock_price_sell AS harga
+            FROM
+                product_stock
+                LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE 1=1 AND product_stock_price_sell BETWEEN \'300\' AND \'500\' LIMI 0, 2')
+ 4 APPPATH\Controllers\Product.php(70): CodeIgniter\Database\BaseConnection->query('SELECT 
+                product.product_id AS id,
+                product.product_name AS produk,
+                product.product_category_name AS kategori,
+                product_stock_unit_name AS unit,
+                product_stock_price_sell AS harga
+            FROM
+                product_stock
+                LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE 1=1 AND product_stock_price_sell BETWEEN \'300\' AND \'500\' LIMI 0, 2')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->search()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-06 04:11:53 --> Error: Call to a member function getResultArray() on array
+[Method: GET, Route: product/search]
+in APPPATH\Controllers\Product.php on line 74.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->search()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-06 04:21:31 --> TypeError: Unsupported operand types: CodeIgniter\Database\MySQLi\Result / int
+[Method: GET, Route: product/search]
+in APPPATH\Controllers\Product.php on line 70.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->search()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-06 04:21:54 --> TypeError: Unsupported operand types: array / int
+[Method: GET, Route: product/search]
+in APPPATH\Controllers\Product.php on line 70.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->search()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+ERROR - 2024-05-06 04:24:14 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '0.5, 2' at line 10 in C:\xampp\htdocs\crud_ci4_postman\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud_ci4_postman\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT \r\n      ...', 0)
+#1 C:\xampp\htdocs\crud_ci4_postman\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \r\n      ...')
+#2 C:\xampp\htdocs\crud_ci4_postman\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \r\n      ...')
+#3 C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php(72): CodeIgniter\Database\BaseConnection->query('SELECT \r\n      ...')
+#4 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(933): App\Controllers\Product->search()
+#5 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#6 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\crud_ci4_postman\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\crud_ci4_postman\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\crud_ci4_postman\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\crud_ci4_postman\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-06 04:24:14 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '0.5, 2' at line 10
+[Method: GET, Route: product/search]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Product.php(72): CodeIgniter\Database\BaseConnection->query('SELECT 
+                product.product_id AS id,
+                product.product_name AS produk,
+                product.product_category_name AS kategori,
+                product_stock_unit_name AS unit,
+                product_stock_price_sell AS harga
+            FROM
+                product_stock
+                LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE 1=1 AND product_stock_price_sell BETWEEN \'100\' AND \'500\' AND product_stock_price_sell >= \'100\' AND product_stock_price_sell <= \'500\' LIMIT 0.5, 2')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->search()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-06 04:24:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '0.5, 2' at line 10
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+                product.product_id AS id,
+                product.product_name AS produk,
+                product.product_category_name AS kategori,
+                product_stock_unit_name AS unit,
+                product_stock_price_sell AS harga
+            FROM
+                product_stock
+                LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE 1=1 AND product_stock_price_sell BETWEEN \'100\' AND \'500\' AND product_stock_price_sell >= \'100\' AND product_stock_price_sell <= \'500\' LIMIT 0.5, 2')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+                product.product_id AS id,
+                product.product_name AS produk,
+                product.product_category_name AS kategori,
+                product_stock_unit_name AS unit,
+                product_stock_price_sell AS harga
+            FROM
+                product_stock
+                LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE 1=1 AND product_stock_price_sell BETWEEN \'100\' AND \'500\' AND product_stock_price_sell >= \'100\' AND product_stock_price_sell <= \'500\' LIMIT 0.5, 2')
+ 3 APPPATH\Controllers\Product.php(72): CodeIgniter\Database\BaseConnection->query('SELECT 
+                product.product_id AS id,
+                product.product_name AS produk,
+                product.product_category_name AS kategori,
+                product_stock_unit_name AS unit,
+                product_stock_price_sell AS harga
+            FROM
+                product_stock
+                LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE 1=1 AND product_stock_price_sell BETWEEN \'100\' AND \'500\' AND product_stock_price_sell >= \'100\' AND product_stock_price_sell <= \'500\' LIMIT 0.5, 2')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->search()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-06 04:24:14 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '0.5, 2' at line 10
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT 
+                product.product_id AS id,
+                product.product_name AS produk,
+                product.product_category_name AS kategori,
+                product_stock_unit_name AS unit,
+                product_stock_price_sell AS harga
+            FROM
+                product_stock
+                LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE 1=1 AND product_stock_price_sell BETWEEN \'100\' AND \'500\' AND product_stock_price_sell >= \'100\' AND product_stock_price_sell <= \'500\' LIMIT 0.5, 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+                product.product_id AS id,
+                product.product_name AS produk,
+                product.product_category_name AS kategori,
+                product_stock_unit_name AS unit,
+                product_stock_price_sell AS harga
+            FROM
+                product_stock
+                LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE 1=1 AND product_stock_price_sell BETWEEN \'100\' AND \'500\' AND product_stock_price_sell >= \'100\' AND product_stock_price_sell <= \'500\' LIMIT 0.5, 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+                product.product_id AS id,
+                product.product_name AS produk,
+                product.product_category_name AS kategori,
+                product_stock_unit_name AS unit,
+                product_stock_price_sell AS harga
+            FROM
+                product_stock
+                LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE 1=1 AND product_stock_price_sell BETWEEN \'100\' AND \'500\' AND product_stock_price_sell >= \'100\' AND product_stock_price_sell <= \'500\' LIMIT 0.5, 2')
+ 4 APPPATH\Controllers\Product.php(72): CodeIgniter\Database\BaseConnection->query('SELECT 
+                product.product_id AS id,
+                product.product_name AS produk,
+                product.product_category_name AS kategori,
+                product_stock_unit_name AS unit,
+                product_stock_price_sell AS harga
+            FROM
+                product_stock
+                LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE 1=1 AND product_stock_price_sell BETWEEN \'100\' AND \'500\' AND product_stock_price_sell >= \'100\' AND product_stock_price_sell <= \'500\' LIMIT 0.5, 2')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->search()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-06 07:11:34 --> ErrorException: Undefined variable $pageSelanjutny
+[Method: GET, Route: product/search]
+in APPPATH\Controllers\Product.php on line 93.
+ 1 APPPATH\Controllers\Product.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pageSelanjutny', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 93)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->search()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-06 09:25:02 --> ErrorException: Undefined array key "product_array"
+[Method: POST, Route: product]
+in APPPATH\Controllers\Product.php on line 103.
+ 1 APPPATH\Controllers\Product.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_array"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-06 09:25:49 --> ErrorException: Undefined array key "product_array"
+[Method: POST, Route: product]
+in APPPATH\Controllers\Product.php on line 103.
+ 1 APPPATH\Controllers\Product.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_array"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-06 09:28:30 --> ErrorException: Undefined array key "product_array"
+[Method: POST, Route: product]
+in APPPATH\Controllers\Product.php on line 101.
+ 1 APPPATH\Controllers\Product.php(101): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_array"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 101)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-06 09:34:26 --> ErrorException: Undefined array key "products"
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 106.
+ 1 APPPATH\Controllers\Product.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "products"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 106)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-06 09:34:38 --> ErrorException: Undefined array key "product_array"
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 106.
+ 1 APPPATH\Controllers\Product.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_array"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 106)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-06 09:37:02 --> Error: Call to undefined method CodeIgniter\HTTP\IncomingRequest::getFormData()
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 96.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-06 09:39:45 --> ErrorException: file_get_contents(): Invalid php:// URL specified
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 96.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(): Invalid php:// URL specified', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 96)
+ 2 APPPATH\Controllers\Product.php(96): file_get_contents('php://insertObject')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-06 09:41:29 --> Error: Cannot use object of type stdClass as array
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 106.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-06 09:42:58 --> TypeError: Cannot access offset of type string on string
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 107.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-06 09:43:25 --> TypeError: Cannot access offset of type string on string
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 107.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-06 09:43:37 --> TypeError: Cannot access offset of type string on string
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 107.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-06 09:43:55 --> TypeError: Cannot access offset of type string on string
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 107.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-06 09:45:06 --> TypeError: json_decode(): Argument #1 ($json) must be of type string, stdClass given
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 99.
+ 1 APPPATH\Controllers\Product.php(99): json_decode(Object(stdClass))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-06 09:45:08 --> TypeError: json_decode(): Argument #1 ($json) must be of type string, stdClass given
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 99.
+ 1 APPPATH\Controllers\Product.php(99): json_decode(Object(stdClass))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-06 09:45:23 --> TypeError: Cannot access offset of type string on string
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 107.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')

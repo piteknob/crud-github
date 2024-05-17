@@ -1,0 +1,158 @@
+ERROR - 2024-05-02 02:03:42 --> mysqli_sql_exception: Unknown column 'log_stock_quantity' in 'field list' in C:\xampp\htdocs\crud_ci4_postman\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud_ci4_postman\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO log...', 0)
+#1 C:\xampp\htdocs\crud_ci4_postman\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO log...')
+#2 C:\xampp\htdocs\crud_ci4_postman\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO log...')
+#3 C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php(259): CodeIgniter\Database\BaseConnection->query('INSERT INTO log...')
+#4 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(933): App\Controllers\Product->move()
+#5 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#6 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\crud_ci4_postman\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\crud_ci4_postman\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\crud_ci4_postman\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\crud_ci4_postman\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-02 02:03:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'log_stock_quantity' in 'field list'
+[Method: POST, Route: product/move]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Product.php(259): CodeIgniter\Database\BaseConnection->query('INSERT INTO log_stock (log_stock_product_id, log_stock_product_name, log_stock_status, log_stock_quantity, log_stock_category_id, log_stock_category_name, log_stock_unit_id, log_stock_unit_name, log_stock_date)
+            SELECT product_id, product_name, \'reduce\', 20, category_id, category_name, unit_id, unit_name, NOW()
+            FROM product, category, unit
+            WHERE product_id = \'16\' AND category_id = \'1\' AND unit_id = \'4\'')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->move()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-02 02:03:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'log_stock_quantity' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO log_stock (log_stock_product_id, log_stock_product_name, log_stock_status, log_stock_quantity, log_stock_category_id, log_stock_category_name, log_stock_unit_id, log_stock_unit_name, log_stock_date)
+            SELECT product_id, product_name, \'reduce\', 20, category_id, category_name, unit_id, unit_name, NOW()
+            FROM product, category, unit
+            WHERE product_id = \'16\' AND category_id = \'1\' AND unit_id = \'4\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO log_stock (log_stock_product_id, log_stock_product_name, log_stock_status, log_stock_quantity, log_stock_category_id, log_stock_category_name, log_stock_unit_id, log_stock_unit_name, log_stock_date)
+            SELECT product_id, product_name, \'reduce\', 20, category_id, category_name, unit_id, unit_name, NOW()
+            FROM product, category, unit
+            WHERE product_id = \'16\' AND category_id = \'1\' AND unit_id = \'4\'')
+ 3 APPPATH\Controllers\Product.php(259): CodeIgniter\Database\BaseConnection->query('INSERT INTO log_stock (log_stock_product_id, log_stock_product_name, log_stock_status, log_stock_quantity, log_stock_category_id, log_stock_category_name, log_stock_unit_id, log_stock_unit_name, log_stock_date)
+            SELECT product_id, product_name, \'reduce\', 20, category_id, category_name, unit_id, unit_name, NOW()
+            FROM product, category, unit
+            WHERE product_id = \'16\' AND category_id = \'1\' AND unit_id = \'4\'')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->move()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-02 02:03:42 --> [Caused by] mysqli_sql_exception: Unknown column 'log_stock_quantity' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO log_stock (log_stock_product_id, log_stock_product_name, log_stock_status, log_stock_quantity, log_stock_category_id, log_stock_category_name, log_stock_unit_id, log_stock_unit_name, log_stock_date)
+            SELECT product_id, product_name, \'reduce\', 20, category_id, category_name, unit_id, unit_name, NOW()
+            FROM product, category, unit
+            WHERE product_id = \'16\' AND category_id = \'1\' AND unit_id = \'4\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO log_stock (log_stock_product_id, log_stock_product_name, log_stock_status, log_stock_quantity, log_stock_category_id, log_stock_category_name, log_stock_unit_id, log_stock_unit_name, log_stock_date)
+            SELECT product_id, product_name, \'reduce\', 20, category_id, category_name, unit_id, unit_name, NOW()
+            FROM product, category, unit
+            WHERE product_id = \'16\' AND category_id = \'1\' AND unit_id = \'4\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO log_stock (log_stock_product_id, log_stock_product_name, log_stock_status, log_stock_quantity, log_stock_category_id, log_stock_category_name, log_stock_unit_id, log_stock_unit_name, log_stock_date)
+            SELECT product_id, product_name, \'reduce\', 20, category_id, category_name, unit_id, unit_name, NOW()
+            FROM product, category, unit
+            WHERE product_id = \'16\' AND category_id = \'1\' AND unit_id = \'4\'')
+ 4 APPPATH\Controllers\Product.php(259): CodeIgniter\Database\BaseConnection->query('INSERT INTO log_stock (log_stock_product_id, log_stock_product_name, log_stock_status, log_stock_quantity, log_stock_category_id, log_stock_category_name, log_stock_unit_id, log_stock_unit_name, log_stock_date)
+            SELECT product_id, product_name, \'reduce\', 20, category_id, category_name, unit_id, unit_name, NOW()
+            FROM product, category, unit
+            WHERE product_id = \'16\' AND category_id = \'1\' AND unit_id = \'4\'')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->move()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-02 06:15:05 --> Error: Call to undefined function App\Controllers\cari()
+[Method: GET, Route: product]
+in APPPATH\Controllers\Product.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-02 06:15:39 --> Error: Call to undefined function App\Controllers\cari()
+[Method: GET, Route: product]
+in APPPATH\Controllers\Product.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-02 06:15:49 --> Error: Call to undefined function App\Controllers\cari()
+[Method: GET, Route: product]
+in APPPATH\Controllers\Product.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-02 06:15:56 --> Error: Call to undefined function App\Controllers\cari()
+[Method: GET, Route: product]
+in APPPATH\Controllers\Product.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-02 06:30:14 --> ErrorException: Undefined array key "search"
+[Method: GET, Route: product/search]
+in APPPATH\Controllers\Product.php on line 39.
+ 1 APPPATH\Controllers\Product.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "search"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->search()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-02 06:30:40 --> ErrorException: Undefined array key "search"
+[Method: GET, Route: product/search]
+in APPPATH\Controllers\Product.php on line 41.
+ 1 APPPATH\Controllers\Product.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "search"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->search()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-02 06:37:13 --> ErrorException: Undefined property: App\Controllers\Product::$respond
+[Method: POST, Route: product/search]
+in APPPATH\Controllers\Product.php on line 59.
+ 1 APPPATH\Controllers\Product.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Product::$respond', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 59)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->search()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-02 07:11:22 --> ErrorException: Undefined variable $db
+[Method: POST, Route: product/softDelete]
+in APPPATH\Controllers\Product.php on line 328.
+ 1 APPPATH\Controllers\Product.php(328): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 328)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->softDelete()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')

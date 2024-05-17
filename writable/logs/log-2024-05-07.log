@@ -1,0 +1,760 @@
+CRITICAL - 2024-05-07 06:33:33 --> ErrorException: Undefined variable $responseValidation
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 154.
+ 1 APPPATH\Controllers\Product.php(154): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $responseValidation', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 154)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 06:33:56 --> ErrorException: Undefined variable $responseValidation
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 154.
+ 1 APPPATH\Controllers\Product.php(154): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $responseValidation', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 154)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 06:41:12 --> TypeError: CodeIgniter\RESTful\ResourceController::respond(): Argument #2 ($status) must be of type ?int, array given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 151
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\API\ResponseTrait.php on line 92.
+ 1 APPPATH\Controllers\Product.php(151): CodeIgniter\RESTful\ResourceController->respond([...], [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 06:43:15 --> TypeError: CodeIgniter\RESTful\ResourceController::respond(): Argument #2 ($status) must be of type ?int, array given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 150
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\API\ResponseTrait.php on line 92.
+ 1 APPPATH\Controllers\Product.php(150): CodeIgniter\RESTful\ResourceController->respond([...], [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 06:44:26 --> TypeError: CodeIgniter\RESTful\ResourceController::respond(): Argument #2 ($status) must be of type ?int, array given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 117
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\API\ResponseTrait.php on line 92.
+ 1 APPPATH\Controllers\Product.php(117): CodeIgniter\RESTful\ResourceController->respond([], [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 06:44:34 --> TypeError: CodeIgniter\RESTful\ResourceController::respond(): Argument #2 ($status) must be of type ?int, array given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 117
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\API\ResponseTrait.php on line 92.
+ 1 APPPATH\Controllers\Product.php(117): CodeIgniter\RESTful\ResourceController->respond([], [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 06:44:41 --> TypeError: CodeIgniter\Database\BaseConnection::prepare(): Argument #1 ($func) must be of type Closure, string given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 121
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\Database\BaseConnection.php on line 950.
+ 1 APPPATH\Controllers\Product.php(121): CodeIgniter\Database\BaseConnection->prepare('INSERT INTO product (product_name, product_category_id, product_category_name) 
+                                    SELECT ?, category_id, category_name FROM category WHERE category_id = ?')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 06:46:51 --> Error: Call to a member function execute() on string
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 140.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 06:48:18 --> ErrorException: Undefined variable $idProduct
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 143.
+ 1 APPPATH\Controllers\Product.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idProduct', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 143)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 06:49:29 --> TypeError: CodeIgniter\RESTful\ResourceController::respond(): Argument #2 ($status) must be of type ?int, array given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 154
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\API\ResponseTrait.php on line 92.
+ 1 APPPATH\Controllers\Product.php(154): CodeIgniter\RESTful\ResourceController->respond([...], [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 06:50:14 --> TypeError: CodeIgniter\RESTful\ResourceController::respond(): Argument #2 ($status) must be of type ?int, array given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 149
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\API\ResponseTrait.php on line 92.
+ 1 APPPATH\Controllers\Product.php(149): CodeIgniter\RESTful\ResourceController->respond([...], [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 06:50:54 --> TypeError: CodeIgniter\RESTful\ResourceController::respond(): Argument #2 ($status) must be of type ?int, array given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 116
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\API\ResponseTrait.php on line 92.
+ 1 APPPATH\Controllers\Product.php(116): CodeIgniter\RESTful\ResourceController->respond([], [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 06:51:59 --> TypeError: CodeIgniter\RESTful\ResourceController::respond(): Argument #2 ($status) must be of type ?int, array given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 116
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\API\ResponseTrait.php on line 92.
+ 1 APPPATH\Controllers\Product.php(116): CodeIgniter\RESTful\ResourceController->respond([], [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 06:52:40 --> TypeError: CodeIgniter\RESTful\ResourceController::respond(): Argument #2 ($status) must be of type ?int, array given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 116
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\API\ResponseTrait.php on line 92.
+ 1 APPPATH\Controllers\Product.php(116): CodeIgniter\RESTful\ResourceController->respond([], [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 06:53:04 --> TypeError: CodeIgniter\RESTful\ResourceController::respond(): Argument #2 ($status) must be of type ?int, array given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 116
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\API\ResponseTrait.php on line 92.
+ 1 APPPATH\Controllers\Product.php(116): CodeIgniter\RESTful\ResourceController->respond([], [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 06:53:29 --> TypeError: CodeIgniter\RESTful\ResourceController::respond(): Argument #2 ($status) must be of type ?int, array given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 148
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\API\ResponseTrait.php on line 92.
+ 1 APPPATH\Controllers\Product.php(148): CodeIgniter\RESTful\ResourceController->respond([...], [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 06:53:39 --> TypeError: CodeIgniter\RESTful\ResourceController::respond(): Argument #2 ($status) must be of type ?int, array given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 148
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\API\ResponseTrait.php on line 92.
+ 1 APPPATH\Controllers\Product.php(148): CodeIgniter\RESTful\ResourceController->respond([...], [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 06:55:05 --> TypeError: CodeIgniter\RESTful\ResourceController::respond(): Argument #2 ($status) must be of type ?int, array given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 117
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\API\ResponseTrait.php on line 92.
+ 1 APPPATH\Controllers\Product.php(117): CodeIgniter\RESTful\ResourceController->respond([], [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 06:55:12 --> TypeError: CodeIgniter\RESTful\ResourceController::respond(): Argument #2 ($status) must be of type ?int, array given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 117
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\API\ResponseTrait.php on line 92.
+ 1 APPPATH\Controllers\Product.php(117): CodeIgniter\RESTful\ResourceController->respond([], [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 07:01:22 --> TypeError: CodeIgniter\RESTful\ResourceController::failValidationError(): Argument #1 ($description) must be of type string, array given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 120
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\API\ResponseTrait.php on line 234.
+ 1 APPPATH\Controllers\Product.php(120): CodeIgniter\RESTful\ResourceController->failValidationError([...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 07:13:08 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Product.php(95): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 07:15:15 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Product.php(95): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 07:15:25 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Product.php(95): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 07:15:27 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Product.php(95): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 07:21:21 --> Error: Object of class CodeIgniter\HTTP\Response could not be converted to string
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 117.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 07:30:13 --> TypeError: CodeIgniter\RESTful\ResourceController::failValidationError(): Argument #1 ($description) must be of type string, array given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 118
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\API\ResponseTrait.php on line 234.
+ 1 APPPATH\Controllers\Product.php(118): CodeIgniter\RESTful\ResourceController->failValidationError([...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 07:44:34 --> TypeError: CodeIgniter\RESTful\ResourceController::failValidationError(): Argument #1 ($description) must be of type string, array given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 118
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\API\ResponseTrait.php on line 234.
+ 1 APPPATH\Controllers\Product.php(118): CodeIgniter\RESTful\ResourceController->failValidationError([...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 07:44:42 --> TypeError: CodeIgniter\RESTful\ResourceController::failValidationError(): Argument #1 ($description) must be of type string, array given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 118
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\API\ResponseTrait.php on line 234.
+ 1 APPPATH\Controllers\Product.php(118): CodeIgniter\RESTful\ResourceController->failValidationError([...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 07:46:32 --> TypeError: CodeIgniter\RESTful\ResourceController::failValidationError(): Argument #1 ($description) must be of type string, array given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 113
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\API\ResponseTrait.php on line 234.
+ 1 APPPATH\Controllers\Product.php(113): CodeIgniter\RESTful\ResourceController->failValidationError([...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 07:47:46 --> TypeError: CodeIgniter\Validation\Validation::getRegex(): Argument #1 ($field) must be of type string, null given, called in C:\xampp\htdocs\crud_ci4_postman\system\Validation\Validation.php on line 866
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\Validation\Validation.php on line 221.
+ 1 SYSTEMPATH\Validation\Validation.php(866): CodeIgniter\Validation\Validation::getRegex(null)
+ 2 [internal function]: CodeIgniter\Validation\Validation::CodeIgniter\Validation\{closure}('product_name')
+ 3 SYSTEMPATH\Validation\Validation.php(864): array_filter([...], Object(Closure), 2)
+ 4 APPPATH\Controllers\Product.php(110): CodeIgniter\Validation\Validation->getError()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 07:48:50 --> Error: Object of class CodeIgniter\HTTP\Response could not be converted to string
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 113.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 07:49:44 --> Error: Object of class CodeIgniter\HTTP\Response could not be converted to string
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 113.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 07:50:08 --> Error: Object of class CodeIgniter\HTTP\Response could not be converted to string
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 113.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 07:50:13 --> Error: Object of class CodeIgniter\HTTP\Response could not be converted to string
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 113.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 07:50:21 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Product.php(95): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 07:50:28 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Product.php(95): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 07:50:33 --> Error: Object of class CodeIgniter\HTTP\Response could not be converted to string
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 113.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 07:50:43 --> Error: Object of class CodeIgniter\HTTP\Response could not be converted to string
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 113.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 07:50:53 --> Error: Object of class CodeIgniter\HTTP\Response could not be converted to string
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 113.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 07:50:58 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Product.php(95): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 07:51:05 --> Error: Object of class CodeIgniter\HTTP\Response could not be converted to string
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 113.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 07:51:37 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Product.php(95): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 07:58:57 --> TypeError: str_contains(): Argument #1 ($haystack) must be of type string, int given
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\Validation\Validation.php on line 172.
+ 1 SYSTEMPATH\Validation\Validation.php(172): str_contains(1, '*')
+ 2 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 3 APPPATH\Controllers\Product.php(108): CodeIgniter\Controller->validate([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 08:03:35 --> TypeError: CodeIgniter\Validation\Validation::run(): Argument #1 ($data) must be of type ?array, stdClass given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 114
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\Validation\Validation.php on line 136.
+ 1 APPPATH\Controllers\Product.php(114): CodeIgniter\Validation\Validation->run(Object(stdClass))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 08:04:12 --> TypeError: CodeIgniter\Validation\Validation::run(): Argument #1 ($data) must be of type ?array, stdClass given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 114
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\Validation\Validation.php on line 136.
+ 1 APPPATH\Controllers\Product.php(114): CodeIgniter\Validation\Validation->run(Object(stdClass))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 08:04:27 --> TypeError: CodeIgniter\Validation\Validation::run(): Argument #1 ($data) must be of type ?array, stdClass given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 114
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\Validation\Validation.php on line 136.
+ 1 APPPATH\Controllers\Product.php(114): CodeIgniter\Validation\Validation->run(Object(stdClass))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 08:12:54 --> ParseError: syntax error, unexpected token "foreach", expecting "function" or "const"
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 116.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('product/insertObject', 'POST')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('product/insertObject')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('product/insertObject')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 08:17:02 --> ParseError: syntax error, unexpected token "public"
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 157.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('product/insertObject', 'POST')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('product/insertObject')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('product/insertObject')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 08:17:30 --> ErrorException: Undefined variable $validation
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 115.
+ 1 APPPATH\Controllers\Product.php(115): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 115)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 08:18:19 --> TypeError: CodeIgniter\Validation\Validation::run(): Argument #1 ($data) must be of type ?array, stdClass given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 115
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\Validation\Validation.php on line 136.
+ 1 APPPATH\Controllers\Product.php(115): CodeIgniter\Validation\Validation->run(Object(stdClass))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 08:18:57 --> TypeError: CodeIgniter\Validation\Validation::run(): Argument #1 ($data) must be of type ?array, stdClass given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 115
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\Validation\Validation.php on line 136.
+ 1 APPPATH\Controllers\Product.php(115): CodeIgniter\Validation\Validation->run(Object(stdClass))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 08:19:06 --> TypeError: CodeIgniter\Validation\Validation::run(): Argument #1 ($data) must be of type ?array, stdClass given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 115
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\Validation\Validation.php on line 136.
+ 1 APPPATH\Controllers\Product.php(115): CodeIgniter\Validation\Validation->run(Object(stdClass))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 08:22:49 --> ErrorException: Undefined property: CodeIgniter\Validation\Validation::$setRules
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 113.
+ 1 APPPATH\Controllers\Product.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Validation\\Validation::$setRules', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 113)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 08:30:39 --> Error: Call to a member function run() on array
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 08:31:04 --> Error: Call to a member function run() on array
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 08:31:26 --> Error: Call to a member function run() on array
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 08:32:35 --> Error: Call to a member function run() on array
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 08:32:42 --> Error: Call to a member function run() on array
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 08:32:47 --> Error: Call to a member function run() on array
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 08:32:50 --> Error: Call to a member function run() on array
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 08:33:04 --> Error: Call to a member function run() on array
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 109.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 08:44:03 --> ErrorException: 'continue' not in the 'loop' or 'switch' context
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 113.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-05-07 08:44:25 --> ErrorException: 'continue' not in the 'loop' or 'switch' context
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 112.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-05-07 08:44:33 --> ErrorException: Array to string conversion
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 110.
+ 1 APPPATH\Controllers\Product.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 110)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 08:46:45 --> ErrorException: Array to string conversion
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 116.
+ 1 APPPATH\Controllers\Product.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 116)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 08:47:49 --> TypeError: str_contains(): Argument #1 ($haystack) must be of type string, int given
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\Validation\Validation.php on line 172.
+ 1 SYSTEMPATH\Validation\Validation.php(172): str_contains(0, '*')
+ 2 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 3 APPPATH\Controllers\Product.php(107): CodeIgniter\Controller->validate([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 08:50:32 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Product.php(95): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 08:53:59 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Product.php(95): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 09:30:17 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Product.php(95): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-07 09:57:26 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Product.php(95): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')

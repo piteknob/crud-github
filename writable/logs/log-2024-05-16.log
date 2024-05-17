@@ -1,0 +1,1051 @@
+CRITICAL - 2024-05-16 08:41:36 --> ErrorException: Undefined array key "Token-User"
+[Method: GET, Route: index]
+in APPPATH\Filters\Auth.php on line 37.
+ 1 APPPATH\Filters\Auth.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token-User"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Filters\\Auth.php', 37)
+ 2 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('index', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 08:51:29 --> Error: Call to undefined function App\Filters\getErrorMessage()
+[Method: POST, Route: product/insert]
+in APPPATH\Filters\Auth.php on line 51.
+ 1 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/insert', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 08:54:42 --> ParseError: syntax error, unexpected token "]"
+[Method: POST, Route: product/insert]
+in APPPATH\Filters\Auth.php on line 51.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Filters\\Auth.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Filters\\Auth')
+ 3 SYSTEMPATH\Filters\Filters.php(197): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Filters\\Auth')
+ 4 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/insert', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 08:56:58 --> Error: Call to a member function getErrors() on string
+[Method: POST, Route: product/insert]
+in APPPATH\Filters\Auth.php on line 51.
+ 1 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/insert', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 08:57:24 --> Error: Call to a member function getErrors() on array
+[Method: POST, Route: product/insert]
+in APPPATH\Filters\Auth.php on line 51.
+ 1 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/insert', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 08:57:53 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Result::getErrors()
+[Method: POST, Route: product/insert]
+in APPPATH\Filters\Auth.php on line 51.
+ 1 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/insert', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 08:58:16 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Result::getErrors()
+[Method: POST, Route: product/insert]
+in APPPATH\Filters\Auth.php on line 52.
+ 1 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/insert', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 08:58:17 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Result::getErrors()
+[Method: POST, Route: product/insert]
+in APPPATH\Filters\Auth.php on line 52.
+ 1 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/insert', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 08:58:35 --> Error: Call to a member function getErrors() on string
+[Method: POST, Route: product/insert]
+in APPPATH\Filters\Auth.php on line 51.
+ 1 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/insert', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 09:01:23 --> Error: Call to a member function getErrors() on string
+[Method: POST, Route: product/insert]
+in APPPATH\Filters\Auth.php on line 51.
+ 1 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/insert', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 09:04:32 --> Error: Call to undefined function App\Filters\errorSummary()
+[Method: POST, Route: product/insert]
+in APPPATH\Filters\Auth.php on line 52.
+ 1 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/insert', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 09:05:17 --> ErrorException: Undefined array key "Token-User"
+[Method: POST, Route: product/insert]
+in APPPATH\Filters\Auth.php on line 39.
+ 1 APPPATH\Filters\Auth.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token-User"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Filters\\Auth.php', 39)
+ 2 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/insert', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 09:05:20 --> ErrorException: Undefined array key "Token-User"
+[Method: POST, Route: product/insert]
+in APPPATH\Filters\Auth.php on line 39.
+ 1 APPPATH\Filters\Auth.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token-User"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Filters\\Auth.php', 39)
+ 2 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/insert', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 09:06:01 --> ErrorException: Undefined array key "Token-User"
+[Method: GET, Route: product/search]
+in APPPATH\Filters\Auth.php on line 39.
+ 1 APPPATH\Filters\Auth.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token-User"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Filters\\Auth.php', 39)
+ 2 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/search', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 09:09:15 --> Error: Call to a member function getErrors() on array
+[Method: GET, Route: product/search]
+in APPPATH\Filters\Auth.php on line 52.
+ 1 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/search', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 09:09:46 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Result::getErrors()
+[Method: GET, Route: product/search]
+in APPPATH\Filters\Auth.php on line 52.
+ 1 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/search', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 09:10:18 --> Error: Call to undefined function App\Filters\getErrors()
+[Method: GET, Route: product/search]
+in APPPATH\Filters\Auth.php on line 45.
+ 1 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/search', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 09:16:35 --> ErrorException: Undefined property: App\Filters\Auth::$response
+[Method: GET, Route: product/search]
+in SYSTEMPATH\API\ResponseTrait.php on line 326.
+ 1 SYSTEMPATH\API\ResponseTrait.php(326): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Filters\\Auth::$response', 'C:\\xampp\\htdocs\\crud_ci4_postman\\system\\API\\ResponseTrait.php', 326)
+ 2 SYSTEMPATH\API\ResponseTrait.php(103): App\Filters\Auth->format([...])
+ 3 SYSTEMPATH\API\ResponseTrait.php(140): App\Filters\Auth->respond([...], 401, '')
+ 4 SYSTEMPATH\API\ResponseTrait.php(203): App\Filters\Auth->fail([...], 401, null, '')
+ 5 APPPATH\Filters\Auth.php(50): App\Filters\Auth->failUnauthorized('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9..zs3qKndYrlllnu6lhioucFqciM4pVSkUtb8f9sS_PjY')
+ 6 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 7 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 8 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/search', 'before')
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 09:17:16 --> ErrorException: Undefined property: App\Filters\Auth::$response
+[Method: GET, Route: product/search]
+in SYSTEMPATH\API\ResponseTrait.php on line 326.
+ 1 SYSTEMPATH\API\ResponseTrait.php(326): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Filters\\Auth::$response', 'C:\\xampp\\htdocs\\crud_ci4_postman\\system\\API\\ResponseTrait.php', 326)
+ 2 SYSTEMPATH\API\ResponseTrait.php(103): App\Filters\Auth->format([...])
+ 3 SYSTEMPATH\API\ResponseTrait.php(140): App\Filters\Auth->respond([...], 401, '')
+ 4 SYSTEMPATH\API\ResponseTrait.php(203): App\Filters\Auth->fail([...], 401, null, '')
+ 5 APPPATH\Filters\Auth.php(50): App\Filters\Auth->failUnauthorized('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9..zs3qKndYrlllnu6lhioucFqciM4pVSkUtb8f9sS_PjY')
+ 6 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 7 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 8 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/search', 'before')
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 09:37:16 --> Error: Call to a member function getErrors() on string
+[Method: GET, Route: product/search]
+in APPPATH\Filters\Auth.php on line 63.
+ 1 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/search', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 09:38:09 --> Error: Call to a member function getErrors() on string
+[Method: GET, Route: product/search]
+in APPPATH\Filters\Auth.php on line 63.
+ 1 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/search', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 09:38:12 --> Error: Call to a member function getErrors() on string
+[Method: GET, Route: product/search]
+in APPPATH\Filters\Auth.php on line 63.
+ 1 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/search', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 10:27:22 --> ErrorException: A non-numeric value encountered
+[Method: GET, Route: index]
+in APPPATH\Controllers\Product.php on line 43.
+ 1 APPPATH\Controllers\Product.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 10:27:44 --> ErrorException: A non-numeric value encountered
+[Method: GET, Route: index]
+in APPPATH\Controllers\Product.php on line 43.
+ 1 APPPATH\Controllers\Product.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+ERROR - 2024-05-16 10:32:17 --> mysqli_sql_exception: Unknown column 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjEzNTY5OTk1MjQsIm5iZiI6MTM1NzAwMDAwMCwidWlkIjoiOSIsImVtYWlsIjoiZmxveWRAZ21haWwuY29tIn0.iGZE2ZalBOqwhm71G4x_599gFa73oj7_iMSsRfy68xQ' in 'where clause' in C:\xampp\htdocs\crud_ci4_postman\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud_ci4_postman\system\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE auth_use...', 0)
+#1 C:\xampp\htdocs\crud_ci4_postman\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE auth_use...')
+#2 C:\xampp\htdocs\crud_ci4_postman\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE auth_use...')
+#3 C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php(46): CodeIgniter\Database\BaseConnection->query('UPDATE auth_use...')
+#4 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(933): App\Controllers\Product->index()
+#5 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#6 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\crud_ci4_postman\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\crud_ci4_postman\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\crud_ci4_postman\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\crud_ci4_postman\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-16 10:32:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjEzNTY5OTk1MjQsIm5iZiI6MTM1NzAwMDAwMCwidWlkIjoiOSIsImVtYWlsIjoiZmxveWRAZ21haWwuY29tIn0.iGZE2ZalBOqwhm71G4x_599gFa73oj7_iMSsRfy68xQ' in 'where clause'
+[Method: GET, Route: index]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Product.php(46): CodeIgniter\Database\BaseConnection->query('UPDATE auth_user 
+            SET 
+            auth_user_date_login = NOW(),
+            auth_user_date_expired = \'2024-05-16 11:32:17\'
+            WHERE auth_user_token = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjEzNTY5OTk1MjQsIm5iZiI6MTM1NzAwMDAwMCwidWlkIjoiOSIsImVtYWlsIjoiZmxveWRAZ21haWwuY29tIn0.iGZE2ZalBOqwhm71G4x_599gFa73oj7_iMSsRfy68xQ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 10:32:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjEzNTY5OTk1MjQsIm5iZiI6MTM1NzAwMDAwMCwidWlkIjoiOSIsImVtYWlsIjoiZmxveWRAZ21haWwuY29tIn0.iGZE2ZalBOqwhm71G4x_599gFa73oj7_iMSsRfy68xQ' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE auth_user 
+            SET 
+            auth_user_date_login = NOW(),
+            auth_user_date_expired = \'2024-05-16 11:32:17\'
+            WHERE auth_user_token = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjEzNTY5OTk1MjQsIm5iZiI6MTM1NzAwMDAwMCwidWlkIjoiOSIsImVtYWlsIjoiZmxveWRAZ21haWwuY29tIn0.iGZE2ZalBOqwhm71G4x_599gFa73oj7_iMSsRfy68xQ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE auth_user 
+            SET 
+            auth_user_date_login = NOW(),
+            auth_user_date_expired = \'2024-05-16 11:32:17\'
+            WHERE auth_user_token = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjEzNTY5OTk1MjQsIm5iZiI6MTM1NzAwMDAwMCwidWlkIjoiOSIsImVtYWlsIjoiZmxveWRAZ21haWwuY29tIn0.iGZE2ZalBOqwhm71G4x_599gFa73oj7_iMSsRfy68xQ')
+ 3 APPPATH\Controllers\Product.php(46): CodeIgniter\Database\BaseConnection->query('UPDATE auth_user 
+            SET 
+            auth_user_date_login = NOW(),
+            auth_user_date_expired = \'2024-05-16 11:32:17\'
+            WHERE auth_user_token = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjEzNTY5OTk1MjQsIm5iZiI6MTM1NzAwMDAwMCwidWlkIjoiOSIsImVtYWlsIjoiZmxveWRAZ21haWwuY29tIn0.iGZE2ZalBOqwhm71G4x_599gFa73oj7_iMSsRfy68xQ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 10:32:17 --> [Caused by] mysqli_sql_exception: Unknown column 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjEzNTY5OTk1MjQsIm5iZiI6MTM1NzAwMDAwMCwidWlkIjoiOSIsImVtYWlsIjoiZmxveWRAZ21haWwuY29tIn0.iGZE2ZalBOqwhm71G4x_599gFa73oj7_iMSsRfy68xQ' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('UPDATE auth_user 
+            SET 
+            auth_user_date_login = NOW(),
+            auth_user_date_expired = \'2024-05-16 11:32:17\'
+            WHERE auth_user_token = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjEzNTY5OTk1MjQsIm5iZiI6MTM1NzAwMDAwMCwidWlkIjoiOSIsImVtYWlsIjoiZmxveWRAZ21haWwuY29tIn0.iGZE2ZalBOqwhm71G4x_599gFa73oj7_iMSsRfy68xQ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE auth_user 
+            SET 
+            auth_user_date_login = NOW(),
+            auth_user_date_expired = \'2024-05-16 11:32:17\'
+            WHERE auth_user_token = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjEzNTY5OTk1MjQsIm5iZiI6MTM1NzAwMDAwMCwidWlkIjoiOSIsImVtYWlsIjoiZmxveWRAZ21haWwuY29tIn0.iGZE2ZalBOqwhm71G4x_599gFa73oj7_iMSsRfy68xQ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE auth_user 
+            SET 
+            auth_user_date_login = NOW(),
+            auth_user_date_expired = \'2024-05-16 11:32:17\'
+            WHERE auth_user_token = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjEzNTY5OTk1MjQsIm5iZiI6MTM1NzAwMDAwMCwidWlkIjoiOSIsImVtYWlsIjoiZmxveWRAZ21haWwuY29tIn0.iGZE2ZalBOqwhm71G4x_599gFa73oj7_iMSsRfy68xQ')
+ 4 APPPATH\Controllers\Product.php(46): CodeIgniter\Database\BaseConnection->query('UPDATE auth_user 
+            SET 
+            auth_user_date_login = NOW(),
+            auth_user_date_expired = \'2024-05-16 11:32:17\'
+            WHERE auth_user_token = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjEzNTY5OTk1MjQsIm5iZiI6MTM1NzAwMDAwMCwidWlkIjoiOSIsImVtYWlsIjoiZmxveWRAZ21haWwuY29tIn0.iGZE2ZalBOqwhm71G4x_599gFa73oj7_iMSsRfy68xQ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 10:43:44 --> ParseError: syntax error, unexpected token "=>", expecting "]"
+[Method: GET, Route: index]
+in APPPATH\Controllers\Product.php on line 38.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Product')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Product')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Product', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 11:13:22 --> ErrorException: Undefined array key "Token-User"
+[Method: GET, Route: index]
+in APPPATH\Filters\Auth.php on line 44.
+ 1 APPPATH\Filters\Auth.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token-User"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Filters\\Auth.php', 44)
+ 2 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('index', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 11:13:53 --> ErrorException: Undefined array key "Token-User"
+[Method: GET, Route: index]
+in APPPATH\Filters\Auth.php on line 44.
+ 1 APPPATH\Filters\Auth.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token-User"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Filters\\Auth.php', 44)
+ 2 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('index', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 11:14:19 --> ErrorException: Undefined array key "Token-User"
+[Method: GET, Route: index]
+in APPPATH\Filters\Auth.php on line 44.
+ 1 APPPATH\Filters\Auth.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token-User"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Filters\\Auth.php', 44)
+ 2 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('index', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 11:14:20 --> ErrorException: Undefined array key "Token-User"
+[Method: GET, Route: index]
+in APPPATH\Filters\Auth.php on line 44.
+ 1 APPPATH\Filters\Auth.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token-User"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Filters\\Auth.php', 44)
+ 2 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('index', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 11:17:35 --> ErrorException: Undefined array key "Token-User"
+[Method: POST, Route: product/insert]
+in APPPATH\Filters\Auth.php on line 44.
+ 1 APPPATH\Filters\Auth.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token-User"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Filters\\Auth.php', 44)
+ 2 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/insert', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 11:26:57 --> ErrorException: Undefined property: stdClass::$product_stock_buy
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 182.
+ 1 APPPATH\Controllers\Product.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$product_stock_buy', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 182)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 11:30:35 --> ParseError: syntax error, unexpected token "return", expecting "function" or "const"
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 223.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('product/insertObject', 'POST')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('product/insertObject')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('product/insertObject')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 11:30:59 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 229.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('product/insertObject', 'POST')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('product/insertObject')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('product/insertObject')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 11:32:25 --> ErrorException: 'continue' not in the 'loop' or 'switch' context
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 192.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-05-16 11:42:24 --> Error: Cannot use object of type stdClass as array
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 183.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 11:45:29 --> Error: Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 183.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 11:47:27 --> ErrorException: Undefined variable $unitName
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 201.
+ 1 APPPATH\Controllers\Product.php(201): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $unitName', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 201)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 11:51:29 --> ErrorException: Array to string conversion
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 223.
+ 1 APPPATH\Controllers\Product.php(223): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 223)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 11:52:34 --> ErrorException: Array to string conversion
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 221.
+ 1 APPPATH\Controllers\Product.php(221): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 221)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 13:21:28 --> ErrorException: Undefined variable $post
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 160.
+ 1 APPPATH\Controllers\Product.php(160): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $post', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 160)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 13:22:06 --> ErrorException: Object of class stdClass could not be converted to int
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 160.
+ 1 APPPATH\Controllers\Product.php(160): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Object of class stdClass could not be converted to int', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 160)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 13:23:37 --> ErrorException: Undefined property: stdClass::$product_name
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 225.
+ 1 APPPATH\Controllers\Product.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$product_name', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 225)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 13:26:53 --> ErrorException: Undefined property: stdClass::$product_name
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 227.
+ 1 APPPATH\Controllers\Product.php(227): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$product_name', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 227)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 13:27:19 --> ErrorException: Undefined property: stdClass::$product_category_id
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 228.
+ 1 APPPATH\Controllers\Product.php(228): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$product_category_id', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 228)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 13:34:12 --> ErrorException: Undefined property: stdClass::$product_name
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 229.
+ 1 APPPATH\Controllers\Product.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$product_name', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 229)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 13:34:23 --> ErrorException: Attempt to read property "product_name" on array
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 229.
+ 1 APPPATH\Controllers\Product.php(229): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "product_name" on array', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 229)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 13:37:32 --> ParseError: syntax error, unexpected token "return", expecting variable or "{" or "$"
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 224.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('product/insertObject', 'POST')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('product/insertObject')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('product/insertObject')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 13:42:18 --> Error: [] operator not supported for strings
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 233.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 13:42:28 --> Error: [] operator not supported for strings
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 233.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 13:56:09 --> ErrorException: Attempt to read property "product_name" on array
+[Method: GET, Route: index]
+in APPPATH\Controllers\Product.php on line 45.
+ 1 APPPATH\Controllers\Product.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "product_name" on array', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 13:58:06 --> ErrorException: Undefined array key "product_name"
+[Method: GET, Route: index]
+in APPPATH\Controllers\Product.php on line 32.
+ 1 APPPATH\Controllers\Product.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_name"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 13:59:25 --> TypeError: CodeIgniter\Database\BaseBuilder::get(): Argument #1 ($limit) must be of type ?int, string given, called in C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php on line 32
+[Method: GET, Route: index]
+in SYSTEMPATH\Database\BaseBuilder.php on line 1616.
+ 1 APPPATH\Controllers\Product.php(32): CodeIgniter\Database\BaseBuilder->get('product_name')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 14:11:17 --> Error: Object of class CodeIgniter\HTTP\Response could not be converted to string
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 231.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 15:20:52 --> TypeError: CodeIgniter\Validation\Validation::getError(): Argument #1 ($field) must be of type ?string, CodeIgniter\Validation\Validation given, called in C:\xampp\htdocs\crud_ci4_postman\app\Filters\Auth.php on line 55
+[Method: GET, Route: index]
+in SYSTEMPATH\Validation\Validation.php on line 858.
+ 1 APPPATH\Filters\Auth.php(55): CodeIgniter\Validation\Validation->getError(Object(CodeIgniter\Validation\Validation))
+ 2 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('index', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 15:24:23 --> ErrorException: Undefined variable $validData
+[Method: GET, Route: index]
+in APPPATH\Filters\Auth.php on line 60.
+ 1 APPPATH\Filters\Auth.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validData', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Filters\\Auth.php', 60)
+ 2 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('index', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 15:28:23 --> TypeError: Unsupported operand types: CodeIgniter\Validation\Validation & bool
+[Method: GET, Route: index]
+in APPPATH\Filters\Auth.php on line 57.
+ 1 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('index', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 15:33:20 --> Error: Call to a member function getErrors() on string
+[Method: GET, Route: index]
+in APPPATH\Filters\Auth.php on line 62.
+ 1 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('index', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 15:33:39 --> Error: Call to a member function getErrors() on string
+[Method: GET, Route: index]
+in APPPATH\Filters\Auth.php on line 62.
+ 1 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('index', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 15:33:48 --> Error: Call to a member function getErrors() on array
+[Method: GET, Route: index]
+in APPPATH\Filters\Auth.php on line 62.
+ 1 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('index', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 15:34:27 --> Error: Call to a member function getValidated() on string
+[Method: GET, Route: index]
+in APPPATH\Filters\Auth.php on line 62.
+ 1 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('index', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 16:18:28 --> ErrorException: Array to string conversion
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 231.
+ 1 APPPATH\Controllers\Product.php(231): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Controllers\\Product.php', 231)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 16:18:53 --> Error: Object of class CodeIgniter\HTTP\Response could not be converted to string
+[Method: POST, Route: product/insertObject]
+in APPPATH\Controllers\Product.php on line 231.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 16:25:03 --> ErrorException: Undefined array key "Token-User"
+[Method: POST, Route: product/reduce]
+in APPPATH\Filters\Auth.php on line 44.
+ 1 APPPATH\Filters\Auth.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token-User"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Filters\\Auth.php', 44)
+ 2 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/reduce', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+ERROR - 2024-05-16 16:34:39 --> mysqli_sql_exception: Unknown column 'product_category_name' in 'field list' in C:\xampp\htdocs\crud_ci4_postman\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud_ci4_postman\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_...', 0)
+#1 C:\xampp\htdocs\crud_ci4_postman\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_...')
+#2 C:\xampp\htdocs\crud_ci4_postman\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_...')
+#3 C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php(225): CodeIgniter\Database\BaseConnection->query('SELECT product_...')
+#4 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+#5 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#6 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\crud_ci4_postman\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\crud_ci4_postman\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\crud_ci4_postman\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\crud_ci4_postman\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-16 16:34:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product_category_name' in 'field list'
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Product.php(225): CodeIgniter\Database\BaseConnection->query('SELECT product_stock_id as id, product_stock_product_id as product_id, product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product_stock WHERE product_stock_product_id = \'178\'')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 16:34:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product_category_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_stock_id as id, product_stock_product_id as product_id, product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product_stock WHERE product_stock_product_id = \'178\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_stock_id as id, product_stock_product_id as product_id, product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product_stock WHERE product_stock_product_id = \'178\'')
+ 3 APPPATH\Controllers\Product.php(225): CodeIgniter\Database\BaseConnection->query('SELECT product_stock_id as id, product_stock_product_id as product_id, product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product_stock WHERE product_stock_product_id = \'178\'')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 16:34:39 --> [Caused by] mysqli_sql_exception: Unknown column 'product_category_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_stock_id as id, product_stock_product_id as product_id, product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product_stock WHERE product_stock_product_id = \'178\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_stock_id as id, product_stock_product_id as product_id, product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product_stock WHERE product_stock_product_id = \'178\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_stock_id as id, product_stock_product_id as product_id, product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product_stock WHERE product_stock_product_id = \'178\'')
+ 4 APPPATH\Controllers\Product.php(225): CodeIgniter\Database\BaseConnection->query('SELECT product_stock_id as id, product_stock_product_id as product_id, product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product_stock WHERE product_stock_product_id = \'178\'')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+ERROR - 2024-05-16 16:36:31 --> mysqli_sql_exception: Not unique table/alias: 'product' in C:\xampp\htdocs\crud_ci4_postman\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud_ci4_postman\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_...', 0)
+#1 C:\xampp\htdocs\crud_ci4_postman\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_...')
+#2 C:\xampp\htdocs\crud_ci4_postman\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_...')
+#3 C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php(227): CodeIgniter\Database\BaseConnection->query('SELECT product_...')
+#4 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+#5 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#6 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\crud_ci4_postman\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\crud_ci4_postman\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\crud_ci4_postman\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\crud_ci4_postman\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-16 16:36:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'product'
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Product.php(227): CodeIgniter\Database\BaseConnection->query('SELECT product_stock_id as id, product_stock_product_id as product_id, product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product, product_stock 
+            LEFT JOIN product ON product.product_id = product_stock.product_stock_product_id
+            WHERE product_stock_product_id = \'179\'')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 16:36:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'product'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_stock_id as id, product_stock_product_id as product_id, product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product, product_stock 
+            LEFT JOIN product ON product.product_id = product_stock.product_stock_product_id
+            WHERE product_stock_product_id = \'179\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_stock_id as id, product_stock_product_id as product_id, product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product, product_stock 
+            LEFT JOIN product ON product.product_id = product_stock.product_stock_product_id
+            WHERE product_stock_product_id = \'179\'')
+ 3 APPPATH\Controllers\Product.php(227): CodeIgniter\Database\BaseConnection->query('SELECT product_stock_id as id, product_stock_product_id as product_id, product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product, product_stock 
+            LEFT JOIN product ON product.product_id = product_stock.product_stock_product_id
+            WHERE product_stock_product_id = \'179\'')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 16:36:31 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'product'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_stock_id as id, product_stock_product_id as product_id, product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product, product_stock 
+            LEFT JOIN product ON product.product_id = product_stock.product_stock_product_id
+            WHERE product_stock_product_id = \'179\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_stock_id as id, product_stock_product_id as product_id, product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product, product_stock 
+            LEFT JOIN product ON product.product_id = product_stock.product_stock_product_id
+            WHERE product_stock_product_id = \'179\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_stock_id as id, product_stock_product_id as product_id, product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product, product_stock 
+            LEFT JOIN product ON product.product_id = product_stock.product_stock_product_id
+            WHERE product_stock_product_id = \'179\'')
+ 4 APPPATH\Controllers\Product.php(227): CodeIgniter\Database\BaseConnection->query('SELECT product_stock_id as id, product_stock_product_id as product_id, product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product, product_stock 
+            LEFT JOIN product ON product.product_id = product_stock.product_stock_product_id
+            WHERE product_stock_product_id = \'179\'')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+ERROR - 2024-05-16 16:36:49 --> mysqli_sql_exception: Not unique table/alias: 'product_stock' in C:\xampp\htdocs\crud_ci4_postman\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud_ci4_postman\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_...', 0)
+#1 C:\xampp\htdocs\crud_ci4_postman\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_...')
+#2 C:\xampp\htdocs\crud_ci4_postman\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_...')
+#3 C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php(227): CodeIgniter\Database\BaseConnection->query('SELECT product_...')
+#4 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+#5 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#6 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\crud_ci4_postman\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\crud_ci4_postman\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\crud_ci4_postman\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\crud_ci4_postman\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-16 16:36:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'product_stock'
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Product.php(227): CodeIgniter\Database\BaseConnection->query('SELECT product_stock_id as id, product_stock_product_id as product_id, product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product, product_stock 
+            LEFT JOIN product_stock ON product.product_id = product_stock.product_stock_product_id
+            WHERE product_stock_product_id = \'180\'')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 16:36:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'product_stock'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_stock_id as id, product_stock_product_id as product_id, product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product, product_stock 
+            LEFT JOIN product_stock ON product.product_id = product_stock.product_stock_product_id
+            WHERE product_stock_product_id = \'180\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_stock_id as id, product_stock_product_id as product_id, product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product, product_stock 
+            LEFT JOIN product_stock ON product.product_id = product_stock.product_stock_product_id
+            WHERE product_stock_product_id = \'180\'')
+ 3 APPPATH\Controllers\Product.php(227): CodeIgniter\Database\BaseConnection->query('SELECT product_stock_id as id, product_stock_product_id as product_id, product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product, product_stock 
+            LEFT JOIN product_stock ON product.product_id = product_stock.product_stock_product_id
+            WHERE product_stock_product_id = \'180\'')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 16:36:49 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'product_stock'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_stock_id as id, product_stock_product_id as product_id, product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product, product_stock 
+            LEFT JOIN product_stock ON product.product_id = product_stock.product_stock_product_id
+            WHERE product_stock_product_id = \'180\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_stock_id as id, product_stock_product_id as product_id, product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product, product_stock 
+            LEFT JOIN product_stock ON product.product_id = product_stock.product_stock_product_id
+            WHERE product_stock_product_id = \'180\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_stock_id as id, product_stock_product_id as product_id, product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product, product_stock 
+            LEFT JOIN product_stock ON product.product_id = product_stock.product_stock_product_id
+            WHERE product_stock_product_id = \'180\'')
+ 4 APPPATH\Controllers\Product.php(227): CodeIgniter\Database\BaseConnection->query('SELECT product_stock_id as id, product_stock_product_id as product_id, product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product, product_stock 
+            LEFT JOIN product_stock ON product.product_id = product_stock.product_stock_product_id
+            WHERE product_stock_product_id = \'180\'')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+ERROR - 2024-05-16 16:39:31 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE product_stock_product_id = '181'' at line 3 in C:\xampp\htdocs\crud_ci4_postman\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud_ci4_postman\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_...', 0)
+#1 C:\xampp\htdocs\crud_ci4_postman\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_...')
+#2 C:\xampp\htdocs\crud_ci4_postman\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_...')
+#3 C:\xampp\htdocs\crud_ci4_postman\app\Controllers\Product.php(227): CodeIgniter\Database\BaseConnection->query('SELECT product_...')
+#4 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+#5 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#6 C:\xampp\htdocs\crud_ci4_postman\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\crud_ci4_postman\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\crud_ci4_postman\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\crud_ci4_postman\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\crud_ci4_postman\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-16 16:39:31 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE product_stock_product_id = '181'' at line 3
+[Method: POST, Route: product/insertObject]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Product.php(227): CodeIgniter\Database\BaseConnection->query('SELECT product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product
+            LEFT JOIN product_stock ON product.product_id = product_stock.product_stock_product_id;
+            WHERE product_stock_product_id = \'181\'')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 16:39:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE product_stock_product_id = '181'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product
+            LEFT JOIN product_stock ON product.product_id = product_stock.product_stock_product_id;
+            WHERE product_stock_product_id = \'181\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product
+            LEFT JOIN product_stock ON product.product_id = product_stock.product_stock_product_id;
+            WHERE product_stock_product_id = \'181\'')
+ 3 APPPATH\Controllers\Product.php(227): CodeIgniter\Database\BaseConnection->query('SELECT product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product
+            LEFT JOIN product_stock ON product.product_id = product_stock.product_stock_product_id;
+            WHERE product_stock_product_id = \'181\'')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 16:39:31 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE product_stock_product_id = '181'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product
+            LEFT JOIN product_stock ON product.product_id = product_stock.product_stock_product_id;
+            WHERE product_stock_product_id = \'181\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product
+            LEFT JOIN product_stock ON product.product_id = product_stock.product_stock_product_id;
+            WHERE product_stock_product_id = \'181\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product
+            LEFT JOIN product_stock ON product.product_id = product_stock.product_stock_product_id;
+            WHERE product_stock_product_id = \'181\'')
+ 4 APPPATH\Controllers\Product.php(227): CodeIgniter\Database\BaseConnection->query('SELECT product_stock_product_name as `name`, product_stock_unit_name as unit, product_category_name as category, product_stock_value as `value`, product_stock_price_sell as sell, product_stock_price_buy as buy FROM product
+            LEFT JOIN product_stock ON product.product_id = product_stock.product_stock_product_id;
+            WHERE product_stock_product_id = \'181\'')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->insertObject()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
+CRITICAL - 2024-05-16 16:47:33 --> ErrorException: Undefined array key "Token-User"
+[Method: GET, Route: product/search]
+in APPPATH\Filters\Auth.php on line 44.
+ 1 APPPATH\Filters\Auth.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token-User"', 'C:\\xampp\\htdocs\\crud_ci4_postman\\app\\Filters\\Auth.php', 44)
+ 2 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/search', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud_ci4_postman\\public\\index.php')
