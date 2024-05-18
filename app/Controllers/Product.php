@@ -16,16 +16,22 @@ class Product extends BaseController
     public function __construct()
     {
         $this->db = \Config\Database::connect();
+        helper('pitek');
     }
 
+    public function pitek()
+    {   
+        $data = json_decode(pitek());
+        $data = [
+            'data' => $data
+        ];
 
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'OK', $data, '');
+    }
 
     // ------------------------------------------ INDEX ------------------------------------------ //
     public function index()
     {
-        $header = getallheaders();
-        $get = $this->request->getVar();
-        $token = $header['Token-User'];
         $db = db_connect();
 
         $page = isset($get["page"]) ? $get["page"] : 1;
@@ -36,14 +42,6 @@ class Product extends BaseController
 
         $data = $db->query($product)->getResultArray();
         $jumlahData = count($data);
-
-
-
-
-        $validator = \Config\Services::validation();
-        $validator->setRules([
-            $token => 'required',
-        ]);
 
 
         // pagination 
@@ -168,7 +166,7 @@ class Product extends BaseController
             ]);
             $getArray = json_encode($key);
             $getArray = json_decode($getArray);
-            
+
 
 
             if (!$validator->run((array)$key)) {
