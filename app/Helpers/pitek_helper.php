@@ -4,7 +4,6 @@ $db = \Config\Database::connect();
 
 function joinProductCategory()
 {
-    $db = db_connect();
     $data = "SELECT product.*, category.category_name 
         FROM product
         LEFT JOIN category on product.product_category_id = category.category_id";
@@ -17,8 +16,7 @@ function joinProductProduct_stock()
     $data = "SELECT product.product_category_id, product.product_category_name, product_stock.*
     FROM product
     LEFT JOIN product_stock on product.product_id = product_stock.product_stock_product_id";
-    $data = $db->query($data)->getResultArray();
-    $data = json_encode($data);
+
     return $data;
 }
 
@@ -35,7 +33,7 @@ function pagination($page, $sql, $jumlahData)
     $pageSelanjutnya = ($page + 1 == $jumlahPage + 1) ? null : ($page + 1);
 
     $object = (object) [];
-     $object->data = $query->getResultArray();
+     $object->filter = $query->getResultArray();
      $object->pagination = [
          'jumlah_data' => $jumlahData,
          'page' => $page,

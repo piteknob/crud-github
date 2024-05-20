@@ -4,10 +4,7 @@ namespace App\Controllers;
 
 
 use CodeIgniter\HTTP\ResponseInterface;
-use CodeIgniter\RESTful\ResourceController;
-use CodeIgniter\API\ResponseTrait;
-use App\Controllers\BaseController;
-use Config\Services;
+use App\Controllers\Core\BaseController;
 
 class Product extends BaseController
 {
@@ -20,7 +17,11 @@ class Product extends BaseController
 
     public function pitek()
     {
-        $data = json_decode(joinProductProduct_stock());
+        $db = db_connect();
+
+        $data = joinProductProduct_stock();
+        $data = $db->query($data)->getResultArray();
+
 
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'OK', $data, '');
     }
