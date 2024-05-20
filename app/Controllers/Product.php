@@ -16,15 +16,11 @@ class Product extends BaseController
     public function __construct()
     {
         $this->db = \Config\Database::connect();
-        helper('pitek');
     }
 
     public function pitek()
-    {   
-        $data = json_decode(pitek());
-        $data = [
-            'data' => $data
-        ];
+    {
+        $data = json_decode(joinProductProduct_stock());
 
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'OK', $data, '');
     }
@@ -32,17 +28,14 @@ class Product extends BaseController
     // ------------------------------------------ INDEX ------------------------------------------ //
     public function index()
     {
+        helper('');
         $db = db_connect();
 
         $page = isset($get["page"]) ? $get["page"] : 1;
 
-        $product = "SELECT product.*, category.category_name 
-        FROM product
-        LEFT JOIN category on product.product_category_id = category.category_id";
-
+        $product = joinProductCategory();
         $data = $db->query($product)->getResultArray();
         $jumlahData = count($data);
-
 
         // pagination 
 
@@ -76,6 +69,7 @@ class Product extends BaseController
     {
         $get = $this->request->getVar();
         $db = db_connect();
+
 
         $search = isset($get["search"]) ? $get["search"] : ''; // jika data tidak ada, maka akan bernilai string kosong 
         $unit = isset($get["unit"]) ? $get["unit"] : '';
@@ -114,35 +108,20 @@ class Product extends BaseController
             $sql .= " AND (
                 product.product_name LIKE '%{$search}%' OR
                 product_stock_unit_name LIKE '%{$search}%' OR
-                product.product_id LIKE '%{$search}%')";
+                product.product_id LIKE '%{$search}%' OR
+                product.product_category_name LIKE '%{$search}%' OR
+                product_stock.product_stock_unit_name LIKE '%{$search}%')";
         }
 
         $query = $db->query($sql);
         $result = $query->getResultArray();
         $jumlahData = count($result);
 
-
         // pagination
-        $limit = 3;
-        $offset = ($page - 1) * $limit;
-        $sql .= " LIMIT {$offset}, {$limit}";
-        $query = $db->query($sql);
-        $jumlahPage = ceil($jumlahData / $limit);
-        $pageSebelumnya = ($page - 1 == 0) ? null : ($page - 1);
-        $pageSelanjutnya = ($page + 1 == $jumlahPage + 1) ? null : ($page + 1);
 
-        $object = (object) [];
-        $object->data = $query->getResultArray();
-        $object->pagination = [
-            'jumlah_data' => $jumlahData,
-            'page' => $page,
-            'jumlah_page' => $jumlahPage,
-            'page_sebelumnya' => $pageSebelumnya,
-            'page_selanjutnya' => $pageSelanjutnya
-        ];
+        $pitek = pagination($page, $sql, $jumlahData);
 
-
-        return $this->response->setJSON($object);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'OK', $pitek, '');
     }
 
 

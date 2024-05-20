@@ -1,0 +1,987 @@
+CRITICAL - 2024-05-20 08:36:50 --> ErrorException: Undefined array key "Token-User"
+[Method: GET, Route: product/pitek]
+in APPPATH\Filters\Auth.php on line 44.
+ 1 APPPATH\Filters\Auth.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token-User"', 'C:\\xampp\\htdocs\\crud-github\\app\\Filters\\Auth.php', 44)
+ 2 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/pitek', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-20 08:37:03 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ci4_produk_api', 3306, '', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\crud-github\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\crud-github\app\Controllers\User.php(73): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\User->login()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\crud-github\app\Controllers\User.php(73): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\User->login()
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-20 08:37:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `user_email` = :user_email:', [...], false)
+ 3 APPPATH\Controllers\User.php(73): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->login()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 08:39:51 --> ParseError: syntax error, unexpected token "return"
+[Method: GET, Route: product/pitek]
+in APPPATH\Controllers\Product.php on line 28.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('product/pitek', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('product/pitek')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('product/pitek')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-20 08:47:13 --> mysqli_sql_exception: Unknown column 'product_stock.product_id' in 'on clause' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product....', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product....')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product....')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\pitek_helper.php(23): CodeIgniter\Database\BaseConnection->query('SELECT product....')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(24): joinProductProduct_stock()
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-20 08:47:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product_stock.product_id' in 'on clause'
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\pitek_helper.php(23): CodeIgniter\Database\BaseConnection->query('SELECT product.*, product_stock.*
+    FROM product
+    LEFT JOIN product_stock on product.product_id = product_stock.product_id')
+ 2 APPPATH\Controllers\Product.php(24): joinProductProduct_stock()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 08:47:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product_stock.product_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product.*, product_stock.*
+    FROM product
+    LEFT JOIN product_stock on product.product_id = product_stock.product_id')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product.*, product_stock.*
+    FROM product
+    LEFT JOIN product_stock on product.product_id = product_stock.product_id')
+ 3 APPPATH\Helpers\pitek_helper.php(23): CodeIgniter\Database\BaseConnection->query('SELECT product.*, product_stock.*
+    FROM product
+    LEFT JOIN product_stock on product.product_id = product_stock.product_id')
+ 4 APPPATH\Controllers\Product.php(24): joinProductProduct_stock()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 08:47:13 --> [Caused by] mysqli_sql_exception: Unknown column 'product_stock.product_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product.*, product_stock.*
+    FROM product
+    LEFT JOIN product_stock on product.product_id = product_stock.product_id', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product.*, product_stock.*
+    FROM product
+    LEFT JOIN product_stock on product.product_id = product_stock.product_id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product.*, product_stock.*
+    FROM product
+    LEFT JOIN product_stock on product.product_id = product_stock.product_id')
+ 4 APPPATH\Helpers\pitek_helper.php(23): CodeIgniter\Database\BaseConnection->query('SELECT product.*, product_stock.*
+    FROM product
+    LEFT JOIN product_stock on product.product_id = product_stock.product_id')
+ 5 APPPATH\Controllers\Product.php(24): joinProductProduct_stock()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 10:53:56 --> ErrorException: Undefined array key "Token-User"
+[Method: GET, Route: index]
+in APPPATH\Filters\Auth.php on line 44.
+ 1 APPPATH\Filters\Auth.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token-User"', 'C:\\xampp\\htdocs\\crud-github\\app\\Filters\\Auth.php', 44)
+ 2 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('index', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-20 10:54:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[{"product_id":"244","product_name":"dodo","product_category_id":"1","product...' at line 1 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('[{"product_id":...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('[{"product_id":...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('[{"product_id":...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(36): CodeIgniter\Database\BaseConnection->query('[{"product_id":...')
+#4 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->index()
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-20 10:54:25 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[{"product_id":"244","product_name":"dodo","product_category_id":"1","product...' at line 1
+[Method: GET, Route: index]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Product.php(36): CodeIgniter\Database\BaseConnection->query('[{"product_id":"244","product_name":"dodo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"245","product_name":"penaldo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"246","product_name":"pessi","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"250","product_name":"Soto","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"251","product_name":"Sate","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"252","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"253","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"254","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"255","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"256","product_name":"adw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"257","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"258","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"259","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"260","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"261","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"262","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"263","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"264","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"265","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"}]')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 10:54:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[{"product_id":"244","product_name":"dodo","product_category_id":"1","product...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('[{"product_id":"244","product_name":"dodo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"245","product_name":"penaldo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"246","product_name":"pessi","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"250","product_name":"Soto","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"251","product_name":"Sate","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"252","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"253","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"254","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"255","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"256","product_name":"adw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"257","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"258","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"259","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"260","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"261","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"262","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"263","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"264","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"265","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"}]')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('[{"product_id":"244","product_name":"dodo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"245","product_name":"penaldo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"246","product_name":"pessi","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"250","product_name":"Soto","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"251","product_name":"Sate","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"252","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"253","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"254","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"255","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"256","product_name":"adw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"257","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"258","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"259","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"260","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"261","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"262","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"263","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"264","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"265","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"}]')
+ 3 APPPATH\Controllers\Product.php(36): CodeIgniter\Database\BaseConnection->query('[{"product_id":"244","product_name":"dodo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"245","product_name":"penaldo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"246","product_name":"pessi","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"250","product_name":"Soto","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"251","product_name":"Sate","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"252","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"253","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"254","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"255","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"256","product_name":"adw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"257","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"258","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"259","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"260","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"261","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"262","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"263","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"264","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"265","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"}]')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 10:54:25 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[{"product_id":"244","product_name":"dodo","product_category_id":"1","product...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('[{"product_id":"244","product_name":"dodo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"245","product_name":"penaldo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"246","product_name":"pessi","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"250","product_name":"Soto","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"251","product_name":"Sate","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"252","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"253","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"254","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"255","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"256","product_name":"adw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"257","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"258","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"259","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"260","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"261","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"262","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"263","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"264","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"265","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"}]', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('[{"product_id":"244","product_name":"dodo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"245","product_name":"penaldo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"246","product_name":"pessi","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"250","product_name":"Soto","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"251","product_name":"Sate","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"252","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"253","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"254","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"255","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"256","product_name":"adw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"257","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"258","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"259","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"260","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"261","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"262","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"263","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"264","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"265","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"}]')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('[{"product_id":"244","product_name":"dodo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"245","product_name":"penaldo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"246","product_name":"pessi","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"250","product_name":"Soto","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"251","product_name":"Sate","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"252","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"253","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"254","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"255","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"256","product_name":"adw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"257","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"258","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"259","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"260","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"261","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"262","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"263","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"264","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"265","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"}]')
+ 4 APPPATH\Controllers\Product.php(36): CodeIgniter\Database\BaseConnection->query('[{"product_id":"244","product_name":"dodo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"245","product_name":"penaldo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"246","product_name":"pessi","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"250","product_name":"Soto","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"251","product_name":"Sate","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"252","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"253","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"254","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"255","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"256","product_name":"adw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"257","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"258","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"259","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"260","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"261","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"262","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"263","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"264","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"265","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"}]')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-20 10:54:59 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[{"product_id":"244","product_name":"dodo","product_category_id":"1","product...' at line 1 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('[{"product_id":...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('[{"product_id":...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('[{"product_id":...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(36): CodeIgniter\Database\BaseConnection->query('[{"product_id":...')
+#4 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->index()
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-20 10:54:59 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[{"product_id":"244","product_name":"dodo","product_category_id":"1","product...' at line 1
+[Method: GET, Route: index]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Product.php(36): CodeIgniter\Database\BaseConnection->query('[{"product_id":"244","product_name":"dodo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"245","product_name":"penaldo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"246","product_name":"pessi","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"250","product_name":"Soto","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"251","product_name":"Sate","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"252","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"253","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"254","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"255","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"256","product_name":"adw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"257","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"258","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"259","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"260","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"261","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"262","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"263","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"264","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"265","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"}]')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 10:54:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[{"product_id":"244","product_name":"dodo","product_category_id":"1","product...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('[{"product_id":"244","product_name":"dodo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"245","product_name":"penaldo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"246","product_name":"pessi","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"250","product_name":"Soto","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"251","product_name":"Sate","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"252","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"253","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"254","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"255","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"256","product_name":"adw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"257","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"258","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"259","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"260","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"261","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"262","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"263","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"264","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"265","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"}]')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('[{"product_id":"244","product_name":"dodo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"245","product_name":"penaldo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"246","product_name":"pessi","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"250","product_name":"Soto","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"251","product_name":"Sate","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"252","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"253","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"254","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"255","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"256","product_name":"adw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"257","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"258","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"259","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"260","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"261","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"262","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"263","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"264","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"265","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"}]')
+ 3 APPPATH\Controllers\Product.php(36): CodeIgniter\Database\BaseConnection->query('[{"product_id":"244","product_name":"dodo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"245","product_name":"penaldo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"246","product_name":"pessi","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"250","product_name":"Soto","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"251","product_name":"Sate","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"252","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"253","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"254","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"255","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"256","product_name":"adw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"257","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"258","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"259","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"260","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"261","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"262","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"263","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"264","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"265","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"}]')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 10:54:59 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[{"product_id":"244","product_name":"dodo","product_category_id":"1","product...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('[{"product_id":"244","product_name":"dodo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"245","product_name":"penaldo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"246","product_name":"pessi","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"250","product_name":"Soto","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"251","product_name":"Sate","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"252","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"253","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"254","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"255","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"256","product_name":"adw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"257","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"258","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"259","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"260","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"261","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"262","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"263","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"264","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"265","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"}]', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('[{"product_id":"244","product_name":"dodo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"245","product_name":"penaldo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"246","product_name":"pessi","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"250","product_name":"Soto","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"251","product_name":"Sate","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"252","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"253","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"254","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"255","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"256","product_name":"adw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"257","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"258","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"259","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"260","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"261","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"262","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"263","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"264","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"265","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"}]')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('[{"product_id":"244","product_name":"dodo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"245","product_name":"penaldo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"246","product_name":"pessi","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"250","product_name":"Soto","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"251","product_name":"Sate","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"252","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"253","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"254","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"255","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"256","product_name":"adw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"257","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"258","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"259","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"260","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"261","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"262","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"263","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"264","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"265","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"}]')
+ 4 APPPATH\Controllers\Product.php(36): CodeIgniter\Database\BaseConnection->query('[{"product_id":"244","product_name":"dodo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"245","product_name":"penaldo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"246","product_name":"pessi","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"250","product_name":"Soto","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"251","product_name":"Sate","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"252","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"253","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"254","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"255","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"256","product_name":"adw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"257","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"258","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"259","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"260","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"261","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"262","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"263","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"264","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"265","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"}]')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-20 10:55:02 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[{"product_id":"244","product_name":"dodo","product_category_id":"1","product...' at line 1 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('[{"product_id":...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('[{"product_id":...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('[{"product_id":...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(36): CodeIgniter\Database\BaseConnection->query('[{"product_id":...')
+#4 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->index()
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-20 10:55:02 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[{"product_id":"244","product_name":"dodo","product_category_id":"1","product...' at line 1
+[Method: GET, Route: index]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Product.php(36): CodeIgniter\Database\BaseConnection->query('[{"product_id":"244","product_name":"dodo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"245","product_name":"penaldo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"246","product_name":"pessi","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"250","product_name":"Soto","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"251","product_name":"Sate","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"252","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"253","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"254","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"255","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"256","product_name":"adw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"257","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"258","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"259","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"260","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"261","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"262","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"263","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"264","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"265","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"}]')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 10:55:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[{"product_id":"244","product_name":"dodo","product_category_id":"1","product...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('[{"product_id":"244","product_name":"dodo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"245","product_name":"penaldo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"246","product_name":"pessi","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"250","product_name":"Soto","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"251","product_name":"Sate","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"252","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"253","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"254","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"255","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"256","product_name":"adw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"257","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"258","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"259","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"260","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"261","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"262","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"263","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"264","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"265","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"}]')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('[{"product_id":"244","product_name":"dodo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"245","product_name":"penaldo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"246","product_name":"pessi","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"250","product_name":"Soto","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"251","product_name":"Sate","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"252","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"253","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"254","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"255","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"256","product_name":"adw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"257","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"258","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"259","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"260","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"261","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"262","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"263","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"264","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"265","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"}]')
+ 3 APPPATH\Controllers\Product.php(36): CodeIgniter\Database\BaseConnection->query('[{"product_id":"244","product_name":"dodo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"245","product_name":"penaldo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"246","product_name":"pessi","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"250","product_name":"Soto","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"251","product_name":"Sate","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"252","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"253","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"254","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"255","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"256","product_name":"adw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"257","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"258","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"259","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"260","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"261","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"262","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"263","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"264","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"265","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"}]')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 10:55:02 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[{"product_id":"244","product_name":"dodo","product_category_id":"1","product...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('[{"product_id":"244","product_name":"dodo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"245","product_name":"penaldo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"246","product_name":"pessi","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"250","product_name":"Soto","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"251","product_name":"Sate","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"252","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"253","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"254","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"255","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"256","product_name":"adw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"257","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"258","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"259","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"260","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"261","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"262","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"263","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"264","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"265","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"}]', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('[{"product_id":"244","product_name":"dodo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"245","product_name":"penaldo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"246","product_name":"pessi","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"250","product_name":"Soto","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"251","product_name":"Sate","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"252","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"253","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"254","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"255","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"256","product_name":"adw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"257","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"258","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"259","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"260","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"261","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"262","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"263","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"264","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"265","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"}]')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('[{"product_id":"244","product_name":"dodo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"245","product_name":"penaldo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"246","product_name":"pessi","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"250","product_name":"Soto","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"251","product_name":"Sate","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"252","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"253","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"254","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"255","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"256","product_name":"adw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"257","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"258","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"259","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"260","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"261","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"262","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"263","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"264","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"265","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"}]')
+ 4 APPPATH\Controllers\Product.php(36): CodeIgniter\Database\BaseConnection->query('[{"product_id":"244","product_name":"dodo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"245","product_name":"penaldo","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"246","product_name":"pessi","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"250","product_name":"Soto","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"251","product_name":"Sate","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"252","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"253","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"254","product_name":"Ayam","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"255","product_name":"Bebek","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"256","product_name":"adw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"257","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"258","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"259","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"260","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"261","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"262","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"263","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"264","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"},{"product_id":"265","product_name":"daw","product_category_id":"1","product_category_name":"Makanan","category_name":"Makanan"}]')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 10:57:30 --> Error: Call to a member function getResultArray() on array
+[Method: GET, Route: index]
+in APPPATH\Controllers\Product.php on line 37.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 10:58:18 --> ErrorException: Array to string conversion
+[Method: GET, Route: index]
+in APPPATH\Controllers\Product.php on line 45.
+ 1 APPPATH\Controllers\Product.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 10:59:51 --> TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given
+[Method: GET, Route: index]
+in APPPATH\Controllers\Product.php on line 37.
+ 1 APPPATH\Controllers\Product.php(37): count(null)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-20 11:02:04 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''SELECT product.*, category.category_name 
+        FROM product
+        LEF...' at line 1 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query(''SELECT product...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute(''SELECT product...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery(''SELECT product...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(37): CodeIgniter\Database\BaseConnection->query(''SELECT product...')
+#4 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->index()
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-20 11:02:04 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''SELECT product.*, category.category_name 
+        FROM product
+        LEF...' at line 1
+[Method: GET, Route: index]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Product.php(37): CodeIgniter\Database\BaseConnection->query('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 11:02:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''SELECT product.*, category.category_name 
+        FROM product
+        LEF...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 3 APPPATH\Controllers\Product.php(37): CodeIgniter\Database\BaseConnection->query('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 11:02:04 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''SELECT product.*, category.category_name 
+        FROM product
+        LEF...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 4 APPPATH\Controllers\Product.php(37): CodeIgniter\Database\BaseConnection->query('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-20 11:02:30 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''SELECT product.*, category.category_name 
+        FROM product
+        LEF...' at line 1 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query(''SELECT product...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute(''SELECT product...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery(''SELECT product...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(37): CodeIgniter\Database\BaseConnection->query(''SELECT product...')
+#4 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->index()
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-20 11:02:30 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''SELECT product.*, category.category_name 
+        FROM product
+        LEF...' at line 1
+[Method: GET, Route: index]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Product.php(37): CodeIgniter\Database\BaseConnection->query('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 11:02:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''SELECT product.*, category.category_name 
+        FROM product
+        LEF...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 3 APPPATH\Controllers\Product.php(37): CodeIgniter\Database\BaseConnection->query('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 11:02:30 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''SELECT product.*, category.category_name 
+        FROM product
+        LEF...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 4 APPPATH\Controllers\Product.php(37): CodeIgniter\Database\BaseConnection->query('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-20 11:02:32 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''SELECT product.*, category.category_name 
+        FROM product
+        LEF...' at line 1 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query(''SELECT product...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute(''SELECT product...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery(''SELECT product...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(37): CodeIgniter\Database\BaseConnection->query(''SELECT product...')
+#4 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->index()
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-20 11:02:32 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''SELECT product.*, category.category_name 
+        FROM product
+        LEF...' at line 1
+[Method: GET, Route: index]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Product.php(37): CodeIgniter\Database\BaseConnection->query('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 11:02:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''SELECT product.*, category.category_name 
+        FROM product
+        LEF...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 3 APPPATH\Controllers\Product.php(37): CodeIgniter\Database\BaseConnection->query('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 11:02:32 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''SELECT product.*, category.category_name 
+        FROM product
+        LEF...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 4 APPPATH\Controllers\Product.php(37): CodeIgniter\Database\BaseConnection->query('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-20 11:02:33 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''SELECT product.*, category.category_name 
+        FROM product
+        LEF...' at line 1 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query(''SELECT product...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute(''SELECT product...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery(''SELECT product...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(37): CodeIgniter\Database\BaseConnection->query(''SELECT product...')
+#4 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->index()
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-20 11:02:33 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''SELECT product.*, category.category_name 
+        FROM product
+        LEF...' at line 1
+[Method: GET, Route: index]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Product.php(37): CodeIgniter\Database\BaseConnection->query('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 11:02:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''SELECT product.*, category.category_name 
+        FROM product
+        LEF...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 3 APPPATH\Controllers\Product.php(37): CodeIgniter\Database\BaseConnection->query('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 11:02:33 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''SELECT product.*, category.category_name 
+        FROM product
+        LEF...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 4 APPPATH\Controllers\Product.php(37): CodeIgniter\Database\BaseConnection->query('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-20 11:03:55 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''SELECT product.*, category.category_name 
+        FROM product
+        LEF...' at line 1 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query(''SELECT product...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute(''SELECT product...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery(''SELECT product...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(37): CodeIgniter\Database\BaseConnection->query(''SELECT product...')
+#4 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->index()
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-20 11:03:55 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''SELECT product.*, category.category_name 
+        FROM product
+        LEF...' at line 1
+[Method: GET, Route: index]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Product.php(37): CodeIgniter\Database\BaseConnection->query('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 11:03:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''SELECT product.*, category.category_name 
+        FROM product
+        LEF...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 3 APPPATH\Controllers\Product.php(37): CodeIgniter\Database\BaseConnection->query('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 11:03:55 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''SELECT product.*, category.category_name 
+        FROM product
+        LEF...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 4 APPPATH\Controllers\Product.php(37): CodeIgniter\Database\BaseConnection->query('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-20 11:04:11 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''SELECT product.*, category.category_name 
+        FROM product
+        LEF...' at line 1 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query(''SELECT product...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute(''SELECT product...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery(''SELECT product...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(37): CodeIgniter\Database\BaseConnection->query(''SELECT product...')
+#4 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->index()
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-20 11:04:11 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''SELECT product.*, category.category_name 
+        FROM product
+        LEF...' at line 1
+[Method: GET, Route: index]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Product.php(37): CodeIgniter\Database\BaseConnection->query('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 11:04:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''SELECT product.*, category.category_name 
+        FROM product
+        LEF...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 3 APPPATH\Controllers\Product.php(37): CodeIgniter\Database\BaseConnection->query('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 11:04:11 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''SELECT product.*, category.category_name 
+        FROM product
+        LEF...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 4 APPPATH\Controllers\Product.php(37): CodeIgniter\Database\BaseConnection->query('\'SELECT product.*, category.category_name 
+        FROM product
+        LEFT JOIN category on product.product_category_id = category.category_id\'')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 11:05:04 --> ErrorException: Undefined variable $pagination
+[Method: GET, Route: index]
+in APPPATH\Controllers\Product.php on line 65.
+ 1 APPPATH\Controllers\Product.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pagination', 'C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php', 65)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 11:05:51 --> ErrorException: Array to string conversion
+[Method: GET, Route: index]
+in APPPATH\Controllers\Product.php on line 46.
+ 1 APPPATH\Controllers\Product.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 11:06:57 --> Error: Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+[Method: GET, Route: index]
+in APPPATH\Controllers\Product.php on line 54.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-20 11:20:27 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''%Makanan%')' at line 14 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT \r\n      ...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT \r\n      ...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT \r\n      ...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(113): CodeIgniter\Database\BaseConnection->query('SELECT \r\n      ...')
+#4 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->search()
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-20 11:20:27 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''%Makanan%')' at line 14
+[Method: GET, Route: product/search]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Product.php(113): CodeIgniter\Database\BaseConnection->query('SELECT 
+                    product.product_id AS id,
+                    product.product_name AS produk,
+                    product.product_category_name AS kategori,
+                    product_stock_unit_name AS unit,
+                    product_stock_price_sell AS harga
+            FROM
+                product_stock
+            LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE 1=1 AND (
+                product.product_name LIKE \'%Makanan%\' OR
+                product_stock_unit_name LIKE \'%Makanan%\' OR
+                product.product_id LIKE \'%Makanan%\' OR
+                product.product_category_name \'%Makanan%\')')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->search()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 11:20:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''%Makanan%')' at line 14
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+                    product.product_id AS id,
+                    product.product_name AS produk,
+                    product.product_category_name AS kategori,
+                    product_stock_unit_name AS unit,
+                    product_stock_price_sell AS harga
+            FROM
+                product_stock
+            LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE 1=1 AND (
+                product.product_name LIKE \'%Makanan%\' OR
+                product_stock_unit_name LIKE \'%Makanan%\' OR
+                product.product_id LIKE \'%Makanan%\' OR
+                product.product_category_name \'%Makanan%\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+                    product.product_id AS id,
+                    product.product_name AS produk,
+                    product.product_category_name AS kategori,
+                    product_stock_unit_name AS unit,
+                    product_stock_price_sell AS harga
+            FROM
+                product_stock
+            LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE 1=1 AND (
+                product.product_name LIKE \'%Makanan%\' OR
+                product_stock_unit_name LIKE \'%Makanan%\' OR
+                product.product_id LIKE \'%Makanan%\' OR
+                product.product_category_name \'%Makanan%\')')
+ 3 APPPATH\Controllers\Product.php(113): CodeIgniter\Database\BaseConnection->query('SELECT 
+                    product.product_id AS id,
+                    product.product_name AS produk,
+                    product.product_category_name AS kategori,
+                    product_stock_unit_name AS unit,
+                    product_stock_price_sell AS harga
+            FROM
+                product_stock
+            LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE 1=1 AND (
+                product.product_name LIKE \'%Makanan%\' OR
+                product_stock_unit_name LIKE \'%Makanan%\' OR
+                product.product_id LIKE \'%Makanan%\' OR
+                product.product_category_name \'%Makanan%\')')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->search()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 11:20:27 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''%Makanan%')' at line 14
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT 
+                    product.product_id AS id,
+                    product.product_name AS produk,
+                    product.product_category_name AS kategori,
+                    product_stock_unit_name AS unit,
+                    product_stock_price_sell AS harga
+            FROM
+                product_stock
+            LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE 1=1 AND (
+                product.product_name LIKE \'%Makanan%\' OR
+                product_stock_unit_name LIKE \'%Makanan%\' OR
+                product.product_id LIKE \'%Makanan%\' OR
+                product.product_category_name \'%Makanan%\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+                    product.product_id AS id,
+                    product.product_name AS produk,
+                    product.product_category_name AS kategori,
+                    product_stock_unit_name AS unit,
+                    product_stock_price_sell AS harga
+            FROM
+                product_stock
+            LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE 1=1 AND (
+                product.product_name LIKE \'%Makanan%\' OR
+                product_stock_unit_name LIKE \'%Makanan%\' OR
+                product.product_id LIKE \'%Makanan%\' OR
+                product.product_category_name \'%Makanan%\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+                    product.product_id AS id,
+                    product.product_name AS produk,
+                    product.product_category_name AS kategori,
+                    product_stock_unit_name AS unit,
+                    product_stock_price_sell AS harga
+            FROM
+                product_stock
+            LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE 1=1 AND (
+                product.product_name LIKE \'%Makanan%\' OR
+                product_stock_unit_name LIKE \'%Makanan%\' OR
+                product.product_id LIKE \'%Makanan%\' OR
+                product.product_category_name \'%Makanan%\')')
+ 4 APPPATH\Controllers\Product.php(113): CodeIgniter\Database\BaseConnection->query('SELECT 
+                    product.product_id AS id,
+                    product.product_name AS produk,
+                    product.product_category_name AS kategori,
+                    product_stock_unit_name AS unit,
+                    product_stock_price_sell AS harga
+            FROM
+                product_stock
+            LEFT JOIN product ON product_stock.product_stock_product_id = product.product_id
+            WHERE 1=1 AND (
+                product.product_name LIKE \'%Makanan%\' OR
+                product_stock_unit_name LIKE \'%Makanan%\' OR
+                product.product_id LIKE \'%Makanan%\' OR
+                product.product_category_name \'%Makanan%\')')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->search()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 11:49:13 --> ErrorException: Undefined variable $page
+[Method: GET, Route: product/search]
+in APPPATH\Helpers\pitek_helper.php on line 30.
+ 1 APPPATH\Helpers\pitek_helper.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', 'C:\\xampp\\htdocs\\crud-github\\app\\Helpers\\pitek_helper.php', 30)
+ 2 APPPATH\Controllers\Product.php(72): pagination()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->search()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 13:10:59 --> ErrorException: Undefined variable $object
+[Method: GET, Route: product/search]
+in APPPATH\Controllers\Product.php on line 145.
+ 1 APPPATH\Controllers\Product.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $object', 'C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php', 145)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->search()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
