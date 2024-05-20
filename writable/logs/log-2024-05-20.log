@@ -1027,3 +1027,793 @@ in APPPATH\Filters\Auth.php on line 44.
  7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
  9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-20 16:33:06 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product_stock' 
+        INNER JOIN 'product' ON 'product_stock'.'product_st...' at line 1 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * FROM '...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM '...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM '...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\pitek_helper.php(53): CodeIgniter\Database\BaseConnection->query('SELECT * FROM '...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(21): joinTable('product_stock_p...', 'product_id', 'product_stock', 'product')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-20 16:33:06 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product_stock' 
+        INNER JOIN 'product' ON 'product_stock'.'product_st...' at line 1
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\pitek_helper.php(53): CodeIgniter\Database\BaseConnection->query('SELECT * FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 2 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 16:33:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product_stock' 
+        INNER JOIN 'product' ON 'product_stock'.'product_st...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 3 APPPATH\Helpers\pitek_helper.php(53): CodeIgniter\Database\BaseConnection->query('SELECT * FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 4 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 16:33:06 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product_stock' 
+        INNER JOIN 'product' ON 'product_stock'.'product_st...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 4 APPPATH\Helpers\pitek_helper.php(53): CodeIgniter\Database\BaseConnection->query('SELECT * FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 5 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-20 16:33:56 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product_stock' 
+        INNER JOIN 'product' ON 'product_stock'.'product_st...' at line 1 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * FROM '...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM '...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM '...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\pitek_helper.php(53): CodeIgniter\Database\BaseConnection->query('SELECT * FROM '...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(21): joinTable('product_stock_p...', 'product_id', 'product_stock', 'product')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-20 16:33:56 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product_stock' 
+        INNER JOIN 'product' ON 'product_stock'.'product_st...' at line 1
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\pitek_helper.php(53): CodeIgniter\Database\BaseConnection->query('SELECT * FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 2 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 16:33:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product_stock' 
+        INNER JOIN 'product' ON 'product_stock'.'product_st...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 3 APPPATH\Helpers\pitek_helper.php(53): CodeIgniter\Database\BaseConnection->query('SELECT * FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 4 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 16:33:56 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product_stock' 
+        INNER JOIN 'product' ON 'product_stock'.'product_st...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 4 APPPATH\Helpers\pitek_helper.php(53): CodeIgniter\Database\BaseConnection->query('SELECT * FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 5 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-20 16:35:36 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product_stock' 
+        INNER JOIN 'product' ON 'product_stock'.'product_st...' at line 2 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * \r\n    ...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * \r\n    ...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * \r\n    ...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * \r\n    ...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(21): joinTable('product_stock_p...', 'product_id', 'product_stock', 'product')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-20 16:35:36 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product_stock' 
+        INNER JOIN 'product' ON 'product_stock'.'product_st...' at line 2
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * 
+        FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 2 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 16:35:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product_stock' 
+        INNER JOIN 'product' ON 'product_stock'.'product_st...' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * 
+        FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * 
+        FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 3 APPPATH\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * 
+        FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 4 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 16:35:36 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product_stock' 
+        INNER JOIN 'product' ON 'product_stock'.'product_st...' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * 
+        FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * 
+        FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * 
+        FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 4 APPPATH\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * 
+        FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 5 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-20 16:35:47 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product_stock' 
+        INNER JOIN 'product' ON 'product_stock'.'product_st...' at line 2 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * \r\n    ...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * \r\n    ...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * \r\n    ...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * \r\n    ...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(21): joinTable('product_stock_p...', 'product_id', 'product_stock', 'product')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-20 16:35:47 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product_stock' 
+        INNER JOIN 'product' ON 'product_stock'.'product_st...' at line 2
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * 
+        FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 2 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 16:35:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product_stock' 
+        INNER JOIN 'product' ON 'product_stock'.'product_st...' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * 
+        FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * 
+        FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 3 APPPATH\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * 
+        FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 4 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 16:35:47 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product_stock' 
+        INNER JOIN 'product' ON 'product_stock'.'product_st...' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * 
+        FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * 
+        FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * 
+        FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 4 APPPATH\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * 
+        FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 5 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-20 16:36:04 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product_stock' 
+        INNER JOIN 'product' ON 'product_stock'.'product_st...' at line 2 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * \r\n    ...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * \r\n    ...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * \r\n    ...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * \r\n    ...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(21): joinTable('product_stock_p...', 'product_id', 'product_stock', 'product')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-20 16:36:04 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product_stock' 
+        INNER JOIN 'product' ON 'product_stock'.'product_st...' at line 2
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * 
+        FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 2 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 16:36:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product_stock' 
+        INNER JOIN 'product' ON 'product_stock'.'product_st...' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * 
+        FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * 
+        FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 3 APPPATH\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * 
+        FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 4 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 16:36:04 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product_stock' 
+        INNER JOIN 'product' ON 'product_stock'.'product_st...' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * 
+        FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * 
+        FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * 
+        FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 4 APPPATH\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * 
+        FROM \'product_stock\' 
+        INNER JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 5 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-20 16:36:11 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product_stock' 
+        JOIN 'product' ON 'product_stock'.'product_stock_pr...' at line 2 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * \r\n    ...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * \r\n    ...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * \r\n    ...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * \r\n    ...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(21): joinTable('product_stock_p...', 'product_id', 'product_stock', 'product')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-20 16:36:11 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product_stock' 
+        JOIN 'product' ON 'product_stock'.'product_stock_pr...' at line 2
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * 
+        FROM \'product_stock\' 
+        JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 2 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 16:36:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product_stock' 
+        JOIN 'product' ON 'product_stock'.'product_stock_pr...' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * 
+        FROM \'product_stock\' 
+        JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * 
+        FROM \'product_stock\' 
+        JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 3 APPPATH\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * 
+        FROM \'product_stock\' 
+        JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 4 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 16:36:11 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product_stock' 
+        JOIN 'product' ON 'product_stock'.'product_stock_pr...' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * 
+        FROM \'product_stock\' 
+        JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * 
+        FROM \'product_stock\' 
+        JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * 
+        FROM \'product_stock\' 
+        JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 4 APPPATH\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * 
+        FROM \'product_stock\' 
+        JOIN \'product\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 5 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-20 16:36:22 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product' 
+        JOIN 'product_stock' ON 'product_stock'.'product_stock_pr...' at line 2 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * \r\n    ...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * \r\n    ...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * \r\n    ...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * \r\n    ...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(21): joinTable('product_stock_p...', 'product_id', 'product_stock', 'product')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-20 16:36:22 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product' 
+        JOIN 'product_stock' ON 'product_stock'.'product_stock_pr...' at line 2
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 2 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 16:36:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product' 
+        JOIN 'product_stock' ON 'product_stock'.'product_stock_pr...' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 3 APPPATH\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 4 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 16:36:22 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product' 
+        JOIN 'product_stock' ON 'product_stock'.'product_stock_pr...' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 4 APPPATH\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 5 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-20 16:36:40 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product' 
+        JOIN 'product_stock' ON 'product_stock'.'product_stock_pr...' at line 2 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * \r\n    ...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * \r\n    ...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * \r\n    ...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * \r\n    ...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(21): joinTable('product_stock_p...', 'product_id', 'product_stock', 'product')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-20 16:36:40 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product' 
+        JOIN 'product_stock' ON 'product_stock'.'product_stock_pr...' at line 2
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 2 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 16:36:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product' 
+        JOIN 'product_stock' ON 'product_stock'.'product_stock_pr...' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 3 APPPATH\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 4 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 16:36:40 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product' 
+        JOIN 'product_stock' ON 'product_stock'.'product_stock_pr...' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 4 APPPATH\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 5 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-20 16:37:04 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product' 
+        JOIN 'product_stock' ON 'product_stock'.'product_stock_pr...' at line 2 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * \r\n    ...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * \r\n    ...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * \r\n    ...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * \r\n    ...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(21): joinTable('product_stock_p...', 'product_id', 'product_stock', 'product')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-20 16:37:04 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product' 
+        JOIN 'product_stock' ON 'product_stock'.'product_stock_pr...' at line 2
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 2 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 16:37:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product' 
+        JOIN 'product_stock' ON 'product_stock'.'product_stock_pr...' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 3 APPPATH\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 4 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 16:37:04 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product' 
+        JOIN 'product_stock' ON 'product_stock'.'product_stock_pr...' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 4 APPPATH\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 5 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-20 16:37:28 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product' 
+        JOIN 'product_stock' ON 'product_stock'.'product_stock_pr...' at line 1 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * FROM '...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM '...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM '...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\pitek_helper.php(53): CodeIgniter\Database\BaseConnection->query('SELECT * FROM '...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(21): joinTable('product_stock_p...', 'product_id', 'product_stock', 'product')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-20 16:37:28 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product' 
+        JOIN 'product_stock' ON 'product_stock'.'product_stock_pr...' at line 1
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\pitek_helper.php(53): CodeIgniter\Database\BaseConnection->query('SELECT * FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 2 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 16:37:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product' 
+        JOIN 'product_stock' ON 'product_stock'.'product_stock_pr...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 3 APPPATH\Helpers\pitek_helper.php(53): CodeIgniter\Database\BaseConnection->query('SELECT * FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 4 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 16:37:28 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product' 
+        JOIN 'product_stock' ON 'product_stock'.'product_stock_pr...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 4 APPPATH\Helpers\pitek_helper.php(53): CodeIgniter\Database\BaseConnection->query('SELECT * FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 5 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-20 16:37:43 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product' 
+        JOIN 'product_stock' ON 'product_stock'.'product_stock_pr...' at line 2 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * \r\n    ...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * \r\n    ...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * \r\n    ...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * \r\n    ...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(21): joinTable('product_stock_p...', 'product_id', 'product_stock', 'product')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-20 16:37:43 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product' 
+        JOIN 'product_stock' ON 'product_stock'.'product_stock_pr...' at line 2
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 2 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 16:37:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product' 
+        JOIN 'product_stock' ON 'product_stock'.'product_stock_pr...' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 3 APPPATH\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 4 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-20 16:37:43 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''product' 
+        JOIN 'product_stock' ON 'product_stock'.'product_stock_pr...' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 4 APPPATH\Helpers\pitek_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT * 
+        FROM \'product\' 
+        JOIN \'product_stock\' ON \'product_stock\'.\'product_stock_product_id\'=\'product\'.\'product_id\'')
+ 5 APPPATH\Controllers\Product.php(21): joinTable('product_stock_product_id', 'product_id', 'product_stock', 'product')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')

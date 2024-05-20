@@ -12,7 +12,6 @@ function joinProductCategory()
 
 function joinProductProduct_stock()
 {
-    $db = db_connect();
     $data = "SELECT product.product_category_id, product.product_category_name, product_stock.*
     FROM product
     LEFT JOIN product_stock on product.product_id = product_stock.product_stock_product_id";
@@ -33,14 +32,29 @@ function pagination($page, $sql, $jumlahData)
     $pageSelanjutnya = ($page + 1 == $jumlahPage + 1) ? null : ($page + 1);
 
     $object = (object) [];
-     $object->filter = $query->getResultArray();
-     $object->pagination = [
-         'jumlah_data' => $jumlahData,
-         'page' => $page,
-         'jumlah_page' => $jumlahPage,
-         'page_sebelumnya' => $pageSebelumnya,
-         'page_selanjutnya' => $pageSelanjutnya
+    $object->filter = $query->getResultArray();
+    $object->pagination = [
+        'jumlah_data' => $jumlahData,
+        'page' => $page,
+        'jumlah_page' => $jumlahPage,
+        'page_sebelumnya' => $pageSebelumnya,
+        'page_selanjutnya' => $pageSelanjutnya
     ];
 
     return $object;
 }
+
+
+// ------------------------------------------- PRINTILAN ------------------------------------------- //
+
+// join table return query
+if (!function_exists('joinTable')) {
+    function joinTable($key1, $key2, $table1, $table2)
+    {   
+        $join = "SELECT * 
+        FROM {$table2} 
+        JOIN {$table1} ON {$table1}.{$key1}={$table2}.{$key2}";
+        return $join;
+    }
+}
+

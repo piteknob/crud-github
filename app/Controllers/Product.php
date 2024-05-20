@@ -17,13 +17,12 @@ class Product extends BaseController
 
     public function pitek()
     {
-        $db = db_connect();
+        // $db = db_connect();
+        $join = joinTable("product_stock_product_id", "product_id", "product_stock", "product");
+        print_r($join);
+        die;
 
-        $data = joinProductProduct_stock();
-        $data = $db->query($data)->getResultArray();
-
-
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'OK', $data, '');
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'OK', $join, '');
     }
 
     // ------------------------------------------ INDEX ------------------------------------------ //
