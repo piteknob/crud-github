@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Controllers\Core\AuthController;
 use CodeIgniter\API\ResponseTrait;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\RESTful\ResourceController;
@@ -9,9 +10,8 @@ use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 use Symfony\Component\Console\Input\StringInput;
 
-use function PHPUnit\Framework\stringContains;
 
-class User extends ResourceController
+class User extends AuthController
 {
     use ResponseTrait;
     protected $db;
@@ -26,7 +26,6 @@ class User extends ResourceController
         $post = $this->request->getPost();
         $db = db_connect();
 
-        helper(['form']);
         $rules = [
             'email' => 'required|valid_email|is_unique[user.user_email]',
             'password' => 'required|min_length[6]',
@@ -56,7 +55,6 @@ class User extends ResourceController
         $post = $this->request->getPost();
         $db = db_connect();
 
-        helper(['form']);
         $rules = [
             'email' => 'required|valid_email',
             'password' => 'required'

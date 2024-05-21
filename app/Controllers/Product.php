@@ -2,64 +2,50 @@
 
 namespace App\Controllers;
 
-
 use CodeIgniter\HTTP\ResponseInterface;
 use App\Controllers\Core\BaseController;
+use App\Controllers\Core\AuthController;
 
-class Product extends BaseController
+
+class Product extends AuthController
 {
-    protected $db;
-
-    public function __construct()
-    {
-        $this->db = \Config\Database::connect();
-    }
-
     public function pitek()
     {
-        // $db = db_connect();
-        $join = joinTable("product_stock_product_id", "product_id", "product_stock", "product");
-        print_r($join);
-        die;
+        // $get = $_GET;
+        
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'OK', $join, '');
+
+        // return $this->responsePagination(ResponseInterface::HTTP_OK, 'OK', $get, '');
     }
 
     // ------------------------------------------ INDEX ------------------------------------------ //
     public function index()
     {
-        helper('');
         $db = db_connect();
 
+        $get = $_GET;
         $page = isset($get["page"]) ? $get["page"] : 1;
+        $data = [];
 
-        $product = joinProductCategory();
-        $data = $db->query($product)->getResultArray();
-        $jumlahData = count($data);
+
+        $select = [
+            '*'
+        ];
+        $join = [
+            'table1' => 'product',
+            'key1' => 'product_category_id',
+            'table2' => 'category',
+            'key2' => 'category_id'
+        ];
+        $product = selectData($select);
+        $product .= leftJoinTable($join);
+        $query = $db->query($product)->getResultArray();
+        $jumlahData = count($query);
 
         // pagination 
+        $pagination = pagination($page, $product, $jumlahData);
 
-        $limit = 2;
-        $offset = ($page - 1) * $limit;
-        $product .= " LIMIT $offset, $limit";
-        $gas = $db->query($product);
-        $jumlahPage = ceil($jumlahData / $limit);
-        $pageSebelumnya = ($page - 1 == 0) ? null : ($page - 1);
-        $pageSelanjutnya = ($page + 1 == $jumlahPage + 1) ? null : ($page + 1);
-
-
-        $pagination = (object) [];
-        $pagination->data = $gas->getResultArray();
-        $pagination->page = [
-            'jumlah_data' => $jumlahData,
-            'page' => $page,
-            'jumlah_page' => $jumlahPage,
-            'page_sebelumnya' => $pageSebelumnya,
-            'page_selanjutnya' => $pageSelanjutnya
-        ];
-
-
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'OK', $pagination, '');
+        return $this->responsePagination(ResponseInterface::HTTP_OK, 'OK',$query, $pagination, '');
     }
 
 

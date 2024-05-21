@@ -6,6 +6,7 @@ use CodeIgniter\Controller;
 use CodeIgniter\HTTP\CLIRequest;
 use CodeIgniter\HTTP\IncomingRequest;
 use CodeIgniter\HTTP\RequestInterface;
+use CodeIgniter\HTTP\Response;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
 
@@ -35,7 +36,7 @@ abstract class BaseController extends Controller
      *
      * @var list<string>
      */
-    protected $helpers = ['pitek'];
+    protected $helpers = ['query'];
 
     /**
      * Be sure to declare properties for any property fetch you initialized.
@@ -82,6 +83,18 @@ abstract class BaseController extends Controller
             'data' => $data
         ];
 
+        return $this->response->setJSON($response);
+    }
+
+    public function responsePagination($statusCode = ResponseInterface::HTTP_OK, $message = '', $data = [],$pagination = [], $success = 'success')
+    {
+        $response = [
+            'status' => $statusCode,
+            'message' => $message,
+            'error' => $success,
+            'data' => $data,
+            'pagination' => $pagination
+        ];
         return $this->response->setJSON($response);
     }
 }

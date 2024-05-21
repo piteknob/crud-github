@@ -1,0 +1,2045 @@
+ERROR - 2024-05-21 08:45:03 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ci4_produk_api', 3306, '', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\crud-github\app\Filters\Auth.php(46): CodeIgniter\Database\BaseConnection->query('SELECT auth_use...')
+#4 C:\xampp\htdocs\crud-github\system\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#5 C:\xampp\htdocs\crud-github\system\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore(Array)
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/pitek', 'before')
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\crud-github\app\Filters\Auth.php(46): CodeIgniter\Database\BaseConnection->query('SELECT auth_use...')
+#3 C:\xampp\htdocs\crud-github\system\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#4 C:\xampp\htdocs\crud-github\system\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore(Array)
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/pitek', 'before')
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-21 08:45:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Filters\Auth.php(46): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token FROM auth_user WHERE auth_user_token = \'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjEzNTY5OTk1MjQsIm5iZiI6MTM1NzAwMDAwMCwidWlkIjoiOSIsImVtYWlsIjoiZmxveWRAZ21haWwuY29tIn0.iGZE2ZalBOqwhm71G4x_599gFa73oj7_iMSsRfy68xQ\'')
+ 3 SYSTEMPATH\Filters\Filters.php(203): App\Filters\Auth->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('product/pitek', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 11:06:17 --> ErrorException: Undefined array key "table"
+[Method: GET, Route: product/pitek]
+in APPPATH\Helpers\pitek_helper.php on line 110.
+ 1 APPPATH\Helpers\pitek_helper.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "table"', 'C:\\xampp\\htdocs\\crud-github\\app\\Helpers\\pitek_helper.php', 110)
+ 2 APPPATH\Controllers\Product.php(30): searchData([...], 'makanan')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 11:07:50 --> ErrorException: Array to string conversion
+[Method: GET, Route: product/pitek]
+in APPPATH\Helpers\pitek_helper.php on line 110.
+ 1 APPPATH\Helpers\pitek_helper.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud-github\\app\\Helpers\\pitek_helper.php', 110)
+ 2 APPPATH\Controllers\Product.php(32): searchData([...], 'makanan')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 11:08:14 --> ErrorException: Array to string conversion
+[Method: GET, Route: product/pitek]
+in APPPATH\Helpers\pitek_helper.php on line 111.
+ 1 APPPATH\Helpers\pitek_helper.php(111): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud-github\\app\\Helpers\\pitek_helper.php', 111)
+ 2 APPPATH\Controllers\Product.php(32): searchData([...], 'makanan')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 11:08:33 --> ErrorException: Array to string conversion
+[Method: GET, Route: product/pitek]
+in APPPATH\Helpers\pitek_helper.php on line 111.
+ 1 APPPATH\Helpers\pitek_helper.php(111): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud-github\\app\\Helpers\\pitek_helper.php', 111)
+ 2 APPPATH\Controllers\Product.php(32): searchData([...], 'makanan')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 11:39:40 --> ErrorException: Undefined array key "table1"
+[Method: GET, Route: product/pitek]
+in APPPATH\Helpers\pitek_helper.php on line 103.
+ 1 APPPATH\Helpers\pitek_helper.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "table1"', 'C:\\xampp\\htdocs\\crud-github\\app\\Helpers\\pitek_helper.php', 103)
+ 2 APPPATH\Controllers\Product.php(37): joinTable([...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 11:41:56 --> ErrorException: Array to string conversion
+[Method: GET, Route: product/pitek]
+in APPPATH\Controllers\Product.php on line 41.
+ 1 APPPATH\Controllers\Product.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 13:39:02 --> ErrorException: Undefined variable $db
+[Method: GET, Route: product/pitek]
+in APPPATH\Controllers\Product.php on line 31.
+ 1 APPPATH\Controllers\Product.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 13:39:21 --> ErrorException: Undefined variable $db
+[Method: GET, Route: product/pitek]
+in APPPATH\Controllers\Product.php on line 31.
+ 1 APPPATH\Controllers\Product.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 13:39:24 --> ErrorException: Undefined variable $db
+[Method: GET, Route: product/pitek]
+in APPPATH\Controllers\Product.php on line 31.
+ 1 APPPATH\Controllers\Product.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 13:49:35 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: product/pitek]
+in APPPATH\Controllers\Core\AuthController.php on line 21.
+ 1 APPPATH\Controllers\Product.php(14): App\Controllers\Core\AuthController->getDataUser('floyd')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 13:49:40 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: product/pitek]
+in APPPATH\Controllers\Core\AuthController.php on line 21.
+ 1 APPPATH\Controllers\Product.php(14): App\Controllers\Core\AuthController->getDataUser('floyd')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 13:58:59 --> TypeError: json_decode(): Argument #1 ($json) must be of type string, array given
+[Method: GET, Route: product/pitek]
+in APPPATH\Helpers\pitek_helper.php on line 46.
+ 1 APPPATH\Helpers\pitek_helper.php(46): json_decode([...])
+ 2 APPPATH\Controllers\Product.php(16): setToJSON([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-21 14:06:15 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM product 
+        LEFT JOIN category ON category.category_id=product.pro...' at line 1 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('FROM product \r\n...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('FROM product \r\n...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('FROM product \r\n...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(35): CodeIgniter\Database\BaseConnection->query('FROM product \r\n...')
+#4 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->index()
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-05-21 14:06:15 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM product 
+        LEFT JOIN category ON category.category_id=product.pro...' at line 1
+[Method: GET, Route: product/index]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Product.php(35): CodeIgniter\Database\BaseConnection->query('FROM product 
+        LEFT JOIN category ON category.category_id=product.product_category_id')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 14:06:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM product 
+        LEFT JOIN category ON category.category_id=product.pro...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('FROM product 
+        LEFT JOIN category ON category.category_id=product.product_category_id')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('FROM product 
+        LEFT JOIN category ON category.category_id=product.product_category_id')
+ 3 APPPATH\Controllers\Product.php(35): CodeIgniter\Database\BaseConnection->query('FROM product 
+        LEFT JOIN category ON category.category_id=product.product_category_id')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 14:06:15 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM product 
+        LEFT JOIN category ON category.category_id=product.pro...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('FROM product 
+        LEFT JOIN category ON category.category_id=product.product_category_id', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('FROM product 
+        LEFT JOIN category ON category.category_id=product.product_category_id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('FROM product 
+        LEFT JOIN category ON category.category_id=product.product_category_id')
+ 4 APPPATH\Controllers\Product.php(35): CodeIgniter\Database\BaseConnection->query('FROM product 
+        LEFT JOIN category ON category.category_id=product.product_category_id')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 14:12:20 --> ErrorException: Undefined variable $data
+[Method: GET, Route: product/index]
+in APPPATH\Controllers\Product.php on line 44.
+ 1 APPPATH\Controllers\Product.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php', 44)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 14:18:34 --> ErrorException: Undefined array key "page"
+[Method: GET, Route: product/index]
+in APPPATH\Controllers\Product.php on line 25.
+ 1 APPPATH\Controllers\Product.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "page"', 'C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 14:18:57 --> ErrorException: Undefined array key "page"
+[Method: GET, Route: product/index]
+in APPPATH\Controllers\Product.php on line 25.
+ 1 APPPATH\Controllers\Product.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "page"', 'C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 14:18:58 --> ErrorException: Undefined array key "page"
+[Method: GET, Route: product/index]
+in APPPATH\Controllers\Product.php on line 25.
+ 1 APPPATH\Controllers\Product.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "page"', 'C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 14:19:00 --> ErrorException: Undefined array key "page"
+[Method: GET, Route: product/index]
+in APPPATH\Controllers\Product.php on line 25.
+ 1 APPPATH\Controllers\Product.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "page"', 'C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 14:19:09 --> ErrorException: Undefined array key "page"
+[Method: GET, Route: product/index]
+in APPPATH\Controllers\Product.php on line 25.
+ 1 APPPATH\Controllers\Product.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "page"', 'C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 14:19:18 --> ErrorException: Undefined array key "page"
+[Method: GET, Route: product/index]
+in APPPATH\Controllers\Product.php on line 25.
+ 1 APPPATH\Controllers\Product.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "page"', 'C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 14:19:23 --> ErrorException: Undefined array key "page"
+[Method: GET, Route: product/index]
+in APPPATH\Controllers\Product.php on line 25.
+ 1 APPPATH\Controllers\Product.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "page"', 'C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 14:22:08 --> ParseError: syntax error, unexpected token "=>", expecting "]"
+[Method: GET, Route: product/index]
+in APPPATH\Helpers\pitek_helper.php on line 23.
+ 1 SYSTEMPATH\Controller.php(93): helper([...])
+ 2 APPPATH\Controllers\Core\BaseController.php(52): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 14:22:15 --> ParseError: syntax error, unexpected token "=>", expecting "]"
+[Method: GET, Route: product/index]
+in APPPATH\Helpers\pitek_helper.php on line 23.
+ 1 SYSTEMPATH\Controller.php(93): helper([...])
+ 2 APPPATH\Controllers\Core\BaseController.php(52): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 14:22:47 --> Error: Attempt to assign property "pagination" on null
+[Method: GET, Route: product/index]
+in APPPATH\Helpers\pitek_helper.php on line 21.
+ 1 APPPATH\Controllers\Product.php(43): pagination(1, 'SELECT *FROM product 
+        LEFT JOIN category ON category.category_id=product.product_category_id LIMIT 0, 3', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 14:33:16 --> ParseError: Unclosed '[' on line 90 does not match '}'
+[Method: GET, Route: product/index]
+in APPPATH\Controllers\Core\BaseController.php on line 95.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\BaseController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\BaseController')
+ 3 APPPATH\Controllers\Core\DataController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\BaseController')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\DataController')
+ 7 APPPATH\Controllers\Core\AuthController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\DataController')
+ 8 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+ 9 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+10 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\AuthController')
+11 APPPATH\Controllers\Product.php(10): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\AuthController')
+12 SYSTEMPATH\Router\AutoRouter.php(147): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php')
+13 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('product/index', 'GET')
+14 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('product/index')
+15 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('product/index')
+16 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+17 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+20 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+21 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+WARNING - 2024-05-21 14:33:28 --> [DEPRECATED] Optional parameter $statusCode declared before required parameter $data is implicitly treated as a required parameter in APPPATH\Controllers\Core\BaseController.php on line 88.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\BaseController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\BaseController')
+ 4 APPPATH\Controllers\Core\DataController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\BaseController')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 7 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\DataController')
+ 8 APPPATH\Controllers\Core\AuthController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\DataController')
+ 9 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+10 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+11 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\AuthController')
+12 APPPATH\Controllers\Product.php(10): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\AuthController')
+13 SYSTEMPATH\Router\AutoRouter.php(147): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php')
+14 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('product/index', 'GET')
+15 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('product/index')
+16 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('product/index')
+17 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+18 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+21 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+22 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+WARNING - 2024-05-21 14:33:28 --> [DEPRECATED] Optional parameter $message declared before required parameter $data is implicitly treated as a required parameter in APPPATH\Controllers\Core\BaseController.php on line 0.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\BaseController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\BaseController')
+ 4 APPPATH\Controllers\Core\DataController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\BaseController')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 7 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\DataController')
+ 8 APPPATH\Controllers\Core\AuthController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\DataController')
+ 9 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+10 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+11 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\AuthController')
+12 APPPATH\Controllers\Product.php(10): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\AuthController')
+13 SYSTEMPATH\Router\AutoRouter.php(147): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php')
+14 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('product/index', 'GET')
+15 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('product/index')
+16 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('product/index')
+17 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+18 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+21 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+22 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+WARNING - 2024-05-21 14:33:30 --> [DEPRECATED] Optional parameter $statusCode declared before required parameter $data is implicitly treated as a required parameter in APPPATH\Controllers\Core\BaseController.php on line 88.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\BaseController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\BaseController')
+ 4 APPPATH\Controllers\Core\DataController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\BaseController')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 7 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\DataController')
+ 8 APPPATH\Controllers\Core\AuthController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\DataController')
+ 9 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+10 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+11 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\AuthController')
+12 APPPATH\Controllers\Product.php(10): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\AuthController')
+13 SYSTEMPATH\Router\AutoRouter.php(147): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php')
+14 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('product/index', 'GET')
+15 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('product/index')
+16 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('product/index')
+17 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+18 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+21 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+22 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+WARNING - 2024-05-21 14:33:30 --> [DEPRECATED] Optional parameter $message declared before required parameter $data is implicitly treated as a required parameter in APPPATH\Controllers\Core\BaseController.php on line 0.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\BaseController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\BaseController')
+ 4 APPPATH\Controllers\Core\DataController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\BaseController')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 7 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\DataController')
+ 8 APPPATH\Controllers\Core\AuthController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\DataController')
+ 9 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+10 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+11 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\AuthController')
+12 APPPATH\Controllers\Product.php(10): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\AuthController')
+13 SYSTEMPATH\Router\AutoRouter.php(147): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php')
+14 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('product/index', 'GET')
+15 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('product/index')
+16 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('product/index')
+17 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+18 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+21 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+22 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+WARNING - 2024-05-21 14:33:31 --> [DEPRECATED] Optional parameter $statusCode declared before required parameter $data is implicitly treated as a required parameter in APPPATH\Controllers\Core\BaseController.php on line 88.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\BaseController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\BaseController')
+ 4 APPPATH\Controllers\Core\DataController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\BaseController')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 7 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\DataController')
+ 8 APPPATH\Controllers\Core\AuthController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\DataController')
+ 9 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+10 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+11 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\AuthController')
+12 APPPATH\Controllers\Product.php(10): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\AuthController')
+13 SYSTEMPATH\Router\AutoRouter.php(147): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php')
+14 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('product/index', 'GET')
+15 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('product/index')
+16 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('product/index')
+17 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+18 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+21 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+22 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+WARNING - 2024-05-21 14:33:31 --> [DEPRECATED] Optional parameter $message declared before required parameter $data is implicitly treated as a required parameter in APPPATH\Controllers\Core\BaseController.php on line 0.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\BaseController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\BaseController')
+ 4 APPPATH\Controllers\Core\DataController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\BaseController')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 7 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\DataController')
+ 8 APPPATH\Controllers\Core\AuthController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\DataController')
+ 9 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+10 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+11 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\AuthController')
+12 APPPATH\Controllers\Product.php(10): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\AuthController')
+13 SYSTEMPATH\Router\AutoRouter.php(147): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php')
+14 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('product/index', 'GET')
+15 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('product/index')
+16 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('product/index')
+17 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+18 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+21 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+22 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+WARNING - 2024-05-21 14:33:32 --> [DEPRECATED] Optional parameter $statusCode declared before required parameter $data is implicitly treated as a required parameter in APPPATH\Controllers\Core\BaseController.php on line 88.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\BaseController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\BaseController')
+ 4 APPPATH\Controllers\Core\DataController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\BaseController')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 7 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\DataController')
+ 8 APPPATH\Controllers\Core\AuthController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\DataController')
+ 9 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+10 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+11 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\AuthController')
+12 APPPATH\Controllers\Product.php(10): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\AuthController')
+13 SYSTEMPATH\Router\AutoRouter.php(147): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php')
+14 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('product/index', 'GET')
+15 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('product/index')
+16 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('product/index')
+17 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+18 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+21 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+22 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+WARNING - 2024-05-21 14:33:32 --> [DEPRECATED] Optional parameter $message declared before required parameter $data is implicitly treated as a required parameter in APPPATH\Controllers\Core\BaseController.php on line 0.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\BaseController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\BaseController')
+ 4 APPPATH\Controllers\Core\DataController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\BaseController')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 7 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\DataController')
+ 8 APPPATH\Controllers\Core\AuthController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\DataController')
+ 9 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+10 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+11 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\AuthController')
+12 APPPATH\Controllers\Product.php(10): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\AuthController')
+13 SYSTEMPATH\Router\AutoRouter.php(147): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php')
+14 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('product/index', 'GET')
+15 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('product/index')
+16 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('product/index')
+17 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+18 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+21 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+22 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+WARNING - 2024-05-21 14:33:32 --> [DEPRECATED] Optional parameter $statusCode declared before required parameter $data is implicitly treated as a required parameter in APPPATH\Controllers\Core\BaseController.php on line 88.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\BaseController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\BaseController')
+ 4 APPPATH\Controllers\Core\DataController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\BaseController')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 7 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\DataController')
+ 8 APPPATH\Controllers\Core\AuthController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\DataController')
+ 9 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+10 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+11 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\AuthController')
+12 APPPATH\Controllers\Product.php(10): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\AuthController')
+13 SYSTEMPATH\Router\AutoRouter.php(147): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php')
+14 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('product/index', 'GET')
+15 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('product/index')
+16 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('product/index')
+17 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+18 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+21 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+22 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+WARNING - 2024-05-21 14:33:32 --> [DEPRECATED] Optional parameter $message declared before required parameter $data is implicitly treated as a required parameter in APPPATH\Controllers\Core\BaseController.php on line 0.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\BaseController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\BaseController')
+ 4 APPPATH\Controllers\Core\DataController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\BaseController')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 7 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\DataController')
+ 8 APPPATH\Controllers\Core\AuthController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\DataController')
+ 9 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+10 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+11 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\AuthController')
+12 APPPATH\Controllers\Product.php(10): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\AuthController')
+13 SYSTEMPATH\Router\AutoRouter.php(147): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php')
+14 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('product/index', 'GET')
+15 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('product/index')
+16 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('product/index')
+17 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+18 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+21 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+22 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+WARNING - 2024-05-21 14:33:33 --> [DEPRECATED] Optional parameter $statusCode declared before required parameter $data is implicitly treated as a required parameter in APPPATH\Controllers\Core\BaseController.php on line 88.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\BaseController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\BaseController')
+ 4 APPPATH\Controllers\Core\DataController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\BaseController')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 7 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\DataController')
+ 8 APPPATH\Controllers\Core\AuthController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\DataController')
+ 9 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+10 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+11 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\AuthController')
+12 APPPATH\Controllers\Product.php(10): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\AuthController')
+13 SYSTEMPATH\Router\AutoRouter.php(147): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php')
+14 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('product/index', 'GET')
+15 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('product/index')
+16 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('product/index')
+17 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+18 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+21 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+22 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+WARNING - 2024-05-21 14:33:33 --> [DEPRECATED] Optional parameter $message declared before required parameter $data is implicitly treated as a required parameter in APPPATH\Controllers\Core\BaseController.php on line 0.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\BaseController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\BaseController')
+ 4 APPPATH\Controllers\Core\DataController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\BaseController')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 7 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\DataController')
+ 8 APPPATH\Controllers\Core\AuthController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\DataController')
+ 9 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+10 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+11 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\AuthController')
+12 APPPATH\Controllers\Product.php(10): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\AuthController')
+13 SYSTEMPATH\Router\AutoRouter.php(147): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php')
+14 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('product/index', 'GET')
+15 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('product/index')
+16 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('product/index')
+17 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+18 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+21 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+22 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+WARNING - 2024-05-21 14:33:54 --> [DEPRECATED] Optional parameter $statusCode declared before required parameter $data is implicitly treated as a required parameter in APPPATH\Controllers\Core\BaseController.php on line 89.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\BaseController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\BaseController')
+ 4 APPPATH\Controllers\Core\DataController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\BaseController')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 7 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\DataController')
+ 8 APPPATH\Controllers\Core\AuthController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\DataController')
+ 9 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+10 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+11 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\AuthController')
+12 APPPATH\Controllers\Product.php(10): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\AuthController')
+13 SYSTEMPATH\Router\AutoRouter.php(147): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php')
+14 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('product/index', 'GET')
+15 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('product/index')
+16 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('product/index')
+17 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+18 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+21 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+22 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+WARNING - 2024-05-21 14:33:54 --> [DEPRECATED] Optional parameter $message declared before required parameter $data is implicitly treated as a required parameter in APPPATH\Controllers\Core\BaseController.php on line 0.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\BaseController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\BaseController')
+ 4 APPPATH\Controllers\Core\DataController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\BaseController')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 7 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\DataController')
+ 8 APPPATH\Controllers\Core\AuthController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\DataController')
+ 9 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+10 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+11 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\AuthController')
+12 APPPATH\Controllers\Product.php(10): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\AuthController')
+13 SYSTEMPATH\Router\AutoRouter.php(147): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php')
+14 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('product/index', 'GET')
+15 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('product/index')
+16 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('product/index')
+17 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+18 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+21 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+22 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+WARNING - 2024-05-21 14:33:58 --> [DEPRECATED] Optional parameter $statusCode declared before required parameter $data is implicitly treated as a required parameter in APPPATH\Controllers\Core\BaseController.php on line 89.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\BaseController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\BaseController')
+ 4 APPPATH\Controllers\Core\DataController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\BaseController')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 7 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\DataController')
+ 8 APPPATH\Controllers\Core\AuthController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\DataController')
+ 9 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+10 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+11 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\AuthController')
+12 APPPATH\Controllers\Product.php(10): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\AuthController')
+13 SYSTEMPATH\Router\AutoRouter.php(147): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php')
+14 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('product/index', 'GET')
+15 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('product/index')
+16 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('product/index')
+17 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+18 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+21 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+22 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+WARNING - 2024-05-21 14:33:58 --> [DEPRECATED] Optional parameter $message declared before required parameter $data is implicitly treated as a required parameter in APPPATH\Controllers\Core\BaseController.php on line 0.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\system\\Debug\\Exceptions.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\BaseController.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\BaseController')
+ 4 APPPATH\Controllers\Core\DataController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\BaseController')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\DataController.php')
+ 7 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\DataController')
+ 8 APPPATH\Controllers\Core\AuthController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\DataController')
+ 9 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+10 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Core\\AuthController.php')
+11 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\AuthController')
+12 APPPATH\Controllers\Product.php(10): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\AuthController')
+13 SYSTEMPATH\Router\AutoRouter.php(147): include_once('C:\\xampp\\htdocs\\crud-github\\app\\Controllers\\Product.php')
+14 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('product/index', 'GET')
+15 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('product/index')
+16 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('product/index')
+17 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+18 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+21 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+22 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 14:35:11 --> ErrorException: Undefined variable $pagination
+[Method: GET, Route: product/index]
+in APPPATH\Helpers\pitek_helper.php on line 32.
+ 1 APPPATH\Helpers\pitek_helper.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pagination', 'C:\\xampp\\htdocs\\crud-github\\app\\Helpers\\pitek_helper.php', 32)
+ 2 APPPATH\Controllers\Product.php(43): pagination(1, 'SELECT *FROM product 
+        LEFT JOIN category ON category.category_id=product.product_category_id LIMIT 0, 3', 13)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->index()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-21 15:15:51 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@gmail.com' at line 3 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_use...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_use...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_use...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_use...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('floyd@gmail.com')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-21 15:15:51 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@gmail.com' at line 3
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_user_email = floyd@gmail.com')
+ 2 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('floyd@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:15:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@gmail.com' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_user_email = floyd@gmail.com')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_user_email = floyd@gmail.com')
+ 3 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_user_email = floyd@gmail.com')
+ 4 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('floyd@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:15:51 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@gmail.com' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_user_email = floyd@gmail.com', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_user_email = floyd@gmail.com')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_user_email = floyd@gmail.com')
+ 4 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_user_email = floyd@gmail.com')
+ 5 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('floyd@gmail.com')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-21 15:16:12 --> mysqli_sql_exception: Unknown column 'auth_user_user_email' in 'where clause' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_use...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_use...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_use...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_use...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('floyd@gmail.com')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-21 15:16:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'auth_user_user_email' in 'where clause'
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_user_email = `floyd@gmail.com`')
+ 2 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('floyd@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:16:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'auth_user_user_email' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_user_email = `floyd@gmail.com`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_user_email = `floyd@gmail.com`')
+ 3 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_user_email = `floyd@gmail.com`')
+ 4 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('floyd@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:16:12 --> [Caused by] mysqli_sql_exception: Unknown column 'auth_user_user_email' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_user_email = `floyd@gmail.com`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_user_email = `floyd@gmail.com`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_user_email = `floyd@gmail.com`')
+ 4 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_user_email = `floyd@gmail.com`')
+ 5 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('floyd@gmail.com')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-21 15:16:21 --> mysqli_sql_exception: Unknown column 'floyd@gmail.com' in 'where clause' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_use...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_use...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_use...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_use...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('floyd@gmail.com')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-21 15:16:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'floyd@gmail.com' in 'where clause'
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 2 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('floyd@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:16:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'floyd@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 3 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 4 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('floyd@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:16:21 --> [Caused by] mysqli_sql_exception: Unknown column 'floyd@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 4 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 5 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('floyd@gmail.com')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-21 15:16:41 --> mysqli_sql_exception: Unknown column 'floyd@gmail.com' in 'where clause' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_use...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_use...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_use...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_use...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('floyd@gmail.com')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-21 15:16:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'floyd@gmail.com' in 'where clause'
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 2 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('floyd@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:16:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'floyd@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 3 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 4 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('floyd@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:16:41 --> [Caused by] mysqli_sql_exception: Unknown column 'floyd@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 4 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 5 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('floyd@gmail.com')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-21 15:16:42 --> mysqli_sql_exception: Unknown column 'floyd@gmail.com' in 'where clause' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_use...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_use...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_use...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_use...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('floyd@gmail.com')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-21 15:16:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'floyd@gmail.com' in 'where clause'
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 2 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('floyd@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:16:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'floyd@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 3 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 4 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('floyd@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:16:42 --> [Caused by] mysqli_sql_exception: Unknown column 'floyd@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 4 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 5 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('floyd@gmail.com')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-21 15:16:42 --> mysqli_sql_exception: Unknown column 'floyd@gmail.com' in 'where clause' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_use...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_use...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_use...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_use...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('floyd@gmail.com')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-21 15:16:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'floyd@gmail.com' in 'where clause'
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 2 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('floyd@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:16:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'floyd@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 3 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 4 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('floyd@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:16:42 --> [Caused by] mysqli_sql_exception: Unknown column 'floyd@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 4 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `floyd@gmail.com`')
+ 5 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('floyd@gmail.com')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:16:56 --> ParseError: syntax error, unexpected identifier "print_r"
+[Method: GET, Route: product/pitek]
+in APPPATH\Controllers\Product.php on line 16.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('product/pitek', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('product/pitek')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('product/pitek')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-21 15:16:57 --> mysqli_sql_exception: Unknown column 'pitek@gmail.com' in 'where clause' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_use...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_use...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_use...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_use...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-21 15:16:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pitek@gmail.com' in 'where clause'
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 2 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:16:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pitek@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 3 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 4 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:16:57 --> [Caused by] mysqli_sql_exception: Unknown column 'pitek@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 4 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 5 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-21 15:16:57 --> mysqli_sql_exception: Unknown column 'pitek@gmail.com' in 'where clause' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_use...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_use...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_use...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_use...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-21 15:16:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pitek@gmail.com' in 'where clause'
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 2 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:16:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pitek@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 3 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 4 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:16:57 --> [Caused by] mysqli_sql_exception: Unknown column 'pitek@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 4 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 5 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-21 15:16:58 --> mysqli_sql_exception: Unknown column 'pitek@gmail.com' in 'where clause' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_use...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_use...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_use...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_use...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-21 15:16:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pitek@gmail.com' in 'where clause'
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 2 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:16:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pitek@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 3 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 4 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:16:58 --> [Caused by] mysqli_sql_exception: Unknown column 'pitek@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 4 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 5 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-21 15:16:59 --> mysqli_sql_exception: Unknown column 'pitek@gmail.com' in 'where clause' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_use...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_use...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_use...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_use...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-21 15:16:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pitek@gmail.com' in 'where clause'
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 2 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:16:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pitek@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 3 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 4 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:16:59 --> [Caused by] mysqli_sql_exception: Unknown column 'pitek@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 4 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 5 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-21 15:16:59 --> mysqli_sql_exception: Unknown column 'pitek@gmail.com' in 'where clause' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_use...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_use...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_use...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_use...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-21 15:16:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pitek@gmail.com' in 'where clause'
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 2 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:16:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pitek@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 3 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 4 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:16:59 --> [Caused by] mysqli_sql_exception: Unknown column 'pitek@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 4 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 5 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-21 15:17:26 --> mysqli_sql_exception: Unknown column 'pitek@gmail.com' in 'where clause' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_use...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_use...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_use...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_use...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-21 15:17:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pitek@gmail.com' in 'where clause'
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 2 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:17:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pitek@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 3 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 4 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:17:26 --> [Caused by] mysqli_sql_exception: Unknown column 'pitek@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 4 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 5 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-21 15:17:27 --> mysqli_sql_exception: Unknown column 'pitek@gmail.com' in 'where clause' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_use...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_use...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_use...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_use...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-21 15:17:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pitek@gmail.com' in 'where clause'
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 2 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:17:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pitek@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 3 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 4 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:17:27 --> [Caused by] mysqli_sql_exception: Unknown column 'pitek@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 4 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 5 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-21 15:17:28 --> mysqli_sql_exception: Unknown column 'pitek@gmail.com' in 'where clause' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_use...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_use...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_use...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_use...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-21 15:17:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pitek@gmail.com' in 'where clause'
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 2 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:17:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pitek@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 3 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 4 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:17:28 --> [Caused by] mysqli_sql_exception: Unknown column 'pitek@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 4 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 5 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-21 15:17:28 --> mysqli_sql_exception: Unknown column 'pitek@gmail.com' in 'where clause' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_use...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_use...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_use...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_use...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-21 15:17:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pitek@gmail.com' in 'where clause'
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 2 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:17:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pitek@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 3 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 4 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:17:28 --> [Caused by] mysqli_sql_exception: Unknown column 'pitek@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 4 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 5 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-21 15:17:29 --> mysqli_sql_exception: Unknown column 'pitek@gmail.com' in 'where clause' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_use...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_use...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_use...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_use...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-21 15:17:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pitek@gmail.com' in 'where clause'
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 2 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:17:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pitek@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 3 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 4 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:17:29 --> [Caused by] mysqli_sql_exception: Unknown column 'pitek@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 4 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 5 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-21 15:17:29 --> mysqli_sql_exception: Unknown column 'pitek@gmail.com' in 'where clause' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_use...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_use...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_use...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_use...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-21 15:17:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pitek@gmail.com' in 'where clause'
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 2 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:17:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pitek@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 3 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 4 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:17:29 --> [Caused by] mysqli_sql_exception: Unknown column 'pitek@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 4 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 5 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-21 15:17:30 --> mysqli_sql_exception: Unknown column 'pitek@gmail.com' in 'where clause' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_use...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_use...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_use...')
+#3 C:\xampp\htdocs\crud-github\app\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_use...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->pitek()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-21 15:17:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pitek@gmail.com' in 'where clause'
+[Method: GET, Route: product/pitek]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 2 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:17:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'pitek@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 3 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 4 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-21 15:17:30 --> [Caused by] mysqli_sql_exception: Unknown column 'pitek@gmail.com' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 4 APPPATH\Controllers\Core\AuthController.php(28): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_token 
+        FROM auth_user
+        WHERE auth_user_email = `pitek@gmail.com`')
+ 5 APPPATH\Controllers\Product.php(15): App\Controllers\Core\AuthController->checkUserExist('pitek@gmail.com')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->pitek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
