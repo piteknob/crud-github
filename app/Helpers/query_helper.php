@@ -3,45 +3,99 @@
 $db = \Config\Database::connect();
 
 
-// Generate list data with pagination 
+if (!function_exists('generateDetailData')) {
+    function generateDetailData($query)
+    {
+        $db = db_connect();
+        $selectQuery = isset($query['select']) ? $query['select'] : '';
+        $joinQuery = isset($query['join']) ? $query['join'] : '';
+        $whereQuery = isset($query['where']) ? $query['where'] : '';
+        $searchQuery = isset($query['search']) ? $query['search'] : '';
+        $groupByQuery = isset($query['group_by']) ? $query['group_by'] : '';
+        $limitQuery = isset($query['limit']) ? $query['limit'] : '';
 
-function dataPagination($data, $pagination)
-{
-    
+        $data = (object) [];
+
+        if (!empty($selectQuery)) {
+            $sql = selectData($selectQuery);
+        }
+
+        if (!empty($joinQuery)) {
+            $sql .= joinTable($joinQuery,);
+        }
+
+        if (!empty($whereQuery)) {
+            $sql .= whereData($whereQuery);
+        }
+
+        if (!empty($searchQuery)) {
+            $sql .= searchData($searchQuery);
+        }
+
+        if (!empty($groupByQuery)) {
+            $sql .= groupBy($groupByQuery);
+        }
+
+        if (!empty($limitQuery)) {
+            $sql .= limitData($limitQuery);
+        }
+
+        $sql = $db->query($sql)->getResultArray();
+        $data->data = $sql;
+
+        return $data;
+    }
 }
 
 
+if (!function_exists('generateListData')) {
+    function generateListData($query)
+    {
+        $db = db_connect();
+        $selectQuery = isset($query['select']) ? $query['select'] : '';
+        $searchQuery = isset($query['search']) ? $query['search'] : '';
+        $joinQuery = isset($query['join']) ? $query['join'] : '';
+        $whereQuery = isset($query['where']) ? $query['where'] : '';
+        $groupByQuery = isset($query['group_by']) ? $query['group_by'] : '';
+        $limitQuery = isset($query['limit']) ? $query['limit'] : '';
+
+        $data = (object) [];
+
+
+        if (!empty($selectQuery)) {
+            $sql = selectData($selectQuery);
+        }
+
+        if (!empty($searchQuery)) {
+            $sql .= searchData($query);
+        }
+
+        if (!empty($joinQuery)) {
+            $sql .= joinTable($joinQuery,);
+        }
+
+        if (!empty($whereQuery)) {
+            $sql .= whereData($whereQuery);
+        }
+
+        if (!empty($groupByQuery)) {
+            $sql .= groupBy($groupByQuery);
+        }
+
+        if (!empty($limitQuery)) {
+            $sql .= limitData($limitQuery);
+        }
+
+        $sql = $db->query($sql)->getResultArray();
+        $data->data = $sql;
+
+        return $data;
+    }
+}
 
 
 
 // ------------------------------------------- PRINTILAN ------------------------------------------- //
-
-
-// Generate Pagination
-function pagination($page, $sql, $jumlahData)
-{
-    $db = db_connect();
-
-    $limit = 3;
-    $offset = ($page - 1) * $limit;
-    $sql .= " LIMIT {$offset}, {$limit}";
-    $query = $db->query($sql);
-    $jumlahPage = ceil($jumlahData / $limit);
-    $pageSebelumnya = ($page - 1 == 0) ? null : ($page - 1);
-    $pageSelanjutnya = ($page + 1 == $jumlahPage + 1) ? null : ($page + 1);
-
-    $pagination = [
-        'jumlah_data' => $jumlahData,
-        'page' => $page,
-        'jumlah_page' => $jumlahPage,
-        'page_sebelumnya' => $pageSebelumnya,
-        'page_selanjutnya' => $pageSelanjutnya
-        
-    ];
-
-    return $pagination;
-}
-
 
 // Generate result Array to JSON
 if (!function_exists('setToJSON')) {
@@ -66,59 +120,88 @@ if (!function_exists('setToArray')) {
 if (!function_exists('selectData')) {
     function selectData($data)
     {
-        $query = 'SELECT';
+        $query = 'SELECT ';
         foreach ($data as $key => $row) {
-            $query .= " {$row}, ";
+            $query .= "{$key} AS {$row}, ";
         }
         $query = rtrim($query, ', ');
         return $query;
     }
 }
 
-
+// Generate query limit 
+if (!function_exists('limitData')) {
+    function limitData($data)
+    {
+        $query = " LIMIT {$data['limit']}";
+        return $query;
+    }
+}
 // Generate query group by
 if (!function_exists('groupBy')) {
-    function groupBy($column, $table)
+    function groupBy($data)
     {
-        $query = "SELECT {$column}, COUNT(*)
-        FROM {$table}
-        GROUP BY {$column}";
-        return $query;
+        foreach ($data as $row) {
+            $query = " GROUP BY {$row},";
+            $query = rtrim($query, ', ');
+            return $query;
+        }
     }
 }
 
 // Generate query search
 if (!function_exists('searchData')) {
-    function searchData($data, $search)
+    function searchData($data)
     {
-        $query = '';
         foreach ($data as $key => $row) {
-            $query .= "{$row} LIKE '{$search}' OR ";
+            print_r($row);
+            die;
+            if (whereData([])) {
+                $sql = " AND (product_stock_unit_name LIKE '%{$row['search']}%' OR
+                product_stock_product_name LIKE '%{$row['search']}%' OR
+                product_category_name LIKE '%{$row['search']}%') ";
+                return $sql;
+            } else {
+                $sql = " AND (product_stock_unit_name LIKE '%{$row['search']}%' OR
+                product_stock_product_name LIKE '%{$row['search']}%' OR
+                product_category_name LIKE '%{$row['search']}%') ";
+                return $sql;
+            }
         }
-        $query = rtrim($query, ' OR ');
-        return $query;
     }
 }
 
 
 // Generate query inner join 
 if (!function_exists('joinTable')) {
-    function joinTable($table, $key)
+    function joinTable($data)
     {
-        $join = " FROM {$table['table1']} 
-        JOIN {$table['table2']} ON {$table['table2']}.{$key['key2']}={$table['table1']}.{$key['key1']}";
+        $join = " $data";
         return $join;
     }
 }
 
-// Generate query left join 
-if (!function_exists('leftJoinTable')) {
-    function leftJoinTable($data)
+// Generate query where clause
+if (!function_exists('whereData')) {
+    function whereData($data)
     {
-        $join = "FROM {$data['table1']} 
-        LEFT JOIN {$data['table2']} ON {$data['table2']}.{$data['key2']}={$data['table1']}.{$data['key1']}";
-        return $join;
+        $where = " WHERE ";
+        foreach ($data as $key => $row) {
+            $where .= "{$key} = {$row} AND ";
+        }
+        $where = rtrim($where, ' AND ');
+        return $where;
     }
 }
 
-// Generate 
+// Generate query filter 
+// // if (!function_exists('filterData')) {
+// //     function filterData($data)
+// //     {
+// //         foreach ($data as $key => $row) {
+// //             if ($row['range_harga_awal'] != null && $row['range_harga_akhir'] != null){
+// //                 $sql .= " AND "
+// //             }
+// //         }
+// //     }
+// }

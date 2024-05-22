@@ -11,41 +11,73 @@ class Product extends AuthController
 {
     public function pitek()
     {
-        // $get = $_GET;
-        
+        $get = $this->request->getVar();
+        $db = db_connect();
 
 
-        // return $this->responsePagination(ResponseInterface::HTTP_OK, 'OK', $get, '');
+        $search = isset($get["search"]) ? $get["search"] : '';
+        $unit = isset($get["unit"]) ? $get["unit"] : '';
+        $kategori = isset($get["kategori"]) ? $get["kategori"] : '';
+        $range_harga_awal = isset($get["range_harga_awal"]) ? $get["range_harga_awal"] : null;
+        $range_harga_akhir = isset($get["range_harga_akhir"]) ? $get["range_harga_akhir"] : null;
+        $page = isset($get["page"]) ? $get["page"] : 1;
+
+        $query['select'] = [
+            'product_name' => 'name',
+            'product_category_name' => 'category_name',
+            'product_stock_unit_name' => 'unit_name',
+            'product_stock_price_buy' => 'price_buy',
+            'product_stock_price_sell' => 'price_sell',
+            'product_stock_unit_name' => 'unit_name',
+            'product_stock_in' => 'stock_in',
+            'product_stock_out' => 'stock_out',
+        ];
+
+        $query['join'] = "FROM product JOIN product_stock ON product.product_id=product_stock.product_stock_product_id ";
+
+        $query['search'] = [
+            'search' => $search 
+        ];
+
+        $gas = generateListData($query);
+        print_r($gas);
+        die;
     }
+
+
+    public function detailData()
+    {
+        $query['select'] = [
+            'product_name' => 'name',
+            'product_category_name' => 'category_name',
+            'product_stock_unit_name' => 'unit_name',
+            'product_stock_price_buy' => 'price_buy',
+            'product_stock_price_sell' => 'price_sell',
+            'product_stock_unit_name' => 'unit_name',
+            'product_stock_in' => 'stock_in',
+            'product_stock_out' => 'stock_out',
+        ];
+        $query['join'] = "FROM product JOIN product_stock ON product.product_id=product_stock.product_stock_product_id ";
+        $query['limit'] = [
+            'limit' => 10,
+        ];
+        $query['where'] = [
+            'product.product_category_id' => 1,
+        ];
+        $query['group_by'] = [
+            'product.product_name'
+        ];
+
+        $query = generateDetailData($query);
+
+
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'list data', $query);
+    }
+
 
     // ------------------------------------------ INDEX ------------------------------------------ //
     public function index()
     {
-        $db = db_connect();
-
-        $get = $_GET;
-        $page = isset($get["page"]) ? $get["page"] : 1;
-        $data = [];
-
-
-        $select = [
-            '*'
-        ];
-        $join = [
-            'table1' => 'product',
-            'key1' => 'product_category_id',
-            'table2' => 'category',
-            'key2' => 'category_id'
-        ];
-        $product = selectData($select);
-        $product .= leftJoinTable($join);
-        $query = $db->query($product)->getResultArray();
-        $jumlahData = count($query);
-
-        // pagination 
-        $pagination = pagination($page, $product, $jumlahData);
-
-        return $this->responsePagination(ResponseInterface::HTTP_OK, 'OK',$query, $pagination, '');
     }
 
 
@@ -99,15 +131,22 @@ class Product extends AuthController
                 product_stock.product_stock_unit_name LIKE '%{$search}%')";
         }
 
+        print_r($sql);
+        die;
         $query = $db->query($sql);
         $result = $query->getResultArray();
         $jumlahData = count($result);
 
         // pagination
+        $data = [
+            'page' => $page,
+            'sql' => $sql,
+            'count' => $jumlahData,
+            'limit' => 3
+        ];
+        // $pitek = pagination($data);
 
-        $pitek = pagination($page, $sql, $jumlahData);
-
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'OK', $pitek, '');
+        // return $this->responseSuccess(ResponseInterface::HTTP_OK, 'OK', $pitek, '');
     }
 
 

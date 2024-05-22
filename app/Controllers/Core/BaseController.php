@@ -68,31 +68,31 @@ abstract class BaseController extends Controller
             'status' => $statusCode,
             'message' => $message,
             'error' => $errorCode,
-            'data' => $data
+            'result' => $data
         ];
 
         return $this->response->setJSON($response);
     }
 
-    public function responseSuccess($statusCode = ResponseInterface::HTTP_OK, $message = '', $data = [], $succes = 'success')
+    public function responseSuccess($statusCode = ResponseInterface::HTTP_OK, $message = '', $data = [], $error = '')
     {
         $response = [
             'status' => $statusCode,
             'message' => $message,
-            'error' => $succes,
-            'data' => $data
+            'error' => $error,
+            'result' => $data
         ];
 
         return $this->response->setJSON($response);
     }
 
-    public function responsePagination($statusCode = ResponseInterface::HTTP_OK, $message = '', $data = [],$pagination = [], $success = 'success')
+    public function responsePagination($statusCode = ResponseInterface::HTTP_OK, $message = '', $data = [],$pagination = [], $error = '')
     {
         $response = [
             'status' => $statusCode,
             'message' => $message,
-            'error' => $success,
-            'data' => $data,
+            'error' => $error,
+            'result' => $data,
             'pagination' => $pagination
         ];
         return $this->response->setJSON($response);
