@@ -11,64 +11,78 @@ class Product extends AuthController
 {
     public function pitek()
     {
-        $get = $this->request->getVar();
-        $db = db_connect();
-
-
-        $search = isset($get["search"]) ? $get["search"] : '';
-        $unit = isset($get["unit"]) ? $get["unit"] : '';
-        $kategori = isset($get["kategori"]) ? $get["kategori"] : '';
-        $range_harga_awal = isset($get["range_harga_awal"]) ? $get["range_harga_awal"] : null;
-        $range_harga_akhir = isset($get["range_harga_akhir"]) ? $get["range_harga_akhir"] : null;
-        $page = isset($get["page"]) ? $get["page"] : 1;
+        $query['data'] = ['product'];
 
         $query['select'] = [
+            'product_id' => 'id_product',
+            'product_stock_id' => 'id_stock',
             'product_name' => 'name',
             'product_category_name' => 'category_name',
             'product_stock_unit_name' => 'unit_name',
+            'product_stock_value' => 'value',
             'product_stock_price_buy' => 'price_buy',
             'product_stock_price_sell' => 'price_sell',
-            'product_stock_unit_name' => 'unit_name',
             'product_stock_in' => 'stock_in',
             'product_stock_out' => 'stock_out',
+            'product_created_at' => 'created',
+            'product_updated_at' => 'updated',
         ];
 
-        $query['join'] = "FROM product JOIN product_stock ON product.product_id=product_stock.product_stock_product_id ";
-
-        $query['search'] = [
-            'search' => $search 
+        $query['join'] = [
+            'product_stock' => 'product_stock.product_stock_product_id = product.product_id'
         ];
 
-        $gas = generateListData($query);
-        print_r($gas);
-        die;
+        // $query['where'] = [
+        //     'product_id' => 244
+        // ];
+
+        $query = generateDetailData($this->request->getVar(), $query, $this->db);
+
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'detail data', $query);
     }
 
-
-    public function detailData()
+    public function listData()
     {
+        $get = $this->request->getVar();
+        $page = isset($get['page']) ? $get['page'] : 1;
+
+        $query['data'] = ['product'];
+
         $query['select'] = [
             'product_name' => 'name',
             'product_category_name' => 'category_name',
             'product_stock_unit_name' => 'unit_name',
-            'product_stock_price_buy' => 'price_buy',
-            'product_stock_price_sell' => 'price_sell',
-            'product_stock_unit_name' => 'unit_name',
-            'product_stock_in' => 'stock_in',
-            'product_stock_out' => 'stock_out',
         ];
-        $query['join'] = "FROM product JOIN product_stock ON product.product_id=product_stock.product_stock_product_id ";
-        $query['limit'] = [
-            'limit' => 10,
+
+        // can change to left_join, right_join or just join(inner join)
+        $query['join'] = [
+            'product_stock' => 'product_stock.product_stock_product_id = product.product_id'
         ];
+
+
         $query['where'] = [
-            'product.product_category_id' => 1,
+            'product.product_category_name' => "'Makanan'",
         ];
+
         $query['group_by'] = [
             'product.product_name'
         ];
+        // ---------- PAGINATION TRUE/FALSE (DELETE THIS AND PAGINATION AUTO CREATED) ---------- //
+        $query['pagination'] = [
+            'pagination' => true
+        ];
 
-        $query = generateDetailData($query);
+        // ----------- SEARCH DATA ----------- // 
+        $query['search'] = [
+            '',
+        ];
+
+        // ----------- LIMIT SHOW DATA ----------- //
+        $query['limit'] = [
+            'limit' => 3,
+        ];
+
+        $query = generateListData($this->request->getVar(), $query, $this->db);
 
 
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'list data', $query);
