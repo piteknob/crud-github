@@ -9,7 +9,7 @@ use App\Controllers\Core\AuthController;
 
 class Product extends AuthController
 {
-    public function pitek()
+    public function DetailData()
     {
         $query['data'] = ['product'];
 
@@ -31,10 +31,6 @@ class Product extends AuthController
         $query['join'] = [
             'product_stock' => 'product_stock.product_stock_product_id = product.product_id'
         ];
-
-        // $query['where'] = [
-        //     'product_id' => 244
-        // ];
 
         $query = generateDetailData($this->request->getVar(), $query, $this->db);
 

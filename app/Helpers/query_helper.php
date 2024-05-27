@@ -6,8 +6,11 @@ if (!function_exists('generateDetailData')) {
         $dataQuery = isset($query['data']) ? $query['data'] : '';
         $selectQuery = isset($query['select']) ? $query['select'] : '';
         $joinQuery = isset($query['join']) ? $query['join'] : '';
+        $leftJoinQuery = isset($query['left_join']) ? $query['left_join'] : '';
+        $rightJoinQuery = isset($query['right_join']) ? $query['right_join'] : '';
         // $whereQuery = isset($query['where']) ? $query['where'] : '';
         $idProduct = isset($params['id']) ? $params['id'] : '';
+
         $data = (object) [];
 
         $sql = '';
@@ -24,12 +27,19 @@ if (!function_exists('generateDetailData')) {
             $sql .= joinTable($joinQuery,);
         }
 
+        if (!empty($leftJoinQuery)) {
+            $sql .= leftJoin($leftJoinQuery,);
+        }
+
+        if (!empty($rightJoinQuery)) {
+            $sql .= rightJoin($rightJoinQuery,);
+        }
+
         // if (!empty($idProduct)) {
         //     $sql .= whereData($idProduct);
         // }
 
         $sql .= " WHERE product_id = '{$idProduct}'";
-
         $sql = $db->query($sql)->getResultArray();
         $data->data = $sql;
 
@@ -45,6 +55,8 @@ if (!function_exists('generateListData')) {
         $selectQuery = isset($query['select']) ? $query['select'] : '';
         $searchQuery = isset($query['search']) ? $query['search'] : '';
         $joinQuery = isset($query['join']) ? $query['join'] : '';
+        $leftJoinQuery = isset($query['left_join']) ? $query['left_join'] : '';
+        $rightJoinQuery = isset($query['right_join']) ? $query['right_join'] : '';
         $whereQuery = isset($query['where']) ? $query['where'] : '';
         $groupByQuery = isset($query['group_by']) ? $query['group_by'] : '';
         $paginationResult = isset($query['pagination']) ? $query['pagination'] : '';
@@ -64,6 +76,14 @@ if (!function_exists('generateListData')) {
 
         if (!empty($joinQuery)) {
             $sql .= joinTable($joinQuery);
+        }
+
+        if (!empty($leftJoinQuery)) {
+            $sql .= leftJoin($leftJoinQuery);
+        }
+
+        if (!empty($rightJoinQuery)) {
+            $sql .= rightJoin($rightJoinQuery);
         }
 
         if (!empty($whereQuery)) {
