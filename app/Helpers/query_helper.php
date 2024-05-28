@@ -59,6 +59,7 @@ if (!function_exists('generateListData')) {
         $rightJoinQuery = isset($query['right_join']) ? $query['right_join'] : '';
         $whereQuery = isset($query['where_detail']) ? $query['where_detail'] : '';
         $filterQuery = isset($query['filter']) ? $query['filter'] : '';
+        $filterBetweenQuery = isset($query['filter_between']) ? $query['filter_between'] : '';
         $groupByQuery = isset($query['group_by']) ? $query['group_by'] : '';
         $orderByQuery = isset($query['order_by']) ? $query['order_by'] : '';
         $paginationResult = isset($query['pagination']) ? $query['pagination'] : '';
@@ -68,11 +69,11 @@ if (!function_exists('generateListData')) {
         $paginationPage = isset($params['page']) ? $params['page'] : 1;
         $search = isset($params['search']) ? $params['search'] : '';
         $category = isset($params['category']) ? $params['category'] : '';
-        // $priceStart = isset($params['start']) ? $params['start'] : '';
-        // $priceEnd = isset($params['end']) ? $params['end'] : '';
+        $start = isset($params['start']) ? $params['start'] : '';
+        $end = isset($params['end']) ? $params['end'] : '';
+        
 
         $data = (object) [];
-
 
         $sql = '';
 
@@ -117,6 +118,10 @@ if (!function_exists('generateListData')) {
             $where = false;
         }
 
+        if (!empty($filterBetweenQuery)) {
+            $sql .= filterBetween($filterBetweenQuery, $start, $end, $where);
+        }
+
         if (!empty($groupByQuery)) {
             $sql .= groupBy($groupByQuery);
         }
@@ -125,9 +130,8 @@ if (!function_exists('generateListData')) {
             $sql .= orderBy($orderByQuery);
         }
 
-        print_r($sql);
-        die;
-
+        // print_r($sql);
+        // die;
 
         // Set Pagination from Params 
 
@@ -264,18 +268,42 @@ if (!function_exists('filterData')) {
     function filterData($data, $selectedField, $where)
     {
         if (!empty($where)) {
-            $sql = ' AND';
+            $sql = ' AND (';
             foreach ($selectedField as $key => $value) {
-                $sql .= " {$value} = '{$data}' OR ";
+                $sql .= "{$value} = '{$data}' OR ";
             }
             $sql = rtrim($sql, ' OR ');
+            $sql = "$sql)";
             return $sql;
         } else {
-            $sql = ' WHERE';
+            $sql = ' WHERE (';
             foreach ($selectedField as $key => $value) {
-                $sql .= " {$value} = '{$data}' OR ";
+                $sql .= "{$value} = '{$data}' OR ";
             }
             $sql = rtrim($sql, ' OR ');
+            $sql = "$sql)";
+            return $sql;
+        }
+    }
+}
+
+
+// Generate query filter between
+if (!function_exists('filterBetween')) {
+    function filterBetween($data, $start, $end, $where)
+    {
+        if (empty($where)) {
+
+            foreach ($data as $key => $value) {
+                $sql = " WHERE {$value} BETWEEN {$start} AND {$end} AND ";
+            }
+            $sql = rtrim($sql, ' AND ');
+            return $sql;
+        } else {
+            foreach ($data as $key => $value) {
+                $sql = " AND {$value} BETWEEN {$start} AND {$end} AND ";
+            }
+            $sql = rtrim($sql, ' AND ');
             return $sql;
         }
     }

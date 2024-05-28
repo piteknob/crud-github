@@ -73,7 +73,16 @@ class Product extends AuthController
 
         $query['filter'] = [
             "product_category_name",
+            "product_stock_unit_name",
         ];
+
+        $query['filter_between'] = [
+            "product_stock_price_sell"
+        ];
+
+        // $query['date'] = [
+        //     "product_created_at"
+        // ];
 
         $query['group_by'] = [
             'product.product_name'
