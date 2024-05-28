@@ -19,7 +19,7 @@ if (!function_exists('generateDetailData')) {
             $sql .= selectData($selectQuery);
         }
 
-        if (!empty($dataQuery)){
+        if (!empty($dataQuery)) {
             $sql .= dataFrom($dataQuery);
         }
 
@@ -50,19 +50,29 @@ if (!function_exists('generateDetailData')) {
 if (!function_exists('generateListData')) {
     function generateListData($params, $query, $db)
     {
-        // Setup query data
+        // --------------- set query --------------- //
         $dataQuery = isset($query['data']) ? $query['data'] : '';
         $selectQuery = isset($query['select']) ? $query['select'] : '';
-        $searchQuery = isset($query['search']) ? $query['search'] : '';
+        $searchQuery = isset($query['search_data']) ? $query['search_data'] : '';
         $joinQuery = isset($query['join']) ? $query['join'] : '';
         $leftJoinQuery = isset($query['left_join']) ? $query['left_join'] : '';
         $rightJoinQuery = isset($query['right_join']) ? $query['right_join'] : '';
-        $whereQuery = isset($query['where']) ? $query['where'] : '';
+        $whereQuery = isset($query['where_detail']) ? $query['where_detail'] : '';
+        $filterQuery = isset($query['filter']) ? $query['filter'] : '';
         $groupByQuery = isset($query['group_by']) ? $query['group_by'] : '';
+        $orderByQuery = isset($query['order_by']) ? $query['order_by'] : '';
         $paginationResult = isset($query['pagination']) ? $query['pagination'] : '';
+
+
+        // --------------- set params --------------- //
         $paginationPage = isset($params['page']) ? $params['page'] : 1;
+        $search = isset($params['search']) ? $params['search'] : '';
+        $category = isset($params['category']) ? $params['category'] : '';
+        // $priceStart = isset($params['start']) ? $params['start'] : '';
+        // $priceEnd = isset($params['end']) ? $params['end'] : '';
 
         $data = (object) [];
+
 
         $sql = '';
 
@@ -88,16 +98,35 @@ if (!function_exists('generateListData')) {
 
         if (!empty($whereQuery)) {
             $sql .= whereData($whereQuery);
+            $where = true;
+        } else {
+            $where = false;
         }
 
         if (!empty($searchQuery)) {
-            $sql .= searchData($searchQuery);
+            $sql .= searchData($searchQuery, $search, $where);
+            $where = true;
+        } else {
+            $where = false;
+        }
+
+        if (!empty($filterQuery)) {
+            $sql .= filterData($category, $filterQuery, $where);
+            $where = true;
+        } else {
+            $where = false;
         }
 
         if (!empty($groupByQuery)) {
             $sql .= groupBy($groupByQuery);
         }
 
+        if (!empty($orderByQuery)) {
+            $sql .= orderBy($orderByQuery);
+        }
+
+        print_r($sql);
+        die;
 
 
         // Set Pagination from Params 
@@ -127,8 +156,8 @@ if (!function_exists('generateListData')) {
             $data->data = $result;
             $data->pagination = [
                 'jumlah_data' => $countData,
-                'page' => $paginationPage,
                 'jumlah_page' => $jumlahPage,
+                'page' => $paginationPage,
                 'page_sebelumnya' => $pageSebelumnya,
                 'page_selanjutnya' => $pageSelanjutnya
             ];
@@ -166,6 +195,7 @@ if (!function_exists('setToArray')) {
 }
 
 
+// Generate query data FROM ...
 if (!function_exists('dataFrom')) {
     function dataFrom($data)
     {
@@ -203,37 +233,51 @@ if (!function_exists('limitData')) {
 }
 
 
-// Generate query group by
-if (!function_exists('groupBy')) {
-    function groupBy($data)
+// Generate query search
+if (!function_exists('searchData')) {
+    function searchData($data, $search, $where)
     {
-        foreach ($data as $row) {
-            $query = " GROUP BY {$row},";
-            $query = rtrim($query, ', ');
-            return $query;
+        $sql = '';
+        if (empty($where)) {
+            $sql .= " WHERE (";
+            foreach ($data as $key => $row) {
+                $sql .= "{$row} LIKE '%{$search}%' OR ";
+            }
+            $sql = rtrim($sql, ' OR ');
+            $sql = "$sql)";
+            return $sql;
+        } else {
+            $sql .= " AND (";
+            foreach ($data as $key => $row) {
+                $sql .= "{$row} LIKE '%{$search}%' OR ";
+            }
+            $sql = rtrim($sql, ' OR ');
+            $sql = "$sql)";
+            return $sql;
         }
     }
 }
 
 
-// Generate query search
-if (!function_exists('searchData')) {
-    function searchData($data)
+// Generate query filter
+if (!function_exists('filterData')) {
+    function filterData($data, $selectedField, $where)
     {
-        $sql = '';
-        // if (whereData([])) {
-            foreach ($data as $key => $row) {
-                $sql .= " AND (product_stock_unit_name LIKE '%{$row}%' OR
-                product_stock_product_name LIKE '%{$row}%' OR
-                product_category_name LIKE '%{$row}%') ";
+        if (!empty($where)) {
+            $sql = ' AND';
+            foreach ($selectedField as $key => $value) {
+                $sql .= " {$value} = '{$data}' OR ";
             }
-        // } else
-        //     foreach ($data as $key => $row) {
-        //         $sql .= " AND (product_stock_unit_name LIKE '%{$row}%' OR
-        //         product_stock_product_name LIKE '%{$row}%' OR
-        //         product_category_name LIKE '%{$row}%') ";
-        //     }
-        return $sql;
+            $sql = rtrim($sql, ' OR ');
+            return $sql;
+        } else {
+            $sql = ' WHERE';
+            foreach ($selectedField as $key => $value) {
+                $sql .= " {$value} = '{$data}' OR ";
+            }
+            $sql = rtrim($sql, ' OR ');
+            return $sql;
+        }
     }
 }
 
@@ -252,7 +296,8 @@ if (!function_exists('joinTable')) {
 
 // Generate query left join
 if (!function_exists('leftJoin')) {
-    function leftJoin($data){
+    function leftJoin($data)
+    {
         foreach ($data as $key => $row) {
             $join = " LEFT JOIN {$key} ON {$row}";
         }
@@ -263,7 +308,8 @@ if (!function_exists('leftJoin')) {
 
 // Generate query right join 
 if (!function_exists('rightJoin')) {
-    function rightJoin($data){
+    function rightJoin($data)
+    {
         foreach ($data as $key => $row) {
             $join = " RIGHT JOIN {$key} ON {$row}";
         }
@@ -286,6 +332,7 @@ if (!function_exists('whereData')) {
 }
 
 
+// Generate pagination value 
 if (!function_exists('paginationValue')) {
     function paginationValue($data)
     {
@@ -293,5 +340,31 @@ if (!function_exists('paginationValue')) {
             $pagination = $value;
             return $pagination;
         }
+    }
+}
+
+
+// Generate query group by
+if (!function_exists('groupBy')) {
+    function groupBy($data)
+    {
+        foreach ($data as $row) {
+            $query = " GROUP BY {$row},";
+            $query = rtrim($query, ', ');
+            return $query;
+        }
+    }
+}
+
+
+// Generate query order by
+if (!function_exists('orderBy')) {
+    function orderBy($data)
+    {
+        foreach ($data as $key => $row) {
+            $query = " ORDER BY {$row},";
+        }
+        $query = rtrim($query, ', ');
+        return $query;
     }
 }

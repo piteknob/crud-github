@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use CodeIgniter\HTTP\ResponseInterface;
-use App\Controllers\Core\BaseController;
 use App\Controllers\Core\AuthController;
 
 
@@ -39,15 +38,13 @@ class Product extends AuthController
 
     public function listData()
     {
-        $get = $this->request->getVar();
-        $page = isset($get['page']) ? $get['page'] : 1;
-
         $query['data'] = ['product'];
 
         $query['select'] = [
             'product_name' => 'name',
             'product_category_name' => 'category_name',
             'product_stock_unit_name' => 'unit_name',
+            'product_stock_price_sell' => 'price',
         ];
 
         // can change to left_join, right_join or just join(inner join)
@@ -55,27 +52,35 @@ class Product extends AuthController
             'product_stock' => 'product_stock.product_stock_product_id = product.product_id'
         ];
 
+        $query['where_detail'] = [];
 
-        $query['where'] = [
-            'product.product_category_name' => "'Makanan'",
-        ];
-
-        $query['group_by'] = [
-            'product.product_name'
-        ];
         // ---------- PAGINATION TRUE/FALSE (DELETE THIS AND PAGINATION AUTO CREATED) ---------- //
         $query['pagination'] = [
             'pagination' => true
         ];
 
-        // ----------- SEARCH DATA ----------- // 
-        $query['search'] = [
-            '',
+        // ----------- FIELD SEARCH DATA ----------- // 
+        $query['search_data'] = [
+            'product_stock_unit_name',
+            'product_stock_product_name',
+            'product_category_name',
         ];
 
         // ----------- LIMIT SHOW DATA ----------- //
         $query['limit'] = [
-            'limit' => 3,
+            'limit' => 5,
+        ];
+
+        $query['filter'] = [
+            "product_category_name",
+        ];
+
+        $query['group_by'] = [
+            'product.product_name'
+        ];
+
+        $query['order_by'] = [
+            'product_stock_price_sell'
         ];
 
         $query = generateListData($this->request->getVar(), $query, $this->db);

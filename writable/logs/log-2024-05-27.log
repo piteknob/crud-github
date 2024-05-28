@@ -608,3 +608,1221 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-27 12:01:34 --> mysqli_sql_exception: Unknown column 'product.category_name' in 'group statement' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\query_helper.php(139): CodeIgniter\Database\BaseConnection->query('SELECT product_...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(78): generateListData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->listData()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-27 12:01:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product.category_name' in 'group statement'
+[Method: GET, Route: product/listData]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\query_helper.php(139): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 2 APPPATH\Controllers\Product.php(78): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 12:01:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product.category_name' in 'group statement'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 3 APPPATH\Helpers\query_helper.php(139): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 4 APPPATH\Controllers\Product.php(78): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 12:01:34 --> [Caused by] mysqli_sql_exception: Unknown column 'product.category_name' in 'group statement'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 4 APPPATH\Helpers\query_helper.php(139): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 5 APPPATH\Controllers\Product.php(78): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-27 12:01:34 --> mysqli_sql_exception: Unknown column 'product.category_name' in 'group statement' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\query_helper.php(139): CodeIgniter\Database\BaseConnection->query('SELECT product_...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(78): generateListData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->listData()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-27 12:01:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product.category_name' in 'group statement'
+[Method: GET, Route: product/listData]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\query_helper.php(139): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 2 APPPATH\Controllers\Product.php(78): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 12:01:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product.category_name' in 'group statement'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 3 APPPATH\Helpers\query_helper.php(139): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 4 APPPATH\Controllers\Product.php(78): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 12:01:34 --> [Caused by] mysqli_sql_exception: Unknown column 'product.category_name' in 'group statement'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 4 APPPATH\Helpers\query_helper.php(139): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 5 APPPATH\Controllers\Product.php(78): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-27 12:01:35 --> mysqli_sql_exception: Unknown column 'product.category_name' in 'group statement' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\query_helper.php(139): CodeIgniter\Database\BaseConnection->query('SELECT product_...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(78): generateListData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->listData()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-27 12:01:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product.category_name' in 'group statement'
+[Method: GET, Route: product/listData]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\query_helper.php(139): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 2 APPPATH\Controllers\Product.php(78): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 12:01:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product.category_name' in 'group statement'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 3 APPPATH\Helpers\query_helper.php(139): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 4 APPPATH\Controllers\Product.php(78): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 12:01:35 --> [Caused by] mysqli_sql_exception: Unknown column 'product.category_name' in 'group statement'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 4 APPPATH\Helpers\query_helper.php(139): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 5 APPPATH\Controllers\Product.php(78): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-27 12:01:36 --> mysqli_sql_exception: Unknown column 'product.category_name' in 'group statement' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\query_helper.php(139): CodeIgniter\Database\BaseConnection->query('SELECT product_...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(78): generateListData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->listData()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-27 12:01:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product.category_name' in 'group statement'
+[Method: GET, Route: product/listData]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\query_helper.php(139): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 2 APPPATH\Controllers\Product.php(78): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 12:01:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product.category_name' in 'group statement'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 3 APPPATH\Helpers\query_helper.php(139): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 4 APPPATH\Controllers\Product.php(78): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 12:01:36 --> [Caused by] mysqli_sql_exception: Unknown column 'product.category_name' in 'group statement'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 4 APPPATH\Helpers\query_helper.php(139): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 5 APPPATH\Controllers\Product.php(78): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-27 12:01:36 --> mysqli_sql_exception: Unknown column 'product.category_name' in 'group statement' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\query_helper.php(139): CodeIgniter\Database\BaseConnection->query('SELECT product_...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(78): generateListData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->listData()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-27 12:01:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product.category_name' in 'group statement'
+[Method: GET, Route: product/listData]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\query_helper.php(139): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 2 APPPATH\Controllers\Product.php(78): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 12:01:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product.category_name' in 'group statement'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 3 APPPATH\Helpers\query_helper.php(139): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 4 APPPATH\Controllers\Product.php(78): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 12:01:36 --> [Caused by] mysqli_sql_exception: Unknown column 'product.category_name' in 'group statement'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 4 APPPATH\Helpers\query_helper.php(139): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 5 APPPATH\Controllers\Product.php(78): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-27 12:01:38 --> mysqli_sql_exception: Unknown column 'product.category_name' in 'group statement' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\query_helper.php(139): CodeIgniter\Database\BaseConnection->query('SELECT product_...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(78): generateListData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->listData()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-27 12:01:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product.category_name' in 'group statement'
+[Method: GET, Route: product/listData]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\query_helper.php(139): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 2 APPPATH\Controllers\Product.php(78): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 12:01:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product.category_name' in 'group statement'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 3 APPPATH\Helpers\query_helper.php(139): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 4 APPPATH\Controllers\Product.php(78): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 12:01:38 --> [Caused by] mysqli_sql_exception: Unknown column 'product.category_name' in 'group statement'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 4 APPPATH\Helpers\query_helper.php(139): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.category_name')
+ 5 APPPATH\Controllers\Product.php(78): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-27 14:26:10 --> mysqli_sql_exception: Unknown column 'product.product_category_name' in 'where clause' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\query_helper.php(123): CodeIgniter\Database\BaseConnection->query('SELECT product_...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(82): generateListData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->listData()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-27 14:26:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product.product_category_name' in 'where clause'
+[Method: GET, Route: product/listData]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\query_helper.php(123): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 2 APPPATH\Controllers\Product.php(82): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 14:26:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product.product_category_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 3 APPPATH\Helpers\query_helper.php(123): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 4 APPPATH\Controllers\Product.php(82): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 14:26:10 --> [Caused by] mysqli_sql_exception: Unknown column 'product.product_category_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 4 APPPATH\Helpers\query_helper.php(123): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 5 APPPATH\Controllers\Product.php(82): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-27 14:26:15 --> mysqli_sql_exception: Unknown column 'product.product_category_name' in 'where clause' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\query_helper.php(123): CodeIgniter\Database\BaseConnection->query('SELECT product_...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(82): generateListData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->listData()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-27 14:26:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product.product_category_name' in 'where clause'
+[Method: GET, Route: product/listData]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\query_helper.php(123): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 2 APPPATH\Controllers\Product.php(82): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 14:26:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product.product_category_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 3 APPPATH\Helpers\query_helper.php(123): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 4 APPPATH\Controllers\Product.php(82): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 14:26:15 --> [Caused by] mysqli_sql_exception: Unknown column 'product.product_category_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 4 APPPATH\Helpers\query_helper.php(123): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 5 APPPATH\Controllers\Product.php(82): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-27 14:26:50 --> mysqli_sql_exception: Unknown column 'product.product_id' in 'on clause' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\query_helper.php(123): CodeIgniter\Database\BaseConnection->query('SELECT product_...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(82): generateListData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->listData()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-27 14:26:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product.product_id' in 'on clause'
+[Method: GET, Route: product/listData]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\query_helper.php(123): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 2 APPPATH\Controllers\Product.php(82): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 14:26:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product.product_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 3 APPPATH\Helpers\query_helper.php(123): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 4 APPPATH\Controllers\Product.php(82): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 14:26:50 --> [Caused by] mysqli_sql_exception: Unknown column 'product.product_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 4 APPPATH\Helpers\query_helper.php(123): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 5 APPPATH\Controllers\Product.php(82): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-27 14:26:51 --> mysqli_sql_exception: Unknown column 'product.product_id' in 'on clause' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\query_helper.php(123): CodeIgniter\Database\BaseConnection->query('SELECT product_...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(82): generateListData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->listData()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-27 14:26:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product.product_id' in 'on clause'
+[Method: GET, Route: product/listData]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\query_helper.php(123): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 2 APPPATH\Controllers\Product.php(82): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 14:26:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product.product_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 3 APPPATH\Helpers\query_helper.php(123): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 4 APPPATH\Controllers\Product.php(82): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 14:26:51 --> [Caused by] mysqli_sql_exception: Unknown column 'product.product_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 4 APPPATH\Helpers\query_helper.php(123): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 5 APPPATH\Controllers\Product.php(82): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-27 14:27:46 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'OUTER JOIN product_stock ON product_stock.product_stock_product_id = product....' at line 1 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\query_helper.php(123): CodeIgniter\Database\BaseConnection->query('SELECT product_...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(82): generateListData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->listData()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-27 14:27:46 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'OUTER JOIN product_stock ON product_stock.product_stock_product_id = product....' at line 1
+[Method: GET, Route: product/listData]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\query_helper.php(123): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL OUTER JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 2 APPPATH\Controllers\Product.php(82): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 14:27:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'OUTER JOIN product_stock ON product_stock.product_stock_product_id = product....' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL OUTER JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL OUTER JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 3 APPPATH\Helpers\query_helper.php(123): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL OUTER JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 4 APPPATH\Controllers\Product.php(82): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 14:27:46 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'OUTER JOIN product_stock ON product_stock.product_stock_product_id = product....' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL OUTER JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL OUTER JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL OUTER JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 4 APPPATH\Helpers\query_helper.php(123): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product FULL OUTER JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product.product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_stock_price_sell')
+ 5 APPPATH\Controllers\Product.php(82): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-27 15:05:45 --> mysqli_sql_exception: Unknown column 'category_name' in 'where clause' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\query_helper.php(118): CodeIgniter\Database\BaseConnection->query('SELECT product_...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(81): generateListData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->listData()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-27 15:05:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'category_name' in 'where clause'
+[Method: GET, Route: product/listData]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\query_helper.php(118): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 2 APPPATH\Controllers\Product.php(81): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 15:05:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'category_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 3 APPPATH\Helpers\query_helper.php(118): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 4 APPPATH\Controllers\Product.php(81): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 15:05:45 --> [Caused by] mysqli_sql_exception: Unknown column 'category_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 4 APPPATH\Helpers\query_helper.php(118): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 5 APPPATH\Controllers\Product.php(81): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-27 15:06:33 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 'Minuman' AND (product_stock_unit_name LIKE '%%' OR
+                product...' at line 1 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\query_helper.php(118): CodeIgniter\Database\BaseConnection->query('SELECT product_...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(81): generateListData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->listData()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-27 15:06:33 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 'Minuman' AND (product_stock_unit_name LIKE '%%' OR
+                product...' at line 1
+[Method: GET, Route: product/listData]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\query_helper.php(118): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\', \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 2 APPPATH\Controllers\Product.php(81): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 15:06:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 'Minuman' AND (product_stock_unit_name LIKE '%%' OR
+                product...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\', \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\', \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 3 APPPATH\Helpers\query_helper.php(118): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\', \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 4 APPPATH\Controllers\Product.php(81): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 15:06:33 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 'Minuman' AND (product_stock_unit_name LIKE '%%' OR
+                product...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\', \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\', \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\', \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 4 APPPATH\Helpers\query_helper.php(118): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\', \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 5 APPPATH\Controllers\Product.php(81): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-27 15:06:34 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 'Minuman' AND (product_stock_unit_name LIKE '%%' OR
+                product...' at line 1 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\query_helper.php(118): CodeIgniter\Database\BaseConnection->query('SELECT product_...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(81): generateListData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->listData()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-27 15:06:34 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 'Minuman' AND (product_stock_unit_name LIKE '%%' OR
+                product...' at line 1
+[Method: GET, Route: product/listData]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\query_helper.php(118): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\', \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 2 APPPATH\Controllers\Product.php(81): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 15:06:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 'Minuman' AND (product_stock_unit_name LIKE '%%' OR
+                product...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\', \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\', \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 3 APPPATH\Helpers\query_helper.php(118): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\', \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 4 APPPATH\Controllers\Product.php(81): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 15:06:34 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 'Minuman' AND (product_stock_unit_name LIKE '%%' OR
+                product...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\', \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\', \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\', \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 4 APPPATH\Helpers\query_helper.php(118): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\', \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 5 APPPATH\Controllers\Product.php(81): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-27 15:06:43 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND 'Minuman' AND (product_stock_unit_name LIKE '%%' OR
+                prod...' at line 1 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\query_helper.php(118): CodeIgniter\Database\BaseConnection->query('SELECT product_...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(81): generateListData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->listData()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-27 15:06:43 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND 'Minuman' AND (product_stock_unit_name LIKE '%%' OR
+                prod...' at line 1
+[Method: GET, Route: product/listData]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\query_helper.php(118): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\',AND \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 2 APPPATH\Controllers\Product.php(81): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 15:06:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND 'Minuman' AND (product_stock_unit_name LIKE '%%' OR
+                prod...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\',AND \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\',AND \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 3 APPPATH\Helpers\query_helper.php(118): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\',AND \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 4 APPPATH\Controllers\Product.php(81): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 15:06:43 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND 'Minuman' AND (product_stock_unit_name LIKE '%%' OR
+                prod...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\',AND \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\',AND \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\',AND \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 4 APPPATH\Helpers\query_helper.php(118): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\',AND \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 5 APPPATH\Controllers\Product.php(81): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-27 15:06:44 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND 'Minuman' AND (product_stock_unit_name LIKE '%%' OR
+                prod...' at line 1 in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\query_helper.php(118): CodeIgniter\Database\BaseConnection->query('SELECT product_...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(81): generateListData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->listData()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-27 15:06:44 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND 'Minuman' AND (product_stock_unit_name LIKE '%%' OR
+                prod...' at line 1
+[Method: GET, Route: product/listData]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\query_helper.php(118): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\',AND \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 2 APPPATH\Controllers\Product.php(81): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 15:06:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND 'Minuman' AND (product_stock_unit_name LIKE '%%' OR
+                prod...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\',AND \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\',AND \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 3 APPPATH\Helpers\query_helper.php(118): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\',AND \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 4 APPPATH\Controllers\Product.php(81): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 15:06:44 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND 'Minuman' AND (product_stock_unit_name LIKE '%%' OR
+                prod...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\',AND \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\',AND \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\',AND \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 4 APPPATH\Helpers\query_helper.php(118): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\',AND \'Minuman\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY unit_name')
+ 5 APPPATH\Controllers\Product.php(81): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 16:28:19 --> ParseError: syntax error, unexpected token "]"
+[Method: GET, Route: product/listData]
+in APPPATH\Controllers\Product.php on line 69.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('product/listData', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('product/listData')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('product/listData')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+ERROR - 2024-05-27 16:30:02 --> mysqli_sql_exception: Unknown column 'product_category' in 'order clause' in C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\crud-github\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_...', 0)
+#1 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_...')
+#2 C:\xampp\htdocs\crud-github\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_...')
+#3 C:\xampp\htdocs\crud-github\app\Helpers\query_helper.php(118): CodeIgniter\Database\BaseConnection->query('SELECT product_...')
+#4 C:\xampp\htdocs\crud-github\app\Controllers\Product.php(81): generateListData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(933): App\Controllers\Product->listData()
+#6 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#7 C:\xampp\htdocs\crud-github\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-github\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-github\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud-github\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\crud-github\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-05-27 16:30:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product_category' in 'order clause'
+[Method: GET, Route: product/listData]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 APPPATH\Helpers\query_helper.php(118): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_category')
+ 2 APPPATH\Controllers\Product.php(81): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 16:30:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product_category' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_category')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_category')
+ 3 APPPATH\Helpers\query_helper.php(118): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_category')
+ 4 APPPATH\Controllers\Product.php(81): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
+CRITICAL - 2024-05-27 16:30:02 --> [Caused by] mysqli_sql_exception: Unknown column 'product_category' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_category', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_category')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_category')
+ 4 APPPATH\Helpers\query_helper.php(118): CodeIgniter\Database\BaseConnection->query('SELECT product_name AS name, product_category_name AS category_name, product_stock_unit_name AS unit_name, product_stock_price_sell AS sell FROM product JOIN product_stock ON product_stock.product_stock_product_id = product.product_id WHERE product_category_name = \'Makanan\' AND (product_stock_unit_name LIKE \'%%\' OR
+                product_stock_product_name LIKE \'%%\' OR
+                product_category_name LIKE \'%%\')  GROUP BY product.product_name ORDER BY product_category')
+ 5 APPPATH\Controllers\Product.php(81): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Product->listData()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\crud-github\\public\\index.php')
